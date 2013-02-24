@@ -1,0 +1,327 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		28EAA4B516D775DF00F523B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28EAA4B416D775DF00F523B3 /* UIKit.framework */; };
+		28EAA4B716D775DF00F523B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28EAA4B616D775DF00F523B3 /* Foundation.framework */; };
+		28EAA4B916D775DF00F523B3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28EAA4B816D775DF00F523B3 /* CoreGraphics.framework */; };
+		28EAA4BF16D775E000F523B3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28EAA4BD16D775E000F523B3 /* InfoPlist.strings */; };
+		28EAA4C116D775E000F523B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EAA4C016D775E000F523B3 /* main.m */; };
+		28EAA4C516D775E000F523B3 /* EurukoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EAA4C416D775E000F523B3 /* EurukoAppDelegate.m */; };
+		28EAA4C716D775E000F523B3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 28EAA4C616D775E000F523B3 /* Default.png */; };
+		28EAA4C916D775E000F523B3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28EAA4C816D775E000F523B3 /* Default@2x.png */; };
+		28EAA4CB16D775E000F523B3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28EAA4CA16D775E000F523B3 /* Default-568h@2x.png */; };
+		28EAA4CE16D775E000F523B3 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28EAA4CC16D775E000F523B3 /* MainStoryboard_iPhone.storyboard */; };
+		28EAA4D116D775E000F523B3 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28EAA4CF16D775E000F523B3 /* MainStoryboard_iPad.storyboard */; };
+		28EAA4D416D775E000F523B3 /* EurukoMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EAA4D316D775E000F523B3 /* EurukoMasterViewController.m */; };
+		28EAA4D716D775E000F523B3 /* EurukoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EAA4D616D775E000F523B3 /* EurukoDetailViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		28EAA4B116D775DF00F523B3 /* Euruko2013.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Euruko2013.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		28EAA4B416D775DF00F523B3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		28EAA4B616D775DF00F523B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		28EAA4B816D775DF00F523B3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28EAA4BC16D775E000F523B3 /* Euruko2013-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Euruko2013-Info.plist"; sourceTree = "<group>"; };
+		28EAA4BE16D775E000F523B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		28EAA4C016D775E000F523B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		28EAA4C216D775E000F523B3 /* Euruko2013-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Euruko2013-Prefix.pch"; sourceTree = "<group>"; };
+		28EAA4C316D775E000F523B3 /* EurukoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EurukoAppDelegate.h; sourceTree = "<group>"; };
+		28EAA4C416D775E000F523B3 /* EurukoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EurukoAppDelegate.m; sourceTree = "<group>"; };
+		28EAA4C616D775E000F523B3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		28EAA4C816D775E000F523B3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		28EAA4CA16D775E000F523B3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		28EAA4CD16D775E000F523B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		28EAA4D016D775E000F523B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		28EAA4D216D775E000F523B3 /* EurukoMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EurukoMasterViewController.h; sourceTree = "<group>"; };
+		28EAA4D316D775E000F523B3 /* EurukoMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EurukoMasterViewController.m; sourceTree = "<group>"; };
+		28EAA4D516D775E000F523B3 /* EurukoDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EurukoDetailViewController.h; sourceTree = "<group>"; };
+		28EAA4D616D775E000F523B3 /* EurukoDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EurukoDetailViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		28EAA4AE16D775DF00F523B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28EAA4B516D775DF00F523B3 /* UIKit.framework in Frameworks */,
+				28EAA4B716D775DF00F523B3 /* Foundation.framework in Frameworks */,
+				28EAA4B916D775DF00F523B3 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		28EAA4A816D775DF00F523B3 = {
+			isa = PBXGroup;
+			children = (
+				28EAA4BA16D775DF00F523B3 /* Euruko2013 */,
+				28EAA4B316D775DF00F523B3 /* Frameworks */,
+				28EAA4B216D775DF00F523B3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		28EAA4B216D775DF00F523B3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				28EAA4B116D775DF00F523B3 /* Euruko2013.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28EAA4B316D775DF00F523B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28EAA4B416D775DF00F523B3 /* UIKit.framework */,
+				28EAA4B616D775DF00F523B3 /* Foundation.framework */,
+				28EAA4B816D775DF00F523B3 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		28EAA4BA16D775DF00F523B3 /* Euruko2013 */ = {
+			isa = PBXGroup;
+			children = (
+				28EAA4C316D775E000F523B3 /* EurukoAppDelegate.h */,
+				28EAA4C416D775E000F523B3 /* EurukoAppDelegate.m */,
+				28EAA4CC16D775E000F523B3 /* MainStoryboard_iPhone.storyboard */,
+				28EAA4CF16D775E000F523B3 /* MainStoryboard_iPad.storyboard */,
+				28EAA4D216D775E000F523B3 /* EurukoMasterViewController.h */,
+				28EAA4D316D775E000F523B3 /* EurukoMasterViewController.m */,
+				28EAA4D516D775E000F523B3 /* EurukoDetailViewController.h */,
+				28EAA4D616D775E000F523B3 /* EurukoDetailViewController.m */,
+				28EAA4BB16D775E000F523B3 /* Supporting Files */,
+			);
+			path = Euruko2013;
+			sourceTree = "<group>";
+		};
+		28EAA4BB16D775E000F523B3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				28EAA4BC16D775E000F523B3 /* Euruko2013-Info.plist */,
+				28EAA4BD16D775E000F523B3 /* InfoPlist.strings */,
+				28EAA4C016D775E000F523B3 /* main.m */,
+				28EAA4C216D775E000F523B3 /* Euruko2013-Prefix.pch */,
+				28EAA4C616D775E000F523B3 /* Default.png */,
+				28EAA4C816D775E000F523B3 /* Default@2x.png */,
+				28EAA4CA16D775E000F523B3 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		28EAA4B016D775DF00F523B3 /* Euruko2013 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28EAA4DA16D775E000F523B3 /* Build configuration list for PBXNativeTarget "Euruko2013" */;
+			buildPhases = (
+				28EAA4AD16D775DF00F523B3 /* Sources */,
+				28EAA4AE16D775DF00F523B3 /* Frameworks */,
+				28EAA4AF16D775DF00F523B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Euruko2013;
+			productName = Euruko2013;
+			productReference = 28EAA4B116D775DF00F523B3 /* Euruko2013.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		28EAA4A916D775DF00F523B3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Euruko;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Codigia;
+			};
+			buildConfigurationList = 28EAA4AC16D775DF00F523B3 /* Build configuration list for PBXProject "Euruko2013" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 28EAA4A816D775DF00F523B3;
+			productRefGroup = 28EAA4B216D775DF00F523B3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				28EAA4B016D775DF00F523B3 /* Euruko2013 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		28EAA4AF16D775DF00F523B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28EAA4BF16D775E000F523B3 /* InfoPlist.strings in Resources */,
+				28EAA4C716D775E000F523B3 /* Default.png in Resources */,
+				28EAA4C916D775E000F523B3 /* Default@2x.png in Resources */,
+				28EAA4CB16D775E000F523B3 /* Default-568h@2x.png in Resources */,
+				28EAA4CE16D775E000F523B3 /* MainStoryboard_iPhone.storyboard in Resources */,
+				28EAA4D116D775E000F523B3 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28EAA4AD16D775DF00F523B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28EAA4C116D775E000F523B3 /* main.m in Sources */,
+				28EAA4C516D775E000F523B3 /* EurukoAppDelegate.m in Sources */,
+				28EAA4D416D775E000F523B3 /* EurukoMasterViewController.m in Sources */,
+				28EAA4D716D775E000F523B3 /* EurukoDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		28EAA4BD16D775E000F523B3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28EAA4BE16D775E000F523B3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		28EAA4CC16D775E000F523B3 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28EAA4CD16D775E000F523B3 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		28EAA4CF16D775E000F523B3 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28EAA4D016D775E000F523B3 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		28EAA4D816D775E000F523B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		28EAA4D916D775E000F523B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		28EAA4DB16D775E000F523B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Euruko2013/Euruko2013-Prefix.pch";
+				INFOPLIST_FILE = "Euruko2013/Euruko2013-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		28EAA4DC16D775E000F523B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Euruko2013/Euruko2013-Prefix.pch";
+				INFOPLIST_FILE = "Euruko2013/Euruko2013-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		28EAA4AC16D775DF00F523B3 /* Build configuration list for PBXProject "Euruko2013" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28EAA4D816D775E000F523B3 /* Debug */,
+				28EAA4D916D775E000F523B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28EAA4DA16D775E000F523B3 /* Build configuration list for PBXNativeTarget "Euruko2013" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28EAA4DB16D775E000F523B3 /* Debug */,
+				28EAA4DC16D775E000F523B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 28EAA4A916D775DF00F523B3 /* Project object */;
+}
