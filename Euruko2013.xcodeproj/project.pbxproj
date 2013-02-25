@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28CDA2A916DA95E200B87D75 /* IIViewDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CDA2A616DA95E200B87D75 /* IIViewDeckController.m */; };
+		28CDA2AD16DA963A00B87D75 /* EurukoSidemenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CDA2AC16DA963A00B87D75 /* EurukoSidemenuVC.m */; };
+		28CDA2B016DB4EF000B87D75 /* EurukoMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CDA2AF16DB4EF000B87D75 /* EurukoMainVC.m */; };
+		28CDA2B516DB5BF900B87D75 /* IISideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CDA2B216DB5BF900B87D75 /* IISideController.m */; };
+		28CDA2B616DB5BF900B87D75 /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CDA2B416DB5BF900B87D75 /* IIWrapController.m */; };
+		28CDA2B816DB5D3200B87D75 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28CDA2B716DB5D3200B87D75 /* QuartzCore.framework */; };
 		28EAA4B516D775DF00F523B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28EAA4B416D775DF00F523B3 /* UIKit.framework */; };
 		28EAA4B716D775DF00F523B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28EAA4B616D775DF00F523B3 /* Foundation.framework */; };
 		28EAA4B916D775DF00F523B3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28EAA4B816D775DF00F523B3 /* CoreGraphics.framework */; };
@@ -23,6 +29,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28CDA2A516DA95E200B87D75 /* IIViewDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IIViewDeckController.h; path = ViewDeck/IIViewDeckController.h; sourceTree = SOURCE_ROOT; };
+		28CDA2A616DA95E200B87D75 /* IIViewDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IIViewDeckController.m; path = ViewDeck/IIViewDeckController.m; sourceTree = SOURCE_ROOT; };
+		28CDA2AB16DA963A00B87D75 /* EurukoSidemenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EurukoSidemenuVC.h; sourceTree = "<group>"; };
+		28CDA2AC16DA963A00B87D75 /* EurukoSidemenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EurukoSidemenuVC.m; sourceTree = "<group>"; };
+		28CDA2AE16DB4EF000B87D75 /* EurukoMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EurukoMainVC.h; sourceTree = "<group>"; };
+		28CDA2AF16DB4EF000B87D75 /* EurukoMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EurukoMainVC.m; sourceTree = "<group>"; };
+		28CDA2B116DB5BF900B87D75 /* IISideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IISideController.h; path = ViewDeck/IISideController.h; sourceTree = SOURCE_ROOT; };
+		28CDA2B216DB5BF900B87D75 /* IISideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IISideController.m; path = ViewDeck/IISideController.m; sourceTree = SOURCE_ROOT; };
+		28CDA2B316DB5BF900B87D75 /* IIWrapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IIWrapController.h; path = ViewDeck/IIWrapController.h; sourceTree = SOURCE_ROOT; };
+		28CDA2B416DB5BF900B87D75 /* IIWrapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IIWrapController.m; path = ViewDeck/IIWrapController.m; sourceTree = SOURCE_ROOT; };
+		28CDA2B716DB5D3200B87D75 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		28EAA4B116D775DF00F523B3 /* Euruko2013.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Euruko2013.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28EAA4B416D775DF00F523B3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		28EAA4B616D775DF00F523B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -49,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28CDA2B816DB5D3200B87D75 /* QuartzCore.framework in Frameworks */,
 				28EAA4B516D775DF00F523B3 /* UIKit.framework in Frameworks */,
 				28EAA4B716D775DF00F523B3 /* Foundation.framework in Frameworks */,
 				28EAA4B916D775DF00F523B3 /* CoreGraphics.framework in Frameworks */,
@@ -78,6 +96,7 @@
 		28EAA4B316D775DF00F523B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				28CDA2B716DB5D3200B87D75 /* QuartzCore.framework */,
 				28EAA4B416D775DF00F523B3 /* UIKit.framework */,
 				28EAA4B616D775DF00F523B3 /* Foundation.framework */,
 				28EAA4B816D775DF00F523B3 /* CoreGraphics.framework */,
@@ -92,10 +111,15 @@
 				28EAA4C416D775E000F523B3 /* EurukoAppDelegate.m */,
 				28EAA4CC16D775E000F523B3 /* MainStoryboard_iPhone.storyboard */,
 				28EAA4CF16D775E000F523B3 /* MainStoryboard_iPad.storyboard */,
+				28CDA2AE16DB4EF000B87D75 /* EurukoMainVC.h */,
+				28CDA2AF16DB4EF000B87D75 /* EurukoMainVC.m */,
+				28CDA2AB16DA963A00B87D75 /* EurukoSidemenuVC.h */,
+				28CDA2AC16DA963A00B87D75 /* EurukoSidemenuVC.m */,
 				28EAA4D216D775E000F523B3 /* EurukoMasterViewController.h */,
 				28EAA4D316D775E000F523B3 /* EurukoMasterViewController.m */,
 				28EAA4D516D775E000F523B3 /* EurukoDetailViewController.h */,
 				28EAA4D616D775E000F523B3 /* EurukoDetailViewController.m */,
+				28EAA4DD16DA928000F523B3 /* Libs */,
 				28EAA4BB16D775E000F523B3 /* Supporting Files */,
 			);
 			path = Euruko2013;
@@ -113,6 +137,27 @@
 				28EAA4CA16D775E000F523B3 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		28EAA4DD16DA928000F523B3 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				28EAA4DE16DA928800F523B3 /* ViewDeck */,
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
+		28EAA4DE16DA928800F523B3 /* ViewDeck */ = {
+			isa = PBXGroup;
+			children = (
+				28CDA2B116DB5BF900B87D75 /* IISideController.h */,
+				28CDA2B216DB5BF900B87D75 /* IISideController.m */,
+				28CDA2B316DB5BF900B87D75 /* IIWrapController.h */,
+				28CDA2B416DB5BF900B87D75 /* IIWrapController.m */,
+				28CDA2A516DA95E200B87D75 /* IIViewDeckController.h */,
+				28CDA2A616DA95E200B87D75 /* IIViewDeckController.m */,
+			);
+			name = ViewDeck;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +232,11 @@
 				28EAA4C516D775E000F523B3 /* EurukoAppDelegate.m in Sources */,
 				28EAA4D416D775E000F523B3 /* EurukoMasterViewController.m in Sources */,
 				28EAA4D716D775E000F523B3 /* EurukoDetailViewController.m in Sources */,
+				28CDA2A916DA95E200B87D75 /* IIViewDeckController.m in Sources */,
+				28CDA2AD16DA963A00B87D75 /* EurukoSidemenuVC.m in Sources */,
+				28CDA2B016DB4EF000B87D75 /* EurukoMainVC.m in Sources */,
+				28CDA2B516DB5BF900B87D75 /* IISideController.m in Sources */,
+				28CDA2B616DB5BF900B87D75 /* IIWrapController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +334,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Euruko2013/Euruko2013-Prefix.pch";
 				INFOPLIST_FILE = "Euruko2013/Euruko2013-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -295,6 +348,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Euruko2013/Euruko2013-Prefix.pch";
 				INFOPLIST_FILE = "Euruko2013/Euruko2013-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
