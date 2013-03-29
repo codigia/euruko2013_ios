@@ -50,8 +50,8 @@
   [tableView deselectRowAtIndexPath:indexPath animated:YES];
   // Perform Menu Item action
   switch (indexPath.row) {
-      // Show Dashboard Menu item
-    case 1:
+      // News Menu item
+    case 0:
       // Rooms Menu item
     case 2:
       // Maps Menu item

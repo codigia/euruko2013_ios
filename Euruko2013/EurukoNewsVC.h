@@ -10,8 +10,10 @@
 
 @class EurukoDetailViewController;
 
-@interface EurukoMasterViewController : UITableViewController
+@interface EurukoNewsVC : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
-@property (strong, nonatomic) EurukoDetailViewController *detailViewController;
+@property (weak, nonatomic) IBOutlet UIButton *menuBtn;
+
+- (IBAction)showSidemenu:(id)sender;
 
 @end
