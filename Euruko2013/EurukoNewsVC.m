@@ -50,7 +50,6 @@
 {
 	static NSString *CellIdentifier = @"NewsCell";
 	
-	// Fetch RoomMsg according indexPath
   NSDictionary *newsArticle = [self.newsContent objectAtIndex:indexPath.row];
 	
 	UICollectionViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];

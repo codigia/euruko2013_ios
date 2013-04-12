@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		289013A8171808E20006FB9D /* EurukoSpeakersVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 289013A7171808E20006FB9D /* EurukoSpeakersVC.m */; };
+		289013AC17183C390006FB9D /* spk01.png in Resources */ = {isa = PBXBuildFile; fileRef = 289013A917183C390006FB9D /* spk01.png */; };
+		289013AD17183C390006FB9D /* spk02.png in Resources */ = {isa = PBXBuildFile; fileRef = 289013AA17183C390006FB9D /* spk02.png */; };
+		289013AE17183C390006FB9D /* spk03.png in Resources */ = {isa = PBXBuildFile; fileRef = 289013AB17183C390006FB9D /* spk03.png */; };
 		28BDAFE11705C82F0024A65B /* logo_title.png in Resources */ = {isa = PBXBuildFile; fileRef = 28BDAFE01705C82F0024A65B /* logo_title.png */; };
 		28BDAFE31705D7B40024A65B /* nav_news.png in Resources */ = {isa = PBXBuildFile; fileRef = 28BDAFE21705D7B40024A65B /* nav_news.png */; };
 		28BDAFE51705DADC0024A65B /* menubutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 28BDAFE41705DADC0024A65B /* menubutton.png */; };
@@ -33,6 +37,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		289013A6171808E20006FB9D /* EurukoSpeakersVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EurukoSpeakersVC.h; sourceTree = "<group>"; };
+		289013A7171808E20006FB9D /* EurukoSpeakersVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EurukoSpeakersVC.m; sourceTree = "<group>"; };
+		289013A917183C390006FB9D /* spk01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spk01.png; path = Gfx/spk01.png; sourceTree = SOURCE_ROOT; };
+		289013AA17183C390006FB9D /* spk02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spk02.png; path = Gfx/spk02.png; sourceTree = SOURCE_ROOT; };
+		289013AB17183C390006FB9D /* spk03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spk03.png; path = Gfx/spk03.png; sourceTree = SOURCE_ROOT; };
 		28BDAFE01705C82F0024A65B /* logo_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_title.png; path = Gfx/logo_title.png; sourceTree = SOURCE_ROOT; };
 		28BDAFE21705D7B40024A65B /* nav_news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nav_news.png; path = Gfx/nav_news.png; sourceTree = SOURCE_ROOT; };
 		28BDAFE41705DADC0024A65B /* menubutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menubutton.png; path = Gfx/menubutton.png; sourceTree = SOURCE_ROOT; };
@@ -87,6 +96,9 @@
 		28BDAFDF1705B5AD0024A65B /* Gfx */ = {
 			isa = PBXGroup;
 			children = (
+				289013A917183C390006FB9D /* spk01.png */,
+				289013AA17183C390006FB9D /* spk02.png */,
+				289013AB17183C390006FB9D /* spk03.png */,
 				28BDAFE61705FC050024A65B /* newspaper.png */,
 				28BDAFE41705DADC0024A65B /* menubutton.png */,
 				28BDAFE21705D7B40024A65B /* nav_news.png */,
@@ -136,6 +148,8 @@
 				28CDA2AC16DA963A00B87D75 /* EurukoSidemenuVC.m */,
 				28EAA4D216D775E000F523B3 /* EurukoNewsVC.h */,
 				28EAA4D316D775E000F523B3 /* EurukoNewsVC.m */,
+				289013A6171808E20006FB9D /* EurukoSpeakersVC.h */,
+				289013A7171808E20006FB9D /* EurukoSpeakersVC.m */,
 				28EAA4D516D775E000F523B3 /* EurukoDetailViewController.h */,
 				28EAA4D616D775E000F523B3 /* EurukoDetailViewController.m */,
 				28BDAFDF1705B5AD0024A65B /* Gfx */,
@@ -242,6 +256,9 @@
 				28BDAFE31705D7B40024A65B /* nav_news.png in Resources */,
 				28BDAFE51705DADC0024A65B /* menubutton.png in Resources */,
 				28BDAFE71705FC050024A65B /* newspaper.png in Resources */,
+				289013AC17183C390006FB9D /* spk01.png in Resources */,
+				289013AD17183C390006FB9D /* spk02.png in Resources */,
+				289013AE17183C390006FB9D /* spk03.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +278,7 @@
 				28CDA2B016DB4EF000B87D75 /* EurukoMainVC.m in Sources */,
 				28CDA2B516DB5BF900B87D75 /* IISideController.m in Sources */,
 				28CDA2B616DB5BF900B87D75 /* IIWrapController.m in Sources */,
+				289013A8171808E20006FB9D /* EurukoSpeakersVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
