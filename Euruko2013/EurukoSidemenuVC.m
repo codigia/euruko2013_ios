@@ -52,11 +52,15 @@
   switch (indexPath.row) {
       // News Menu item
     case 0:
-      // Rooms Menu item
+      // Calendar Menu item
+    case 1:
+      // Speakers Menu item
     case 2:
-      // Maps Menu item
+      // Twitter Menu item
+    case 3:
+      // Map Menu item
     case 4:
-      // Logout Menu item
+      // About Menu item
     case 5:
       [self closeMenuAndPerformAction:indexPath.row];
       break;

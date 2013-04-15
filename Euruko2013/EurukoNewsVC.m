@@ -8,7 +8,6 @@
 
 #import "EurukoNewsVC.h"
 #import "IIViewDeckController.h"
-#import "EurukoDetailViewController.h"
 
 @interface EurukoNewsVC ()
 

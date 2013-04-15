@@ -8,6 +8,8 @@
 
 #import "EurukoMainVC.h"
 #import "EurukoSidemenuVC.h"
+#import "EurukoNewsVC.h"
+#import "EurukoSpeakersVC.h"
 
 @interface EurukoMainVC () <EurukoSidemenuViewControllerDelegate>
 
@@ -36,6 +38,36 @@
     // Dispose of any resources that can be recreated.
 }
 
+// Menu Item: News
+- (void)showNews {
+  if ([self.topViewController isKindOfClass:[EurukoNewsVC class]])
+    return;
+  
+  for (UIViewController *theVC in self.viewControllers) {
+    if ([theVC isKindOfClass:[EurukoNewsVC class]]) {
+      [self popToViewController:theVC animated:NO];
+      return;
+    }
+  }
+}
+
+// Menu Item: Speakers
+- (void)showSpeakers {
+  if ([self.topViewController isKindOfClass:[EurukoSpeakersVC class]])
+    return;
+  
+  for (UIViewController *theVC in self.viewControllers) {
+    if ([theVC isKindOfClass:[EurukoSpeakersVC class]]) {
+      [self popToViewController:theVC animated:NO];
+      return;
+    }
+  }
+
+  UIStoryboard *storyboard = self.storyboard;
+  EurukoSpeakersVC *spkVC = (EurukoSpeakersVC *)[storyboard instantiateViewControllerWithIdentifier:@"speakersViewController"];
+  [self pushViewController:spkVC animated:NO];
+}
+
 /*!
  @method
  @abstract
@@ -47,25 +79,23 @@
   
   // Perform Menu Item action
   switch (menuItemId) {
-      // Show Profile Menu item
-    case 1:
-      //[self showDashboard];
+      // Show News Menu item
+    case 0:
+      [self showNews];
       break;
       
-      // Rooms Menu item
+      // Speakers Menu item
     case 2:
-      //[self showRoomList];
+      [self showSpeakers];
       break;
       
-      // Maps Menu item
+      
     case 4:
-      //[self showMap];
+      
       break;
       
-      // Logout Menu item
     case 5:
-      //[self popToRootViewControllerAnimated:NO];
-      //[self logOut];
+      
       break;
       
     default:
