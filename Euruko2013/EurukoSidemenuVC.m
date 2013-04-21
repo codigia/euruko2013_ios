@@ -52,7 +52,7 @@
   switch (indexPath.row) {
       // News Menu item
     case 0:
-      // Calendar Menu item
+      // Agenda Menu item
     case 1:
       // Speakers Menu item
     case 2:

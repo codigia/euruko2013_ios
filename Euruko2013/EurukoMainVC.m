@@ -9,6 +9,7 @@
 #import "EurukoMainVC.h"
 #import "EurukoSidemenuVC.h"
 #import "EurukoNewsVC.h"
+#import "EurukoAgendaVC.h"
 #import "EurukoSpeakersVC.h"
 
 @interface EurukoMainVC () <EurukoSidemenuViewControllerDelegate>
@@ -51,6 +52,23 @@
   }
 }
 
+// Menu Item: Agenda
+- (void)showAgenda {
+  if ([self.topViewController isKindOfClass:[EurukoAgendaVC class]])
+    return;
+  
+  for (UIViewController *theVC in self.viewControllers) {
+    if ([theVC isKindOfClass:[EurukoAgendaVC class]]) {
+      [self popToViewController:theVC animated:NO];
+      return;
+    }
+  }
+  
+  UIStoryboard *storyboard = self.storyboard;
+  EurukoAgendaVC *spkVC = (EurukoAgendaVC *)[storyboard instantiateViewControllerWithIdentifier:@"agendaViewController"];
+  [self pushViewController:spkVC animated:NO];
+}
+
 // Menu Item: Speakers
 - (void)showSpeakers {
   if ([self.topViewController isKindOfClass:[EurukoSpeakersVC class]])
@@ -82,6 +100,11 @@
       // Show News Menu item
     case 0:
       [self showNews];
+      break;
+      
+      // Show News Menu item
+    case 1:
+      [self showAgenda];
       break;
       
       // Speakers Menu item

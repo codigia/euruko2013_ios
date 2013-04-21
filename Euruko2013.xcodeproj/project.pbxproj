@@ -23,6 +23,8 @@
 		28CDA2B516DB5BF900B87D75 /* IISideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CDA2B216DB5BF900B87D75 /* IISideController.m */; };
 		28CDA2B616DB5BF900B87D75 /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CDA2B416DB5BF900B87D75 /* IIWrapController.m */; };
 		28CDA2B816DB5D3200B87D75 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28CDA2B716DB5D3200B87D75 /* QuartzCore.framework */; };
+		28E716C41723E97E00341090 /* agenda_item.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E716C31723E97E00341090 /* agenda_item.png */; };
+		28E716C71723F74100341090 /* EurukoAgendaVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E716C61723F74100341090 /* EurukoAgendaVC.m */; };
 		28EAA4B516D775DF00F523B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28EAA4B416D775DF00F523B3 /* UIKit.framework */; };
 		28EAA4B716D775DF00F523B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28EAA4B616D775DF00F523B3 /* Foundation.framework */; };
 		28EAA4B916D775DF00F523B3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28EAA4B816D775DF00F523B3 /* CoreGraphics.framework */; };
@@ -61,6 +63,9 @@
 		28CDA2B316DB5BF900B87D75 /* IIWrapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IIWrapController.h; path = ViewDeck/IIWrapController.h; sourceTree = SOURCE_ROOT; };
 		28CDA2B416DB5BF900B87D75 /* IIWrapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IIWrapController.m; path = ViewDeck/IIWrapController.m; sourceTree = SOURCE_ROOT; };
 		28CDA2B716DB5D3200B87D75 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		28E716C31723E97E00341090 /* agenda_item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = agenda_item.png; path = Gfx/agenda_item.png; sourceTree = SOURCE_ROOT; };
+		28E716C51723F74100341090 /* EurukoAgendaVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EurukoAgendaVC.h; sourceTree = "<group>"; };
+		28E716C61723F74100341090 /* EurukoAgendaVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EurukoAgendaVC.m; sourceTree = "<group>"; };
 		28EAA4B116D775DF00F523B3 /* Euruko2013.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Euruko2013.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28EAA4B416D775DF00F523B3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		28EAA4B616D775DF00F523B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -100,6 +105,7 @@
 		28BDAFDF1705B5AD0024A65B /* Gfx */ = {
 			isa = PBXGroup;
 			children = (
+				28E716C31723E97E00341090 /* agenda_item.png */,
 				289013B4172187640006FB9D /* vertical_line.png */,
 				289013AF1718926E0006FB9D /* nav_speakers.png */,
 				289013A917183C390006FB9D /* spk01.png */,
@@ -154,6 +160,8 @@
 				28CDA2AC16DA963A00B87D75 /* EurukoSidemenuVC.m */,
 				28EAA4D216D775E000F523B3 /* EurukoNewsVC.h */,
 				28EAA4D316D775E000F523B3 /* EurukoNewsVC.m */,
+				28E716C51723F74100341090 /* EurukoAgendaVC.h */,
+				28E716C61723F74100341090 /* EurukoAgendaVC.m */,
 				289013A6171808E20006FB9D /* EurukoSpeakersVC.h */,
 				289013A7171808E20006FB9D /* EurukoSpeakersVC.m */,
 				28EAA4D516D775E000F523B3 /* EurukoDetailViewController.h */,
@@ -267,6 +275,7 @@
 				289013AE17183C390006FB9D /* spk03.png in Resources */,
 				289013B01718926E0006FB9D /* nav_speakers.png in Resources */,
 				289013B5172187650006FB9D /* vertical_line.png in Resources */,
+				28E716C41723E97E00341090 /* agenda_item.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +296,7 @@
 				28CDA2B516DB5BF900B87D75 /* IISideController.m in Sources */,
 				28CDA2B616DB5BF900B87D75 /* IIWrapController.m in Sources */,
 				289013A8171808E20006FB9D /* EurukoSpeakersVC.m in Sources */,
+				28E716C71723F74100341090 /* EurukoAgendaVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +398,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -402,6 +413,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

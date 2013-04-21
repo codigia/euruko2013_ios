@@ -1,21 +1,22 @@
 //
-//  EurukoSpeakersVC.m
+//  EurukoAgendaVC.m
 //  Euruko2013
 //
-//  Created by George Paloukis on 12/4/13.
+//  Created by George Paloukis on 21/4/13.
 //  Copyright (c) 2013 Codigia. All rights reserved.
 //
 
-#import "EurukoSpeakersVC.h"
+#import "EurukoAgendaVC.h"
 #import "IIViewDeckController.h"
 
-@interface EurukoSpeakersVC ()
+@interface EurukoAgendaVC ()
 
+@property (nonatomic) NSArray *agendaContent;
 @property (nonatomic) NSArray *speaksContent;
 
 @end
 
-@implementation EurukoSpeakersVC
+@implementation EurukoAgendaVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,12 +32,35 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 //  {
-//    "id" : "Matz",
-//    "name" : "Yukihiro 'Matz' Matsumoto",
-//    "title" : "Ruby Chief Architect",
-//    "bio" : "... bio string, HTML formatting ...",
-//    "avatar" : "...URL of the image ..."
+//    "start" : 1349619316,
+//    "end" : 1349621416,
+//    "speaker_id" : "Matz",
+//    "title" : "Keynote",
+//    "descr" : "This will rock your world! HTML formatting",
+//  },
+//  {
+//    "start" : 1349700616,
+//    "end" : 1349704216,
+//    "title" : "Lunch break",
+//    "descr" : "Eat as much as you can! HTML formatting",
 //  }
+  // Static creation of Speakers content
+  self.agendaContent = @[@{@"start": @"1372415400",
+                           @"end": @"1372415400",
+                           @"speaker_id": @"Matz",
+                           @"title": @"Ruby dev! The \"Why\" and the \"How\"!",
+                           @"descr": @"This will rock your world! HTML formatting."},
+                         @{@"start": @"1372419300",
+                           @"end": @"1372419300",
+                           @"speaker_id": @"Koichi",
+                           @"title": @"The Ruby Keynote",
+                           @"descr": @"This will keynote your world! HTML formatting."},
+                         @{@"start": @"1372441500",
+                           @"end": @"1372441500",
+                           @"speaker_id": @"Klabnik",
+                           @"title": @"Time Travel with Ruby",
+                           @"descr": @"This will travel your world! HTML formatting."}];
+  
   // Static creation of Speakers content
   self.speaksContent = @[@{@"id": @"Matz",
                            @"name": @"Yukihiro “Matz” Matsumoto",
@@ -64,26 +88,40 @@
 #pragma mark - Collection view data source
 - (NSInteger)collectionView:(UICollectionView *)cv numberOfItemsInSection:(NSInteger)section;
 {
-  return self.speaksContent.count;
+  return self.agendaContent.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath;
 {
-	static NSString *CellIdentifier = @"SpeakerCell";
+	static NSString *CellIdentifier = @"AgendaCell";
 	
-  NSDictionary *speakerData = [self.speaksContent objectAtIndex:indexPath.row];
-	
+  NSDictionary *agendaData = [self.agendaContent objectAtIndex:indexPath.row];
+	NSDictionary *spkData = @{@"name": @"Unknown Speaker!"};
+  for (NSDictionary *aSpkData in self.speaksContent) {
+    if ([[aSpkData objectForKey:@"id"] isEqualToString:[agendaData objectForKey:@"speaker_id"]]) {
+      spkData = aSpkData;
+      break;
+    }
+  }
+  
 	UICollectionViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
 	
 	// Configure Cell
-	UILabel *spkLbl = (UILabel *)[cell viewWithTag:1];
-  spkLbl.text = [speakerData objectForKey:@"name"];
+	UILabel *sphLbl = (UILabel *)[cell viewWithTag:1];
+  sphLbl.text = [agendaData objectForKey:@"title"];
   
-  spkLbl = (UILabel *)[cell viewWithTag:2];
-  spkLbl.text = [speakerData objectForKey:@"title"];
+  sphLbl = (UILabel *)[cell viewWithTag:3];
+  sphLbl.text = [spkData objectForKey:@"name"];
   
-  UIImageView *spkAvatar = (UIImageView *)[cell viewWithTag:3];
-  spkAvatar.image = [UIImage imageNamed:[speakerData objectForKey:@"avatar"]];
+  UIImageView *spkAvatar = (UIImageView *)[cell viewWithTag:2];
+  spkAvatar.image = [UIImage imageNamed:[spkData objectForKey:@"avatar"]];
+  
+  sphLbl = (UILabel *)[cell viewWithTag:4];
+  NSDate *startTime = [NSDate dateWithTimeIntervalSince1970:[[agendaData objectForKey:@"start"] doubleValue]];
+  NSLocale *locale = [NSLocale currentLocale];
+  NSString *dateComponents = @"HH:mm";
+
+  //sphLbl.text = [NSDateFormatter dateFormatFromTemplate:dateComponents options:0 locale:locale];
   
 	return cell;
 }
