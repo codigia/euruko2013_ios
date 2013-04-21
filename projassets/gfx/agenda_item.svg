@@ -16,7 +16,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.2 r9819"
-   sodipodi:docname="agenda_item.svg">
+   sodipodi:docname="agenda_item.svg"
+   inkscape:export-filename="/prj/codigia/Euruko2013/Gfx/agenda_item.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
      id="defs4">
     <linearGradient
@@ -166,8 +169,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="224.66667"
-     inkscape:cy="66.666667"
+     inkscape:cx="207.66667"
+     inkscape:cy="106.66667"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -210,8 +213,8 @@
        sodipodi:nodetypes="cc"
        inkscape:transform-center-y="1.2222222" />
     <path
-       style="fill:none;stroke:#cccccc;stroke-width:4.69772434;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3;stroke-opacity:1;stroke-dasharray:4.69772436, 4.69772436;stroke-dashoffset:0.93954487"
-       d="m 61,932.07441 c 0,119.17049 0,118.28779 0,118.28779"
+       style="fill:none;stroke:#cccccc;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3;stroke-opacity:1;stroke-dasharray:5,5;stroke-dashoffset:25.5"
+       d="m 61,931.09679 c 0,125.09651 0,124.16991 0,124.16991"
        id="path3801"
        inkscape:connector-curvature="0" />
     <path
@@ -225,11 +228,10 @@
        d="m 113,82.5 a 51.5,42.5 0 1 1 -103,0 51.5,42.5 0 1 1 103,0 z"
        transform="translate(0,800.36218)" />
     <path
-       style="fill:none;stroke:#cccccc;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:3;stroke-dasharray:5, 5;stroke-dashoffset:0"
-       d="M 61,30 C 61,2 61,1 61,1"
+       style="fill:none;stroke:#cccccc;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3;stroke-opacity:1;stroke-dasharray:5,5;stroke-dashoffset:0"
+       d="m 61,832.36218 c 0,-32.47262 0,-33.63235 0,-33.63235"
        id="path5308"
-       inkscape:connector-curvature="0"
-       transform="translate(0,802.36218)" />
+       inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:url(#linearGradient5574);stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        d="m 140,160 c 170,0 170,0 170,0"
