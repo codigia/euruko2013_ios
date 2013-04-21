@@ -219,16 +219,19 @@
        inkscape:connector-curvature="0" />
     <path
        sodipodi:type="arc"
-       style="fill:none;stroke:#cccccc;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:3;stroke-dasharray:5, 5;stroke-dashoffset:1"
+       style="fill:none;stroke:#cccccc;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:3;stroke-dasharray:5,5;stroke-dashoffset:5"
        id="path5251"
        sodipodi:cx="61.5"
        sodipodi:cy="82.5"
        sodipodi:rx="51.5"
        sodipodi:ry="42.5"
-       d="m 113,82.5 a 51.5,42.5 0 1 1 -103,0 51.5,42.5 0 1 1 103,0 z"
-       transform="translate(0,800.36218)" />
+       d="m 61.017067,124.99813 a 51.5,42.5 0 1 1 0.594479,0.002"
+       transform="translate(0,800.36218)"
+       sodipodi:start="1.5801738"
+       sodipodi:end="7.8518157"
+       sodipodi:open="true" />
     <path
-       style="fill:none;stroke:#cccccc;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3;stroke-opacity:1;stroke-dasharray:5,5;stroke-dashoffset:0"
+       style="fill:none;stroke:#cccccc;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3;stroke-opacity:1;stroke-dasharray:5,5;stroke-dashoffset:8.5"
        d="m 61,832.36218 c 0,-32.47262 0,-33.63235 0,-33.63235"
        id="path5308"
        inkscape:connector-curvature="0" />
