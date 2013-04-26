@@ -532,7 +532,7 @@
                                     <outlet property="delegate" destination="G3y-R6-zXR" id="4pl-Z4-Va5"/>
                                 </connections>
                             </collectionView>
-                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" image="nav_speakers.png" translatesAutoresizingMaskIntoConstraints="NO" id="ib5-aY-3W6">
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" image="nav_agenda.png" translatesAutoresizingMaskIntoConstraints="NO" id="ib5-aY-3W6">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="o2Q-th-fYh"/>
                                 </constraints>
@@ -568,6 +568,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="s8J-Ox-jP3"/>
                     <connections>
+                        <outlet property="agendaCollView" destination="zia-Be-cMd" id="GSm-pW-HCl"/>
                         <outlet property="menuBtn" destination="Otn-Qd-LLQ" id="hxu-P5-lba"/>
                     </connections>
                 </viewController>
@@ -580,52 +581,12 @@
         <image name="agenda_item.png" width="640" height="250"/>
         <image name="logo_title.png" width="640" height="200"/>
         <image name="menubutton.png" width="76" height="76"/>
+        <image name="nav_agenda.png" width="640" height="98"/>
         <image name="nav_news.png" width="640" height="98"/>
         <image name="nav_speakers.png" width="640" height="98"/>
         <image name="spk01.png" width="214" height="214"/>
         <image name="vertical_line.png" width="8" height="100"/>
     </resources>
-    <classes>
-        <class className="EurukoAgendaVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoAgendaVC.h"/>
-            <relationships>
-                <relationship kind="action" name="showSidemenu:"/>
-                <relationship kind="outlet" name="menuBtn" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="EurukoMainVC" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoMainVC.h"/>
-        </class>
-        <class className="EurukoNewsVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoNewsVC.h"/>
-            <relationships>
-                <relationship kind="action" name="showSidemenu:"/>
-                <relationship kind="outlet" name="menuBtn" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="EurukoSidemenuVC" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoSidemenuVC.h"/>
-        </class>
-        <class className="EurukoSpeakersVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoSpeakersVC.h"/>
-            <relationships>
-                <relationship kind="action" name="showSidemenu:"/>
-                <relationship kind="outlet" name="menuBtn" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="UICollectionReusableView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
-        </class>
-        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
-        </class>
-        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

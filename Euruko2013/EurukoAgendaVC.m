@@ -13,6 +13,9 @@
 
 @property (nonatomic) NSArray *agendaContent;
 @property (nonatomic) NSArray *speaksContent;
+@property (nonatomic) NSMutableArray *agendaData;
+
+@property (weak, nonatomic) IBOutlet UICollectionView *agendaCollView;
 
 @end
 
@@ -31,6 +34,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+  self.agendaData = [NSMutableArray arrayWithCapacity:20];
+  
 //  {
 //    "start" : 1349619316,
 //    "end" : 1349621416,
@@ -85,43 +90,73 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+  [self prepareData];
+  [self.agendaCollView reloadData];
+}
+
+#pragma mark - Data processing
+- (void)prepareData {
+  if (self.agendaData.count > 0)
+    [self.agendaData removeAllObjects];
+  
+  for (NSDictionary *aAgendaItem in self.agendaContent) {
+    NSMutableDictionary *theAgendaObj = [NSMutableDictionary dictionaryWithCapacity:5];
+    [theAgendaObj setObject:[aAgendaItem objectForKey:@"start"] forKey:@"start"];
+    [theAgendaObj setObject:[aAgendaItem objectForKey:@"end"] forKey:@"end"];
+    [theAgendaObj setObject:[aAgendaItem objectForKey:@"speaker_id"] forKey:@"speaker_id"];
+    [theAgendaObj setObject:[aAgendaItem objectForKey:@"title"] forKey:@"title"];
+    [theAgendaObj setObject:[aAgendaItem objectForKey:@"descr"] forKey:@"descr"];
+    
+    // References to speaker item
+    for (NSDictionary *aSpkData in self.speaksContent) {
+      if ([[aSpkData objectForKey:@"id"] isEqualToString:[aAgendaItem objectForKey:@"speaker_id"]]) {
+        [theAgendaObj setObject:[aSpkData objectForKey:@"name"] forKey:@"spkName"];
+        [theAgendaObj setObject:[aSpkData objectForKey:@"avatar"] forKey:@"spkAvatar"];
+        break;
+      }
+    }
+    
+    // Time display
+    NSDate *startDate = [NSDate dateWithTimeIntervalSince1970:[[aAgendaItem objectForKey:@"start"] doubleValue]];
+    NSCalendar *gregorian = [[NSCalendar alloc]
+                             initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *timeComponents =
+    [gregorian components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:startDate];
+    [theAgendaObj setObject:[NSString stringWithFormat:@"%d:%d", timeComponents.hour, timeComponents.minute] forKey:@"time"];
+    
+    // Add to array
+    [self.agendaData addObject:theAgendaObj];
+  }
+  
+}
+
 #pragma mark - Collection view data source
 - (NSInteger)collectionView:(UICollectionView *)cv numberOfItemsInSection:(NSInteger)section;
 {
-  return self.agendaContent.count;
+  return self.agendaData.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath;
 {
 	static NSString *CellIdentifier = @"AgendaCell";
 	
-  NSDictionary *agendaData = [self.agendaContent objectAtIndex:indexPath.row];
-	NSDictionary *spkData = @{@"name": @"Unknown Speaker!"};
-  for (NSDictionary *aSpkData in self.speaksContent) {
-    if ([[aSpkData objectForKey:@"id"] isEqualToString:[agendaData objectForKey:@"speaker_id"]]) {
-      spkData = aSpkData;
-      break;
-    }
-  }
+  NSDictionary *agendaItem = [self.agendaData objectAtIndex:indexPath.row];
   
 	UICollectionViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
 	
 	// Configure Cell
 	UILabel *sphLbl = (UILabel *)[cell viewWithTag:1];
-  sphLbl.text = [agendaData objectForKey:@"title"];
+  sphLbl.text = [agendaItem objectForKey:@"title"];
   
   sphLbl = (UILabel *)[cell viewWithTag:3];
-  sphLbl.text = [spkData objectForKey:@"name"];
+  sphLbl.text = [agendaItem objectForKey:@"spkName"];
   
   UIImageView *spkAvatar = (UIImageView *)[cell viewWithTag:2];
-  spkAvatar.image = [UIImage imageNamed:[spkData objectForKey:@"avatar"]];
+  spkAvatar.image = [UIImage imageNamed:[agendaItem objectForKey:@"spkAvatar"]];
   
   sphLbl = (UILabel *)[cell viewWithTag:4];
-  NSDate *startTime = [NSDate dateWithTimeIntervalSince1970:[[agendaData objectForKey:@"start"] doubleValue]];
-  NSLocale *locale = [NSLocale currentLocale];
-  NSString *dateComponents = @"HH:mm";
-
-  //sphLbl.text = [NSDateFormatter dateFormatFromTemplate:dateComponents options:0 locale:locale];
+  sphLbl.text = [agendaItem objectForKey:@"time"];
   
 	return cell;
 }
@@ -132,4 +167,8 @@
   [self.navigationController.viewDeckController toggleLeftViewAnimated:YES];
 }
 
+- (void)viewDidUnload {
+  [self setAgendaCollView:nil];
+  [super viewDidUnload];
+}
 @end
