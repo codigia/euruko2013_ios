@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		28152763172A5F1F0036A7D4 /* nav_agenda.png in Resources */ = {isa = PBXBuildFile; fileRef = 28152762172A5F1F0036A7D4 /* nav_agenda.png */; };
+		28152765172A9E6E0036A7D4 /* disclosure_mark.png in Resources */ = {isa = PBXBuildFile; fileRef = 28152764172A9E6E0036A7D4 /* disclosure_mark.png */; };
 		289013A8171808E20006FB9D /* EurukoSpeakersVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 289013A7171808E20006FB9D /* EurukoSpeakersVC.m */; };
 		289013AC17183C390006FB9D /* spk01.png in Resources */ = {isa = PBXBuildFile; fileRef = 289013A917183C390006FB9D /* spk01.png */; };
 		289013AD17183C390006FB9D /* spk02.png in Resources */ = {isa = PBXBuildFile; fileRef = 289013AA17183C390006FB9D /* spk02.png */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		28152762172A5F1F0036A7D4 /* nav_agenda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nav_agenda.png; path = Gfx/nav_agenda.png; sourceTree = SOURCE_ROOT; };
+		28152764172A9E6E0036A7D4 /* disclosure_mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = disclosure_mark.png; path = Gfx/disclosure_mark.png; sourceTree = SOURCE_ROOT; };
 		289013A6171808E20006FB9D /* EurukoSpeakersVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EurukoSpeakersVC.h; sourceTree = "<group>"; };
 		289013A7171808E20006FB9D /* EurukoSpeakersVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EurukoSpeakersVC.m; sourceTree = "<group>"; };
 		289013A917183C390006FB9D /* spk01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spk01.png; path = Gfx/spk01.png; sourceTree = SOURCE_ROOT; };
@@ -107,6 +109,7 @@
 		28BDAFDF1705B5AD0024A65B /* Gfx */ = {
 			isa = PBXGroup;
 			children = (
+				28152764172A9E6E0036A7D4 /* disclosure_mark.png */,
 				28152762172A5F1F0036A7D4 /* nav_agenda.png */,
 				28E716C31723E97E00341090 /* agenda_item.png */,
 				289013B4172187640006FB9D /* vertical_line.png */,
@@ -280,6 +283,7 @@
 				289013B5172187650006FB9D /* vertical_line.png in Resources */,
 				28E716C41723E97E00341090 /* agenda_item.png in Resources */,
 				28152763172A5F1F0036A7D4 /* nav_agenda.png in Resources */,
+				28152765172A9E6E0036A7D4 /* disclosure_mark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

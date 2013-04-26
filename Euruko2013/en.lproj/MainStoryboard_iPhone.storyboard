@@ -56,10 +56,9 @@
                                                         <constraint firstAttribute="height" constant="50" id="hjJ-07-Dfo"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="News Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7J-Lb-lZg">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="News Title" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="227" translatesAutoresizingMaskIntoConstraints="NO" id="o7J-Lb-lZg">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="240" id="3R0-hm-hjb"/>
-                                                        <constraint firstAttribute="height" constant="21" id="SFa-5p-zW6"/>
+                                                        <constraint firstAttribute="width" constant="227" id="8yq-BH-MrP"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -82,30 +81,28 @@
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="News text description" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="240" translatesAutoresizingMaskIntoConstraints="NO" id="4pJ-9Y-xl4">
+                                                <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" image="disclosure_mark.png" translatesAutoresizingMaskIntoConstraints="NO" id="z00-xh-4uN">
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="3Zz-L0-GMI"/>
+                                                        <constraint firstAttribute="width" constant="15" id="FgY-WB-3cH"/>
+                                                        <constraint firstAttribute="height" constant="15" id="jFE-1f-6ua"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" red="0.86477598852040816" green="0.86477598852040816" blue="0.86477598852040816" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="4pJ-9Y-xl4" firstAttribute="leading" secondItem="35g-8a-NfO" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="7AX-D6-Xvp"/>
                                             <constraint firstItem="o7J-Lb-lZg" firstAttribute="leading" secondItem="35g-8a-NfO" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="93Y-20-fol"/>
-                                            <constraint firstItem="35g-8a-NfO" firstAttribute="leading" secondItem="dKI-HU-6nl" secondAttribute="leading" constant="51" id="9pX-Gc-aAF"/>
-                                            <constraint firstItem="zY2-Pg-bwI" firstAttribute="top" secondItem="dKI-HU-6nl" secondAttribute="top" constant="29" id="DK9-60-77F"/>
                                             <constraint firstItem="zY2-Pg-bwI" firstAttribute="trailing" secondItem="8Rm-hy-jeY" secondAttribute="trailing" type="default" id="DMF-4U-WH8"/>
+                                            <constraint firstItem="zY2-Pg-bwI" firstAttribute="top" secondItem="dKI-HU-6nl" secondAttribute="top" constant="29" id="FmP-Le-X6E"/>
                                             <constraint firstItem="zY2-Pg-bwI" firstAttribute="leading" secondItem="8Rm-hy-jeY" secondAttribute="leading" type="default" id="IAZ-oZ-yzl"/>
+                                            <constraint firstAttribute="trailing" secondItem="z00-xh-4uN" secondAttribute="trailing" constant="7" id="NGO-iO-vKR"/>
                                             <constraint firstItem="o7J-Lb-lZg" firstAttribute="top" secondItem="35g-8a-NfO" secondAttribute="top" type="default" id="OjG-lG-fiL"/>
                                             <constraint firstItem="8Rm-hy-jeY" firstAttribute="top" secondItem="dKI-HU-6nl" secondAttribute="top" constant="8" id="cKz-4y-Xek"/>
-                                            <constraint firstItem="4pJ-9Y-xl4" firstAttribute="trailing" secondItem="o7J-Lb-lZg" secondAttribute="trailing" type="default" id="hoa-WH-rkD"/>
-                                            <constraint firstItem="4pJ-9Y-xl4" firstAttribute="bottom" secondItem="35g-8a-NfO" secondAttribute="bottom" type="default" id="nWU-9n-eAk"/>
-                                            <constraint firstItem="35g-8a-NfO" firstAttribute="centerY" secondItem="dKI-HU-6nl" secondAttribute="centerY" type="default" id="one-JC-2fV"/>
+                                            <constraint firstAttribute="trailing" secondItem="o7J-Lb-lZg" secondAttribute="trailing" constant="20" type="default" id="iaa-Ok-XE0"/>
+                                            <constraint firstItem="o7J-Lb-lZg" firstAttribute="bottom" secondItem="35g-8a-NfO" secondAttribute="bottom" type="default" id="lOV-rY-Faa"/>
+                                            <constraint firstItem="z00-xh-4uN" firstAttribute="top" secondItem="dKI-HU-6nl" secondAttribute="top" constant="22" id="qf5-hh-BXg"/>
+                                            <constraint firstItem="35g-8a-NfO" firstAttribute="centerY" secondItem="dKI-HU-6nl" secondAttribute="centerY" type="default" id="yUj-Dj-TYM"/>
                                             <constraint firstItem="8Rm-hy-jeY" firstAttribute="leading" secondItem="dKI-HU-6nl" secondAttribute="leading" constant="5" id="zzL-df-VoU"/>
                                         </constraints>
                                     </collectionViewCell>
@@ -579,6 +576,7 @@
     </scenes>
     <resources>
         <image name="agenda_item.png" width="640" height="250"/>
+        <image name="disclosure_mark.png" width="30" height="30"/>
         <image name="logo_title.png" width="640" height="200"/>
         <image name="menubutton.png" width="76" height="76"/>
         <image name="nav_agenda.png" width="640" height="98"/>

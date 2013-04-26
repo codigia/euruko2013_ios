@@ -22,14 +22,14 @@
   [super viewDidLoad];
 	
   // Static creation of News Content
-  self.newsContent = @[@{@"newsTitle": @"Call for Presentations is now open!",
-                         @"newsBody": @"We are very excited to announce that Call for Presentations for EuRuKo 2013 is now open"},
-                       @{@"newsTitle": @"Sponsorship packages online!",
-                         @"newsBody": @"Boldly show your Ruby love - be a sponsor"},
-                       @{@"newsTitle": @"Tickets will be available soon",
-                         @"newsBody": @"Tickets will be available soon, be prepared!"},
-                       @{@"newsTitle": @"Website launch on 28/01",
-                         @"newsBody": @"EuRuKo (the European Ruby Conference) is an annual conference which focuses on the Ruby programming language"}];
+  self.newsContent = @[@{@"time": @"1366218000",
+                         @"title": @"Persado is our first Helios sponsor!"},
+                       @{@"time": @"1365872400",
+                         @"title": @"Countdown for 2nd ticket batch started!",
+                         @"link" : @"http://euruko2013.org/blog/2013-04-12-above-and-beyond/"},
+                       @{@"time": @"1365786000",
+                         @"title": @"20 supporter tickets will be available",
+                         @"link" : @"http://euruko2013.org/blog/2013-04-12-more-tickets-more-timezones-more-fun/"}];
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,10 +55,29 @@
 	
 	// Configure Cell
 	UILabel *newsLbl = (UILabel *)[cell viewWithTag:1];
-  newsLbl.text = [newsArticle objectForKey:@"newsTitle"];
+  newsLbl.text = [newsArticle objectForKey:@"title"];
   
-  newsLbl = (UILabel *)[cell viewWithTag:2];
-  newsLbl.text = [newsArticle objectForKey:@"newsBody"];
+  // Day/Month display
+  NSDate *startDate = [NSDate dateWithTimeIntervalSince1970:[[newsArticle objectForKey:@"time"] doubleValue]];
+  NSLocale *usLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+  NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+  dateFormatter.locale = usLocale;
+  [dateFormatter setDateFormat:@"MMM"];
+  
+  newsLbl = (UILabel *)[cell viewWithTag:4];
+  newsLbl.text = [dateFormatter stringFromDate:startDate];
+  
+  [dateFormatter setDateFormat:@"d"];
+  
+  newsLbl = (UILabel *)[cell viewWithTag:3];
+  newsLbl.text = [dateFormatter stringFromDate:startDate];
+  
+  // Mark for existed link
+  UIView *linkMark = [cell viewWithTag:2];
+  if ([newsArticle objectForKey:@"link"])
+    linkMark.alpha = 1.0;
+  else
+    linkMark.alpha = 0.0;
   
 	return cell;
 }
