@@ -11,20 +11,15 @@
 
 @interface EurukoSidemenuVC ()
 
+@property (weak, nonatomic) IBOutlet UIView *footerView;
+
+- (IBAction)footerBtnTapped:(id)sender;
+
 - (void)closeMenuAndPerformAction:(NSInteger)menuId;
 
 @end
 
 @implementation EurukoSidemenuVC
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -35,6 +30,10 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+  
+  // Calculate Footer View's height
+  // TableView's height is: statusbar:20, EurukoTitle:100, 6 menu items * 44
+  self.footerView.bounds = CGRectMake(self.footerView.bounds.origin.x, self.footerView.bounds.origin.y, self.footerView.bounds.size.width, [UIScreen mainScreen].bounds.size.height - (20+100+6*44));
 }
 
 - (void)didReceiveMemoryWarning
@@ -70,6 +69,9 @@
   }
 }
 
+- (IBAction)footerBtnTapped:(id)sender {
+}
+
 - (void)closeMenuAndPerformAction:(NSInteger)menuId {
   // Hide with Bouncing the SideMenu
   [self.viewDeckController closeLeftViewBouncing:^(IIViewDeckController *controller){
@@ -77,4 +79,8 @@
   }];
 }
 
+- (void)viewDidUnload {
+  [self setFooterView:nil];
+  [super viewDidUnload];
+}
 @end

@@ -165,12 +165,48 @@
                     <tableView key="view" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ql7-gV-93I">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.82479671556122447" green="0.16844068257961073" blue="0.18634363615801589" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" image="logo_title.png" id="UCy-oH-Yw0">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="c77-qc-gz9">
+                            <rect key="frame" x="0.0" y="364" width="320" height="96"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="pagefold.png" translatesAutoresizingMaskIntoConstraints="NO" id="QsN-Zr-eye">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="125" type="user" id="8YV-8u-5RT"/>
+                                        <constraint firstAttribute="width" constant="100" type="user" id="sih-Db-kTv"/>
+                                    </constraints>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tr7-NW-H7k">
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="40" type="user" id="8Td-Gz-sIF"/>
+                                        <constraint firstAttribute="height" constant="40" type="user" id="ODE-2I-H9S"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <state key="normal" title="footer_btn" image="icon_gaia.png">
+                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="footerBtnTapped:" destination="s9x-aO-J95" eventType="touchUpInside" id="IfF-c8-f6c"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="QsN-Zr-eye" firstAttribute="leading" secondItem="c77-qc-gz9" secondAttribute="leading" type="user" id="F2C-2b-hWi"/>
+                                <constraint firstAttribute="bottom" secondItem="QsN-Zr-eye" secondAttribute="bottom" type="user" id="h5I-et-cWS"/>
+                                <constraint firstItem="Tr7-NW-H7k" firstAttribute="leading" secondItem="c77-qc-gz9" secondAttribute="leading" type="user" id="hht-kR-Hzs"/>
+                                <constraint firstAttribute="bottom" secondItem="Tr7-NW-H7k" secondAttribute="bottom" type="user" id="tcv-Wu-F8o"/>
+                            </constraints>
+                        </view>
                         <sections>
                             <tableViewSection id="p7q-zS-q5T">
                                 <cells>
@@ -183,19 +219,27 @@
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="News" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PsN-Io-bl3">
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="IYU-go-vfo"/>
+                                                        <constraint firstAttribute="width" constant="220" id="KKB-Ba-pA9"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="19"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="22"/>
+                                                    <color key="textColor" red="0.57649075255102034" green="0.57649075255102034" blue="0.57649075255102034" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="menu_news.png" translatesAutoresizingMaskIntoConstraints="NO" id="gq1-ej-aBG">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="JDp-CR-NaK"/>
+                                                        <constraint firstAttribute="width" constant="30" id="nqa-Hu-nE7"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="PsN-Io-bl3" firstAttribute="leading" secondItem="mJH-ve-36T" secondAttribute="leading" constant="20" type="default" id="01L-5V-eFC"/>
-                                            <constraint firstAttribute="trailing" secondItem="PsN-Io-bl3" secondAttribute="trailing" constant="20" type="default" id="C2O-yr-d6u"/>
-                                            <constraint firstItem="PsN-Io-bl3" firstAttribute="top" secondItem="mJH-ve-36T" secondAttribute="top" constant="11" id="FXq-jB-wv9"/>
+                                            <constraint firstItem="PsN-Io-bl3" firstAttribute="bottom" secondItem="gq1-ej-aBG" secondAttribute="bottom" type="default" id="AMn-7T-7su"/>
+                                            <constraint firstItem="PsN-Io-bl3" firstAttribute="centerY" secondItem="mJH-ve-36T" secondAttribute="centerY" type="default" id="Dk3-bK-jyr"/>
+                                            <constraint firstItem="PsN-Io-bl3" firstAttribute="top" secondItem="gq1-ej-aBG" secondAttribute="top" type="default" id="fGf-Ib-mF6"/>
+                                            <constraint firstItem="PsN-Io-bl3" firstAttribute="leading" secondItem="mJH-ve-36T" secondAttribute="leading" constant="60" id="gdU-VQ-iqj"/>
+                                            <constraint firstItem="gq1-ej-aBG" firstAttribute="leading" secondItem="mJH-ve-36T" secondAttribute="leading" constant="15" id="x2i-wQ-I4g"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="BOn-uw-QDc">
@@ -207,19 +251,27 @@
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Agenda" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSS-2u-1k9">
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="YPO-wm-gy7"/>
+                                                        <constraint firstAttribute="width" constant="220" id="4qM-Lq-mSi"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="19"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="22"/>
+                                                    <color key="textColor" red="0.57649075260000004" green="0.57649075260000004" blue="0.57649075260000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="menu_agenda.png" translatesAutoresizingMaskIntoConstraints="NO" id="vBp-gt-QCB">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="XpO-7f-eoe"/>
+                                                        <constraint firstAttribute="width" constant="30" id="ksc-dy-e1h"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="eSS-2u-1k9" firstAttribute="top" secondItem="BOn-uw-QDc" secondAttribute="top" constant="11" id="Kph-Wt-rjx"/>
-                                            <constraint firstAttribute="trailing" secondItem="eSS-2u-1k9" secondAttribute="trailing" constant="20" type="default" id="LAP-lC-r1D"/>
-                                            <constraint firstItem="eSS-2u-1k9" firstAttribute="leading" secondItem="BOn-uw-QDc" secondAttribute="leading" constant="20" type="default" id="u0Q-5x-CQV"/>
+                                            <constraint firstItem="eSS-2u-1k9" firstAttribute="leading" secondItem="BOn-uw-QDc" secondAttribute="leading" constant="60" id="F9q-xc-QHA"/>
+                                            <constraint firstItem="vBp-gt-QCB" firstAttribute="bottom" secondItem="eSS-2u-1k9" secondAttribute="bottom" type="default" id="Jie-7o-ZA4"/>
+                                            <constraint firstItem="vBp-gt-QCB" firstAttribute="leading" secondItem="BOn-uw-QDc" secondAttribute="leading" constant="15" id="nZR-pg-Xws"/>
+                                            <constraint firstItem="vBp-gt-QCB" firstAttribute="top" secondItem="eSS-2u-1k9" secondAttribute="top" type="default" id="so4-ME-a1p"/>
+                                            <constraint firstItem="vBp-gt-QCB" firstAttribute="centerY" secondItem="BOn-uw-QDc" secondAttribute="centerY" type="default" id="xTq-lb-vBG"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="MSb-O6-DXf">
@@ -231,19 +283,27 @@
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Speakers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2R-kZ-ITj">
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="zFN-Hf-tcZ"/>
+                                                        <constraint firstAttribute="width" constant="220" id="QqY-9n-e1Y"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="19"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="22"/>
+                                                    <color key="textColor" red="0.57649075260000004" green="0.57649075260000004" blue="0.57649075260000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="menu_speakers.png" translatesAutoresizingMaskIntoConstraints="NO" id="JEL-lM-ize">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="5Pn-01-Gsm"/>
+                                                        <constraint firstAttribute="width" constant="30" id="J3H-DH-QoE"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="h2R-kZ-ITj" firstAttribute="top" secondItem="MSb-O6-DXf" secondAttribute="top" constant="11" id="CrO-ER-44Q"/>
-                                            <constraint firstAttribute="trailing" secondItem="h2R-kZ-ITj" secondAttribute="trailing" constant="20" type="default" id="Va2-NI-MFC"/>
-                                            <constraint firstItem="h2R-kZ-ITj" firstAttribute="leading" secondItem="MSb-O6-DXf" secondAttribute="leading" constant="20" type="default" id="WlA-41-Lt0"/>
+                                            <constraint firstItem="JEL-lM-ize" firstAttribute="top" secondItem="h2R-kZ-ITj" secondAttribute="top" type="default" id="0Yz-pV-2Fk"/>
+                                            <constraint firstItem="JEL-lM-ize" firstAttribute="leading" secondItem="MSb-O6-DXf" secondAttribute="leading" constant="15" id="0j7-Oh-PAw"/>
+                                            <constraint firstItem="JEL-lM-ize" firstAttribute="bottom" secondItem="h2R-kZ-ITj" secondAttribute="bottom" type="default" id="DwU-eR-EOb"/>
+                                            <constraint firstItem="h2R-kZ-ITj" firstAttribute="leading" secondItem="MSb-O6-DXf" secondAttribute="leading" constant="60" id="fUB-tU-BDa"/>
+                                            <constraint firstItem="JEL-lM-ize" firstAttribute="centerY" secondItem="MSb-O6-DXf" secondAttribute="centerY" type="default" id="fxh-s2-BGJ"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="aHx-NI-6T9">
@@ -255,19 +315,27 @@
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Twitter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRk-T5-Q5Y">
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="ZlN-lz-a8g"/>
+                                                        <constraint firstAttribute="width" constant="220" id="XXK-Cq-r5v"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="19"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="22"/>
+                                                    <color key="textColor" red="0.57649075260000004" green="0.57649075260000004" blue="0.57649075260000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="menu_twitter.png" translatesAutoresizingMaskIntoConstraints="NO" id="Eme-Fg-Z5c">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="hGm-Do-gsH"/>
+                                                        <constraint firstAttribute="width" constant="30" id="sly-br-oTU"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="LRk-T5-Q5Y" firstAttribute="leading" secondItem="aHx-NI-6T9" secondAttribute="leading" constant="20" type="default" id="ijd-hQ-KlG"/>
-                                            <constraint firstAttribute="trailing" secondItem="LRk-T5-Q5Y" secondAttribute="trailing" constant="20" type="default" id="pSE-Uo-jcm"/>
-                                            <constraint firstItem="LRk-T5-Q5Y" firstAttribute="top" secondItem="aHx-NI-6T9" secondAttribute="top" constant="11" id="wAj-jq-Tke"/>
+                                            <constraint firstItem="LRk-T5-Q5Y" firstAttribute="leading" secondItem="aHx-NI-6T9" secondAttribute="leading" constant="60" id="AKH-5b-gh9"/>
+                                            <constraint firstItem="Eme-Fg-Z5c" firstAttribute="top" secondItem="LRk-T5-Q5Y" secondAttribute="top" type="default" id="Q2w-uz-LwS"/>
+                                            <constraint firstItem="Eme-Fg-Z5c" firstAttribute="bottom" secondItem="LRk-T5-Q5Y" secondAttribute="bottom" type="default" id="VRs-4X-Skh"/>
+                                            <constraint firstItem="Eme-Fg-Z5c" firstAttribute="leading" secondItem="aHx-NI-6T9" secondAttribute="leading" constant="15" id="hNv-9K-PsU"/>
+                                            <constraint firstItem="Eme-Fg-Z5c" firstAttribute="centerY" secondItem="aHx-NI-6T9" secondAttribute="centerY" type="default" id="oN8-9T-KGG"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="NPe-TS-xvT">
@@ -279,19 +347,27 @@
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Map" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LrF-sv-ntU">
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="xfM-hE-nve"/>
+                                                        <constraint firstAttribute="width" constant="220" id="YSj-CO-z7k"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="19"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="22"/>
+                                                    <color key="textColor" red="0.57649075260000004" green="0.57649075260000004" blue="0.57649075260000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="menu_map.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rbs-Zp-OyJ">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="Lq7-tu-sr4"/>
+                                                        <constraint firstAttribute="width" constant="30" id="lV7-Mt-C8c"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="LrF-sv-ntU" secondAttribute="trailing" constant="20" type="default" id="BZf-L6-yGB"/>
-                                            <constraint firstItem="LrF-sv-ntU" firstAttribute="leading" secondItem="NPe-TS-xvT" secondAttribute="leading" constant="20" type="default" id="lGb-wy-2hd"/>
-                                            <constraint firstItem="LrF-sv-ntU" firstAttribute="top" secondItem="NPe-TS-xvT" secondAttribute="top" constant="11" id="whd-Of-FfZ"/>
+                                            <constraint firstItem="LrF-sv-ntU" firstAttribute="leading" secondItem="NPe-TS-xvT" secondAttribute="leading" constant="60" id="8d5-tP-rIN"/>
+                                            <constraint firstItem="Rbs-Zp-OyJ" firstAttribute="bottom" secondItem="LrF-sv-ntU" secondAttribute="bottom" type="default" id="FkJ-qS-4hS"/>
+                                            <constraint firstItem="Rbs-Zp-OyJ" firstAttribute="top" secondItem="LrF-sv-ntU" secondAttribute="top" type="default" id="IDh-G4-O2o"/>
+                                            <constraint firstItem="Rbs-Zp-OyJ" firstAttribute="leading" secondItem="NPe-TS-xvT" secondAttribute="leading" constant="15" id="Qku-yo-mow"/>
+                                            <constraint firstItem="Rbs-Zp-OyJ" firstAttribute="centerY" secondItem="NPe-TS-xvT" secondAttribute="centerY" type="default" id="ZUW-Uv-mtL"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="CXw-zi-lnn">
@@ -303,19 +379,27 @@
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="About" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRN-TA-AL6">
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="zlb-6F-xio"/>
+                                                        <constraint firstAttribute="width" constant="220" id="Dcu-1A-ezr"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="19"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="22"/>
+                                                    <color key="textColor" red="0.57649075260000004" green="0.57649075260000004" blue="0.57649075260000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="menu_about.png" translatesAutoresizingMaskIntoConstraints="NO" id="OrZ-Dm-oGE">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="Bzk-xp-PhS"/>
+                                                        <constraint firstAttribute="height" constant="30" id="SQM-1L-bO0"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="LRN-TA-AL6" secondAttribute="trailing" constant="20" type="default" id="Brf-rp-4VU"/>
-                                            <constraint firstItem="LRN-TA-AL6" firstAttribute="leading" secondItem="CXw-zi-lnn" secondAttribute="leading" constant="20" type="default" id="S0J-Ld-Rir"/>
-                                            <constraint firstItem="LRN-TA-AL6" firstAttribute="top" secondItem="CXw-zi-lnn" secondAttribute="top" constant="11" id="cts-AB-Oha"/>
+                                            <constraint firstItem="LRN-TA-AL6" firstAttribute="leading" secondItem="CXw-zi-lnn" secondAttribute="leading" constant="60" id="Ifh-Fp-3YQ"/>
+                                            <constraint firstItem="OrZ-Dm-oGE" firstAttribute="top" secondItem="LRN-TA-AL6" secondAttribute="top" type="default" id="O6K-A3-Lar"/>
+                                            <constraint firstItem="LRN-TA-AL6" firstAttribute="centerY" secondItem="CXw-zi-lnn" secondAttribute="centerY" type="default" id="Sxz-rK-Jli"/>
+                                            <constraint firstItem="OrZ-Dm-oGE" firstAttribute="bottom" secondItem="LRN-TA-AL6" secondAttribute="bottom" type="default" id="V6G-7F-xfG"/>
+                                            <constraint firstItem="OrZ-Dm-oGE" firstAttribute="leading" secondItem="CXw-zi-lnn" secondAttribute="leading" constant="15" id="spP-zz-Pcm"/>
                                         </constraints>
                                     </tableViewCell>
                                 </cells>
@@ -326,6 +410,9 @@
                             <outlet property="delegate" destination="s9x-aO-J95" id="9TH-CT-NpR"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="footerView" destination="c77-qc-gz9" id="mVR-pt-jQK"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v1n-BY-vRM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -577,14 +664,71 @@
     <resources>
         <image name="agenda_item.png" width="640" height="250"/>
         <image name="disclosure_mark.png" width="30" height="30"/>
+        <image name="icon_gaia.png" width="57" height="52"/>
         <image name="logo_title.png" width="640" height="200"/>
+        <image name="menu_about.png" width="80" height="80"/>
+        <image name="menu_agenda.png" width="80" height="80"/>
+        <image name="menu_map.png" width="80" height="80"/>
+        <image name="menu_news.png" width="80" height="80"/>
+        <image name="menu_speakers.png" width="80" height="80"/>
+        <image name="menu_twitter.png" width="80" height="80"/>
         <image name="menubutton.png" width="76" height="76"/>
         <image name="nav_agenda.png" width="640" height="98"/>
         <image name="nav_news.png" width="640" height="98"/>
         <image name="nav_speakers.png" width="640" height="98"/>
+        <image name="pagefold.png" width="487" height="618"/>
         <image name="spk01.png" width="214" height="214"/>
         <image name="vertical_line.png" width="8" height="100"/>
     </resources>
+    <classes>
+        <class className="EurukoAgendaVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoAgendaVC.h"/>
+            <relationships>
+                <relationship kind="action" name="showSidemenu:"/>
+                <relationship kind="outlet" name="agendaCollView" candidateClass="UICollectionView"/>
+                <relationship kind="outlet" name="menuBtn" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="EurukoMainVC" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoMainVC.h"/>
+        </class>
+        <class className="EurukoNewsVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoNewsVC.h"/>
+            <relationships>
+                <relationship kind="action" name="showSidemenu:"/>
+                <relationship kind="outlet" name="menuBtn" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="EurukoSidemenuVC" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoSidemenuVC.h"/>
+            <relationships>
+                <relationship kind="action" name="footerBtnTapped:"/>
+                <relationship kind="outlet" name="footerView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="EurukoSpeakersVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoSpeakersVC.h"/>
+            <relationships>
+                <relationship kind="action" name="showSidemenu:"/>
+                <relationship kind="outlet" name="menuBtn" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

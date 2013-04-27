@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		28152763172A5F1F0036A7D4 /* nav_agenda.png in Resources */ = {isa = PBXBuildFile; fileRef = 28152762172A5F1F0036A7D4 /* nav_agenda.png */; };
 		28152765172A9E6E0036A7D4 /* disclosure_mark.png in Resources */ = {isa = PBXBuildFile; fileRef = 28152764172A9E6E0036A7D4 /* disclosure_mark.png */; };
+		2815276C172AE0560036A7D4 /* menu_about.png in Resources */ = {isa = PBXBuildFile; fileRef = 28152766172AE0560036A7D4 /* menu_about.png */; };
+		2815276D172AE0560036A7D4 /* menu_agenda.png in Resources */ = {isa = PBXBuildFile; fileRef = 28152767172AE0560036A7D4 /* menu_agenda.png */; };
+		2815276E172AE0560036A7D4 /* menu_map.png in Resources */ = {isa = PBXBuildFile; fileRef = 28152768172AE0560036A7D4 /* menu_map.png */; };
+		2815276F172AE0560036A7D4 /* menu_news.png in Resources */ = {isa = PBXBuildFile; fileRef = 28152769172AE0560036A7D4 /* menu_news.png */; };
+		28152770172AE0560036A7D4 /* menu_speakers.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815276A172AE0560036A7D4 /* menu_speakers.png */; };
+		28152771172AE0560036A7D4 /* menu_twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815276B172AE0560036A7D4 /* menu_twitter.png */; };
+		28152774172B03790036A7D4 /* icon_gaia.png in Resources */ = {isa = PBXBuildFile; fileRef = 28152772172B03790036A7D4 /* icon_gaia.png */; };
+		28152775172B03790036A7D4 /* pagefold.png in Resources */ = {isa = PBXBuildFile; fileRef = 28152773172B03790036A7D4 /* pagefold.png */; };
 		289013A8171808E20006FB9D /* EurukoSpeakersVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 289013A7171808E20006FB9D /* EurukoSpeakersVC.m */; };
 		289013AC17183C390006FB9D /* spk01.png in Resources */ = {isa = PBXBuildFile; fileRef = 289013A917183C390006FB9D /* spk01.png */; };
 		289013AD17183C390006FB9D /* spk02.png in Resources */ = {isa = PBXBuildFile; fileRef = 289013AA17183C390006FB9D /* spk02.png */; };
@@ -45,6 +53,14 @@
 /* Begin PBXFileReference section */
 		28152762172A5F1F0036A7D4 /* nav_agenda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nav_agenda.png; path = Gfx/nav_agenda.png; sourceTree = SOURCE_ROOT; };
 		28152764172A9E6E0036A7D4 /* disclosure_mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = disclosure_mark.png; path = Gfx/disclosure_mark.png; sourceTree = SOURCE_ROOT; };
+		28152766172AE0560036A7D4 /* menu_about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu_about.png; path = Gfx/menu_about.png; sourceTree = SOURCE_ROOT; };
+		28152767172AE0560036A7D4 /* menu_agenda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu_agenda.png; path = Gfx/menu_agenda.png; sourceTree = SOURCE_ROOT; };
+		28152768172AE0560036A7D4 /* menu_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu_map.png; path = Gfx/menu_map.png; sourceTree = SOURCE_ROOT; };
+		28152769172AE0560036A7D4 /* menu_news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu_news.png; path = Gfx/menu_news.png; sourceTree = SOURCE_ROOT; };
+		2815276A172AE0560036A7D4 /* menu_speakers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu_speakers.png; path = Gfx/menu_speakers.png; sourceTree = SOURCE_ROOT; };
+		2815276B172AE0560036A7D4 /* menu_twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu_twitter.png; path = Gfx/menu_twitter.png; sourceTree = SOURCE_ROOT; };
+		28152772172B03790036A7D4 /* icon_gaia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_gaia.png; path = Gfx/icon_gaia.png; sourceTree = SOURCE_ROOT; };
+		28152773172B03790036A7D4 /* pagefold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pagefold.png; path = Gfx/pagefold.png; sourceTree = SOURCE_ROOT; };
 		289013A6171808E20006FB9D /* EurukoSpeakersVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EurukoSpeakersVC.h; sourceTree = "<group>"; };
 		289013A7171808E20006FB9D /* EurukoSpeakersVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EurukoSpeakersVC.m; sourceTree = "<group>"; };
 		289013A917183C390006FB9D /* spk01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spk01.png; path = Gfx/spk01.png; sourceTree = SOURCE_ROOT; };
@@ -109,6 +125,14 @@
 		28BDAFDF1705B5AD0024A65B /* Gfx */ = {
 			isa = PBXGroup;
 			children = (
+				28152772172B03790036A7D4 /* icon_gaia.png */,
+				28152773172B03790036A7D4 /* pagefold.png */,
+				28152766172AE0560036A7D4 /* menu_about.png */,
+				28152767172AE0560036A7D4 /* menu_agenda.png */,
+				28152768172AE0560036A7D4 /* menu_map.png */,
+				28152769172AE0560036A7D4 /* menu_news.png */,
+				2815276A172AE0560036A7D4 /* menu_speakers.png */,
+				2815276B172AE0560036A7D4 /* menu_twitter.png */,
 				28152764172A9E6E0036A7D4 /* disclosure_mark.png */,
 				28152762172A5F1F0036A7D4 /* nav_agenda.png */,
 				28E716C31723E97E00341090 /* agenda_item.png */,
@@ -284,6 +308,14 @@
 				28E716C41723E97E00341090 /* agenda_item.png in Resources */,
 				28152763172A5F1F0036A7D4 /* nav_agenda.png in Resources */,
 				28152765172A9E6E0036A7D4 /* disclosure_mark.png in Resources */,
+				2815276C172AE0560036A7D4 /* menu_about.png in Resources */,
+				2815276D172AE0560036A7D4 /* menu_agenda.png in Resources */,
+				2815276E172AE0560036A7D4 /* menu_map.png in Resources */,
+				2815276F172AE0560036A7D4 /* menu_news.png in Resources */,
+				28152770172AE0560036A7D4 /* menu_speakers.png in Resources */,
+				28152771172AE0560036A7D4 /* menu_twitter.png in Resources */,
+				28152774172B03790036A7D4 /* icon_gaia.png in Resources */,
+				28152775172B03790036A7D4 /* pagefold.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
