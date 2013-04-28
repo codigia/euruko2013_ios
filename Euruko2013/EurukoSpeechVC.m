@@ -7,6 +7,7 @@
 //
 
 #import "EurukoSpeechVC.h"
+#import "EurukoSpeakerInfoVC.h"
 
 @interface EurukoSpeechVC ()
 @property (weak, nonatomic) IBOutlet UILabel *timeLbl;
@@ -49,6 +50,16 @@
   [self setSpeakerAvatarImg:nil];
   [self setSpeechTitleLbl:nil];
   [super viewDidUnload];
+}
+
+#pragma mark - Segues
+// Show Speaker Info screen
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+	if ([[segue identifier] isEqualToString:@"ShowSpeakerInfoViewFromSpeech"]) {
+    EurukoSpeakerInfoVC *spkInfoVC = [segue destinationViewController];
+		spkInfoVC.speakerData = self.speakerData;
+	}
 }
 
 #pragma mark - Actions
