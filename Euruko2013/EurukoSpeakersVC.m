@@ -88,9 +88,11 @@
   spkLbl = (UILabel *)[cell viewWithTag:2];
   spkLbl.text = [speakerData objectForKey:@"title"];
   
+  UIImageView *spkAvatar = (UIImageView *)[cell viewWithTag:3];
   if ([speakerData objectForKey:@"avatar"]) {
-    UIImageView *spkAvatar = (UIImageView *)[cell viewWithTag:3];
     spkAvatar.image = [UIImage imageNamed:[speakerData objectForKey:@"avatar"]];
+  } else {
+    spkAvatar.image = [UIImage imageNamed:@"no_speaker.png"];
   }
   
 	return cell;

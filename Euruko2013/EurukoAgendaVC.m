@@ -7,6 +7,7 @@
 //
 
 #import "EurukoAgendaVC.h"
+#import "EurukoSpeechVC.h"
 #import "IIViewDeckController.h"
 
 @interface EurukoAgendaVC ()
@@ -64,6 +65,11 @@
                            @"end": @"1372441500",
                            @"speaker_id": @"Klabnik",
                            @"title": @"Time Travel with Ruby",
+                           @"descr": @"This will travel your world! HTML formatting."},
+                         @{@"start": @"1372501500",
+                           @"end": @"1372501500",
+                           @"speaker_id": @"noknown",
+                           @"title": @"Virtual Hacking with Ruby",
                            @"descr": @"This will travel your world! HTML formatting."}];
   
   // Static creation of Speakers content
@@ -81,6 +87,10 @@
                            @"name": @"Steve Klabnik",
                            @"title": @"Instructor & Open Source lead",
                            @"avatar": @"spk03.png",
+                           @"bio": @"Steve enjoys turning coffee into code, writing, philosophy, and physical activity. He is a contributor to many high visibility open source projects such as Sinatra, Resque, Rubinius and of course the venerable Ruby on Rails web framework. His talks are always insightful and inspiring. We shouldn't expect anything less for EuRuKo."},
+                         @{@"id": @"noknown",
+                           @"name": @"The Unknown",
+                           @"title": @"Virtual Speaker & Blogger",
                            @"bio": @"Steve enjoys turning coffee into code, writing, philosophy, and physical activity. He is a contributor to many high visibility open source projects such as Sinatra, Resque, Rubinius and of course the venerable Ruby on Rails web framework. His talks are always insightful and inspiring. We shouldn't expect anything less for EuRuKo."}];
 }
 
@@ -112,7 +122,8 @@
     for (NSDictionary *aSpkData in self.speaksContent) {
       if ([[aSpkData objectForKey:@"id"] isEqualToString:[aAgendaItem objectForKey:@"speaker_id"]]) {
         [theAgendaObj setObject:[aSpkData objectForKey:@"name"] forKey:@"spkName"];
-        [theAgendaObj setObject:[aSpkData objectForKey:@"avatar"] forKey:@"spkAvatar"];
+        if ([aSpkData objectForKey:@"avatar"])
+          [theAgendaObj setObject:[aSpkData objectForKey:@"avatar"] forKey:@"spkAvatar"];
         break;
       }
     }
@@ -153,7 +164,10 @@
   sphLbl.text = [agendaItem objectForKey:@"spkName"];
   
   UIImageView *spkAvatar = (UIImageView *)[cell viewWithTag:2];
-  spkAvatar.image = [UIImage imageNamed:[agendaItem objectForKey:@"spkAvatar"]];
+  if ([agendaItem objectForKey:@"spkAvatar"])
+    spkAvatar.image = [UIImage imageNamed:[agendaItem objectForKey:@"spkAvatar"]];
+  else
+    spkAvatar.image = [UIImage imageNamed:@"no_speaker.png"];
   
   sphLbl = (UILabel *)[cell viewWithTag:4];
   sphLbl.text = [agendaItem objectForKey:@"time"];
@@ -161,7 +175,31 @@
 	return cell;
 }
 
-#pragma mark -
+#pragma mark - Segues
+// Perform Selection action using Selection triggered Segue on CollectionView cell
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+	if ([[segue identifier] isEqualToString:@"ShowSpeechView"]) {
+		NSIndexPath *selectedIndexPath = [[self.agendaCollView indexPathsForSelectedItems] objectAtIndex:0];
+		
+		NSDictionary *selectedSpeech = [self.agendaData objectAtIndex:selectedIndexPath.row];
+		NSDictionary *selectedSpeaker;
+    
+    // References to speaker item
+    for (NSDictionary *aSpkData in self.speaksContent) {
+      if ([[aSpkData objectForKey:@"id"] isEqualToString:[selectedSpeech objectForKey:@"speaker_id"]]) {
+        selectedSpeaker = aSpkData;
+        break;
+      }
+    }
+    
+		EurukoSpeechVC *speechVC = [segue destinationViewController];
+		speechVC.speechData = selectedSpeech;
+    speechVC.speakerData = selectedSpeaker;
+	}
+}
+
+#pragma mark - Actions
 - (IBAction)showSidemenu:(id)sender {
   // Show SideMenu
   [self.navigationController.viewDeckController toggleLeftViewAnimated:YES];

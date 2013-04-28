@@ -22,6 +22,9 @@
 		2815277C172C68490036A7D4 /* no_speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815277A172C68490036A7D4 /* no_speaker.png */; };
 		2815277D172C68490036A7D4 /* speaker_placeholder_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815277B172C68490036A7D4 /* speaker_placeholder_shadow.png */; };
 		28152780172CF6590036A7D4 /* EurukoSpeakerInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2815277F172CF6590036A7D4 /* EurukoSpeakerInfoVC.m */; };
+		28152782172D32D50036A7D4 /* nav_speech.png in Resources */ = {isa = PBXBuildFile; fileRef = 28152781172D32D50036A7D4 /* nav_speech.png */; };
+		28152784172D59D00036A7D4 /* speech_header.png in Resources */ = {isa = PBXBuildFile; fileRef = 28152783172D59D00036A7D4 /* speech_header.png */; };
+		28152787172D6A3F0036A7D4 /* EurukoSpeechVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 28152786172D6A3F0036A7D4 /* EurukoSpeechVC.m */; };
 		289013A8171808E20006FB9D /* EurukoSpeakersVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 289013A7171808E20006FB9D /* EurukoSpeakersVC.m */; };
 		289013AC17183C390006FB9D /* spk01.png in Resources */ = {isa = PBXBuildFile; fileRef = 289013A917183C390006FB9D /* spk01.png */; };
 		289013AD17183C390006FB9D /* spk02.png in Resources */ = {isa = PBXBuildFile; fileRef = 289013AA17183C390006FB9D /* spk02.png */; };
@@ -72,6 +75,10 @@
 		2815277B172C68490036A7D4 /* speaker_placeholder_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = speaker_placeholder_shadow.png; path = Gfx/speaker_placeholder_shadow.png; sourceTree = SOURCE_ROOT; };
 		2815277E172CF6590036A7D4 /* EurukoSpeakerInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EurukoSpeakerInfoVC.h; sourceTree = "<group>"; };
 		2815277F172CF6590036A7D4 /* EurukoSpeakerInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EurukoSpeakerInfoVC.m; sourceTree = "<group>"; };
+		28152781172D32D50036A7D4 /* nav_speech.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nav_speech.png; path = Gfx/nav_speech.png; sourceTree = SOURCE_ROOT; };
+		28152783172D59D00036A7D4 /* speech_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = speech_header.png; path = Gfx/speech_header.png; sourceTree = SOURCE_ROOT; };
+		28152785172D6A3F0036A7D4 /* EurukoSpeechVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EurukoSpeechVC.h; sourceTree = "<group>"; };
+		28152786172D6A3F0036A7D4 /* EurukoSpeechVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EurukoSpeechVC.m; sourceTree = "<group>"; };
 		289013A6171808E20006FB9D /* EurukoSpeakersVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EurukoSpeakersVC.h; sourceTree = "<group>"; };
 		289013A7171808E20006FB9D /* EurukoSpeakersVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EurukoSpeakersVC.m; sourceTree = "<group>"; };
 		289013A917183C390006FB9D /* spk01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spk01.png; path = Gfx/spk01.png; sourceTree = SOURCE_ROOT; };
@@ -136,6 +143,8 @@
 		28BDAFDF1705B5AD0024A65B /* Gfx */ = {
 			isa = PBXGroup;
 			children = (
+				28152783172D59D00036A7D4 /* speech_header.png */,
+				28152781172D32D50036A7D4 /* nav_speech.png */,
 				2815277A172C68490036A7D4 /* no_speaker.png */,
 				2815277B172C68490036A7D4 /* speaker_placeholder_shadow.png */,
 				28152778172C55600036A7D4 /* menuback.png */,
@@ -207,6 +216,8 @@
 				28EAA4D316D775E000F523B3 /* EurukoNewsVC.m */,
 				28E716C51723F74100341090 /* EurukoAgendaVC.h */,
 				28E716C61723F74100341090 /* EurukoAgendaVC.m */,
+				28152785172D6A3F0036A7D4 /* EurukoSpeechVC.h */,
+				28152786172D6A3F0036A7D4 /* EurukoSpeechVC.m */,
 				289013A6171808E20006FB9D /* EurukoSpeakersVC.h */,
 				289013A7171808E20006FB9D /* EurukoSpeakersVC.m */,
 				2815277E172CF6590036A7D4 /* EurukoSpeakerInfoVC.h */,
@@ -337,6 +348,8 @@
 				28152779172C55600036A7D4 /* menuback.png in Resources */,
 				2815277C172C68490036A7D4 /* no_speaker.png in Resources */,
 				2815277D172C68490036A7D4 /* speaker_placeholder_shadow.png in Resources */,
+				28152782172D32D50036A7D4 /* nav_speech.png in Resources */,
+				28152784172D59D00036A7D4 /* speech_header.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +372,7 @@
 				289013A8171808E20006FB9D /* EurukoSpeakersVC.m in Sources */,
 				28E716C71723F74100341090 /* EurukoAgendaVC.m in Sources */,
 				28152780172CF6590036A7D4 /* EurukoSpeakerInfoVC.m in Sources */,
+				28152787172D6A3F0036A7D4 /* EurukoSpeechVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
