@@ -636,7 +636,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="BQd-uT-x6r"/>
                     <connections>
-                        <outlet property="nameBorderBottomConstr" destination="v6r-hS-Hlc" id="He7-w0-r3Q"/>
                         <outlet property="nameBorderView" destination="tET-aI-OkV" id="del-7I-PvT"/>
                         <outlet property="speakerAvatarImg" destination="ftn-Hk-nNg" id="dKR-DC-mS6"/>
                         <outlet property="speakerNameLbl" destination="Vr7-M5-ylp" id="XXn-8T-vs5"/>

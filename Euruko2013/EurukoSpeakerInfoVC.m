@@ -14,7 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *speakerTitleLbl;
 @property (weak, nonatomic) IBOutlet UIImageView *speakerAvatarImg;
 @property (weak, nonatomic) IBOutlet UIView *nameBorderView;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *nameBorderBottomConstr;
 
 - (IBAction)backBtnTapped:(id)sender;
 @end
@@ -34,9 +33,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-  // Set nameBorderView height (iPhone 5 optimization)
-  self.nameBorderBottomConstr.constant = [UIScreen mainScreen].bounds.size.height - (20+70+96);
-  
   // Populate with speaker data
   self.speakerNameLbl.text = [self.speakerData objectForKey:@"name"];
   self.speakerTitleLbl.text = [self.speakerData objectForKey:@"title"];
@@ -55,7 +51,6 @@
   [self setSpeakerTitleLbl:nil];
   [self setSpeakerAvatarImg:nil];
   [self setNameBorderView:nil];
-  [self setNameBorderBottomConstr:nil];
   [super viewDidUnload];
 }
 
