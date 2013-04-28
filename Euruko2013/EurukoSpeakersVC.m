@@ -7,12 +7,14 @@
 //
 
 #import "EurukoSpeakersVC.h"
+#import "EurukoSpeakerInfoVC.h"
 #import "IIViewDeckController.h"
 
 @interface EurukoSpeakersVC ()
 
 @property (nonatomic) NSArray *speaksContent;
 
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @end
 
 @implementation EurukoSpeakersVC
@@ -52,6 +54,10 @@
                            @"name": @"Steve Klabnik",
                            @"title": @"Instructor & Open Source lead",
                            @"avatar": @"spk03.png",
+                           @"bio": @"Steve enjoys turning coffee into code, writing, philosophy, and physical activity. He is a contributor to many high visibility open source projects such as Sinatra, Resque, Rubinius and of course the venerable Ruby on Rails web framework. His talks are always insightful and inspiring. We shouldn't expect anything less for EuRuKo."},
+                         @{@"id": @"noknown",
+                           @"name": @"The Unknown",
+                           @"title": @"Virtual Speaker & Blogger",
                            @"bio": @"Steve enjoys turning coffee into code, writing, philosophy, and physical activity. He is a contributor to many high visibility open source projects such as Sinatra, Resque, Rubinius and of course the venerable Ruby on Rails web framework. His talks are always insightful and inspiring. We shouldn't expect anything less for EuRuKo."}];
 }
 
@@ -82,16 +88,36 @@
   spkLbl = (UILabel *)[cell viewWithTag:2];
   spkLbl.text = [speakerData objectForKey:@"title"];
   
-  UIImageView *spkAvatar = (UIImageView *)[cell viewWithTag:3];
-  spkAvatar.image = [UIImage imageNamed:[speakerData objectForKey:@"avatar"]];
+  if ([speakerData objectForKey:@"avatar"]) {
+    UIImageView *spkAvatar = (UIImageView *)[cell viewWithTag:3];
+    spkAvatar.image = [UIImage imageNamed:[speakerData objectForKey:@"avatar"]];
+  }
   
 	return cell;
 }
 
-#pragma mark -
+#pragma mark - Segues
+// Perform Selection action using Selection triggered Segue on CollectionView cell
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+	if ([[segue identifier] isEqualToString:@"ShowSpeakerInfoView"]) {
+		NSIndexPath *selectedIndexPath = [[self.collectionView indexPathsForSelectedItems] objectAtIndex:0];
+		
+		NSDictionary *selectedSpeaker = [self.speaksContent objectAtIndex:selectedIndexPath.row];
+		
+		EurukoSpeakerInfoVC *spkInfoVC = [segue destinationViewController];
+		spkInfoVC.speakerData = selectedSpeaker;
+	}
+}
+
+#pragma mark - Actions
 - (IBAction)showSidemenu:(id)sender {
   // Show SideMenu
   [self.navigationController.viewDeckController toggleLeftViewAnimated:YES];
 }
 
+- (void)viewDidUnload {
+  [self setCollectionView:nil];
+  [super viewDidUnload];
+}
 @end
