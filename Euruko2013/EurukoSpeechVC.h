@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EurukoSpeechVC : UIViewController
+@interface EurukoSpeechVC : UIViewController <UIWebViewDelegate>
 
 @property (nonatomic) NSDictionary *speechData;
 @property (nonatomic) NSDictionary *speakerData;

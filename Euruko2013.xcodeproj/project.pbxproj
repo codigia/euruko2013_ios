@@ -25,6 +25,7 @@
 		28152782172D32D50036A7D4 /* nav_speech.png in Resources */ = {isa = PBXBuildFile; fileRef = 28152781172D32D50036A7D4 /* nav_speech.png */; };
 		28152784172D59D00036A7D4 /* speech_header.png in Resources */ = {isa = PBXBuildFile; fileRef = 28152783172D59D00036A7D4 /* speech_header.png */; };
 		28152787172D6A3F0036A7D4 /* EurukoSpeechVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 28152786172D6A3F0036A7D4 /* EurukoSpeechVC.m */; };
+		2815278A173069D40036A7D4 /* EurukoBrowserVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 28152789173069D40036A7D4 /* EurukoBrowserVC.m */; };
 		289013A8171808E20006FB9D /* EurukoSpeakersVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 289013A7171808E20006FB9D /* EurukoSpeakersVC.m */; };
 		289013AC17183C390006FB9D /* spk01.png in Resources */ = {isa = PBXBuildFile; fileRef = 289013A917183C390006FB9D /* spk01.png */; };
 		289013AD17183C390006FB9D /* spk02.png in Resources */ = {isa = PBXBuildFile; fileRef = 289013AA17183C390006FB9D /* spk02.png */; };
@@ -55,7 +56,6 @@
 		28EAA4CE16D775E000F523B3 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28EAA4CC16D775E000F523B3 /* MainStoryboard_iPhone.storyboard */; };
 		28EAA4D116D775E000F523B3 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28EAA4CF16D775E000F523B3 /* MainStoryboard_iPad.storyboard */; };
 		28EAA4D416D775E000F523B3 /* EurukoNewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EAA4D316D775E000F523B3 /* EurukoNewsVC.m */; };
-		28EAA4D716D775E000F523B3 /* EurukoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EAA4D616D775E000F523B3 /* EurukoDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +79,8 @@
 		28152783172D59D00036A7D4 /* speech_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = speech_header.png; path = Gfx/speech_header.png; sourceTree = SOURCE_ROOT; };
 		28152785172D6A3F0036A7D4 /* EurukoSpeechVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EurukoSpeechVC.h; sourceTree = "<group>"; };
 		28152786172D6A3F0036A7D4 /* EurukoSpeechVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EurukoSpeechVC.m; sourceTree = "<group>"; };
+		28152788173069D40036A7D4 /* EurukoBrowserVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EurukoBrowserVC.h; sourceTree = "<group>"; };
+		28152789173069D40036A7D4 /* EurukoBrowserVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EurukoBrowserVC.m; sourceTree = "<group>"; };
 		289013A6171808E20006FB9D /* EurukoSpeakersVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EurukoSpeakersVC.h; sourceTree = "<group>"; };
 		289013A7171808E20006FB9D /* EurukoSpeakersVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EurukoSpeakersVC.m; sourceTree = "<group>"; };
 		289013A917183C390006FB9D /* spk01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spk01.png; path = Gfx/spk01.png; sourceTree = SOURCE_ROOT; };
@@ -121,8 +123,6 @@
 		28EAA4D016D775E000F523B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		28EAA4D216D775E000F523B3 /* EurukoNewsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EurukoNewsVC.h; sourceTree = "<group>"; };
 		28EAA4D316D775E000F523B3 /* EurukoNewsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EurukoNewsVC.m; sourceTree = "<group>"; };
-		28EAA4D516D775E000F523B3 /* EurukoDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EurukoDetailViewController.h; sourceTree = "<group>"; };
-		28EAA4D616D775E000F523B3 /* EurukoDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EurukoDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,8 +222,8 @@
 				289013A7171808E20006FB9D /* EurukoSpeakersVC.m */,
 				2815277E172CF6590036A7D4 /* EurukoSpeakerInfoVC.h */,
 				2815277F172CF6590036A7D4 /* EurukoSpeakerInfoVC.m */,
-				28EAA4D516D775E000F523B3 /* EurukoDetailViewController.h */,
-				28EAA4D616D775E000F523B3 /* EurukoDetailViewController.m */,
+				28152788173069D40036A7D4 /* EurukoBrowserVC.h */,
+				28152789173069D40036A7D4 /* EurukoBrowserVC.m */,
 				28BDAFDF1705B5AD0024A65B /* Gfx */,
 				28EAA4DD16DA928000F523B3 /* Libs */,
 				28EAA4BB16D775E000F523B3 /* Supporting Files */,
@@ -363,7 +363,6 @@
 				28EAA4C116D775E000F523B3 /* main.m in Sources */,
 				28EAA4C516D775E000F523B3 /* EurukoAppDelegate.m in Sources */,
 				28EAA4D416D775E000F523B3 /* EurukoNewsVC.m in Sources */,
-				28EAA4D716D775E000F523B3 /* EurukoDetailViewController.m in Sources */,
 				28CDA2A916DA95E200B87D75 /* IIViewDeckController.m in Sources */,
 				28CDA2AD16DA963A00B87D75 /* EurukoSidemenuVC.m in Sources */,
 				28CDA2B016DB4EF000B87D75 /* EurukoMainVC.m in Sources */,
@@ -373,6 +372,7 @@
 				28E716C71723F74100341090 /* EurukoAgendaVC.m in Sources */,
 				28152780172CF6590036A7D4 /* EurukoSpeakerInfoVC.m in Sources */,
 				28152787172D6A3F0036A7D4 /* EurukoSpeechVC.m in Sources */,
+				2815278A173069D40036A7D4 /* EurukoBrowserVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

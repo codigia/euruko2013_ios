@@ -15,6 +15,7 @@
 @property (nonatomic) NSArray *speaksContent;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
 @end
 
 @implementation EurukoSpeakersVC
