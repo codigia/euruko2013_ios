@@ -105,6 +105,9 @@
                                             <constraint firstItem="35g-8a-NfO" firstAttribute="centerY" secondItem="dKI-HU-6nl" secondAttribute="centerY" type="default" id="yUj-Dj-TYM"/>
                                             <constraint firstItem="8Rm-hy-jeY" firstAttribute="leading" secondItem="dKI-HU-6nl" secondAttribute="leading" constant="5" id="zzL-df-VoU"/>
                                         </constraints>
+                                        <connections>
+                                            <segue destination="BOE-Nt-iMl" kind="push" identifier="ShowBrowserViewFromNews" id="LKe-on-wg2"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -151,6 +154,7 @@
                     <navigationItem key="navigationItem" id="dd8-U5-QBZ"/>
                     <connections>
                         <outlet property="menuBtn" destination="d6B-vK-JAe" id="TXX-tj-y2U"/>
+                        <outlet property="newsCollView" destination="4wq-vr-bkG" id="tWh-qn-fmb"/>
                         <segue destination="eCw-TU-cLg" kind="push" identifier="ShowSpeakersView" id="Ptn-vF-Wrw"/>
                         <segue destination="G3y-R6-zXR" kind="push" identifier="ShowAgendaView" id="K73-AP-1fx"/>
                     </connections>
@@ -1016,7 +1020,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="D5R-Dt-7Yh"/>
-        <segue reference="Zxz-tN-qbh"/>
+        <segue reference="LKe-on-wg2"/>
+        <segue reference="Puy-ob-1bF"/>
     </inferredMetricsTieBreakers>
 </document>

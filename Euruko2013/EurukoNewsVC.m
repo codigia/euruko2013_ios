@@ -7,11 +7,14 @@
 //
 
 #import "EurukoNewsVC.h"
+#import "EurukoBrowserVC.h"
 #import "IIViewDeckController.h"
 
 @interface EurukoNewsVC ()
 
 @property (nonatomic) NSArray *newsContent;
+
+@property (weak, nonatomic) IBOutlet UICollectionView *newsCollView;
 
 @end
 
@@ -82,23 +85,38 @@
 	return cell;
 }
 
+#pragma mark - Collection view Delegate
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+  NSDictionary *newsArticle = [self.newsContent objectAtIndex:indexPath.row];
+  if ([newsArticle objectForKey:@"link"])
+    return YES;
+  else
+    return NO;
+}
 
+#pragma mark - Actions
 - (IBAction)showSidemenu:(id)sender {
   // Show SideMenu
   [self.navigationController.viewDeckController toggleLeftViewAnimated:YES];
 }
 
+#pragma mark - Segues
+// Perform Selection action using Selection triggered Segue on CollectionView cell
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        //NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        //NSDate *object = _objects[indexPath.row];
-        //[[segue destinationViewController] setDetailItem:object];
-    }
+	if ([[segue identifier] isEqualToString:@"ShowBrowserViewFromNews"]) {
+		NSIndexPath *selectedIndexPath = [[self.newsCollView indexPathsForSelectedItems] objectAtIndex:0];
+		
+		NSDictionary *selectedNews = [self.newsContent objectAtIndex:selectedIndexPath.row];
+		
+		EurukoBrowserVC *browserVC = [segue destinationViewController];
+		browserVC.startURL = [NSURL URLWithString:[selectedNews objectForKey:@"link"]];
+	}
 }
 
 - (void)viewDidUnload {
   [self setMenuBtn:nil];
+  [self setNewsCollView:nil];
   [super viewDidUnload];
 }
 
