@@ -8,21 +8,19 @@
 
 #import "EurukoAppDelegate.h"
 #import "EurukoSidemenuVC.h"
+#import "EurukoNewsVC.h"
 #import "IIViewDeckController.h"
 
 @implementation EurukoAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  // Override point for customization after application launch.
-  if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-    UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
-    UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
-    splitViewController.delegate = (id)navigationController.topViewController;
-  }
-  
   // Reference the Main App Controller
   self.mainController = (EurukoMainVC *) self.window.rootViewController;
+  
+  // Set properties for News VC (EurukoNewsVC)
+  EurukoNewsVC *newsVC = (EurukoNewsVC *)[self.mainController.viewControllers objectAtIndex:0];
+  newsVC.newsContent = self.mainController.newsContent;
   
   // Initialize SideMenu VC
   UIStoryboard *storyboard = self.mainController.storyboard;

@@ -10,6 +10,8 @@
 
 @interface EurukoNewsVC : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
+@property (nonatomic) NSArray *newsContent;
+
 @property (weak, nonatomic) IBOutlet UIButton *menuBtn;
 
 - (IBAction)showSidemenu:(id)sender;
