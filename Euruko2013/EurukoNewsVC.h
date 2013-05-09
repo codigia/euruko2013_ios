@@ -8,12 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol EurukoNewsDelegate;
+
+
 @interface EurukoNewsVC : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
-@property (nonatomic) NSArray *newsContent;
+@property (nonatomic) NSMutableArray *newsContent;
+@property (weak, nonatomic) id <EurukoNewsDelegate> delegate;
 
 @property (weak, nonatomic) IBOutlet UIButton *menuBtn;
 
 - (IBAction)showSidemenu:(id)sender;
 
+@end
+
+
+@protocol EurukoNewsDelegate <NSObject>
+- (void)fetchNewsContent;
 @end

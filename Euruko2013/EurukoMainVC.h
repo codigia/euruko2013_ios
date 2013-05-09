@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EurukoNewsVC.h"
 
 typedef enum EurukoContentType {
   /*! News content (stored file: news.xml) */
@@ -17,11 +18,21 @@ typedef enum EurukoContentType {
   EurukoContentTypeSpeakers   = 3
 } EurukoContentType;
 
+typedef enum EurukoNetTask {
+  /*! Fetch News content */
+  EurukoNetTaskFetchNews    = 1,
+  /*! Fetch Agenda (and Speakers) content */
+  EurukoNetTaskFetchAgenda  = 2
+} EurukoNetTask;
 
-@interface EurukoMainVC : UINavigationController
+// Euruko app notifications
+// News content fetched from net
+extern NSString *const kEurukoAppNotifContentFetchedNews;
 
-@property (nonatomic) NSArray *newsContent;
-@property (nonatomic) NSArray *agendaContent;
-@property (nonatomic) NSArray *speakersContent;
+@interface EurukoMainVC : UINavigationController <EurukoNewsDelegate>
+
+@property (nonatomic) NSMutableArray *newsContent;
+@property (nonatomic) NSMutableArray *agendaContent;
+@property (nonatomic) NSMutableArray *speakersContent;
 
 @end

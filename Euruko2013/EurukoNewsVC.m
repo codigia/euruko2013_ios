@@ -8,6 +8,7 @@
 
 #import "EurukoNewsVC.h"
 #import "EurukoBrowserVC.h"
+#import "EurukoMainVC.h"
 #import "IIViewDeckController.h"
 
 @interface EurukoNewsVC ()
@@ -22,6 +23,11 @@
 {
   [super viewDidLoad];
 	
+  // Update News Collection when news fetched from net
+	[[NSNotificationCenter defaultCenter] addObserver:self
+                                           selector:@selector(onContentFetched:)
+                                               name:kEurukoAppNotifContentFetchedNews
+                                             object:nil];
   // Static creation of News Content
 //  self.newsContent = @[@{@"time": @"1366218000",
 //                         @"title": @"Persado is our first Helios sponsor!"},
@@ -39,6 +45,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+  // Fetch News content from net
+  [self.delegate fetchNewsContent];
+}
+
+- (void)onContentFetched:(NSNotification *)notif {
+  [self.newsCollView reloadData];
+}
 
 #pragma mark - Collection view data source
 - (NSInteger)collectionView:(UICollectionView *)cv numberOfItemsInSection:(NSInteger)section;

@@ -12,3 +12,5 @@
   #import <UIKit/UIKit.h>
   #import <Foundation/Foundation.h>
 #endif
+
+#define serverURL @"http://euruko2013.codigia.com"

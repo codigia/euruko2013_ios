@@ -10,17 +10,22 @@
 #import "EurukoSidemenuVC.h"
 #import "EurukoNewsVC.h"
 #import "IIViewDeckController.h"
+#import "AFNetworking.h"
 
 @implementation EurukoAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  // Enable Net Indicator manager of AFNetworking framework
+  [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+  
   // Reference the Main App Controller
   self.mainController = (EurukoMainVC *) self.window.rootViewController;
   
   // Set properties for News VC (EurukoNewsVC)
   EurukoNewsVC *newsVC = (EurukoNewsVC *)[self.mainController.viewControllers objectAtIndex:0];
   newsVC.newsContent = self.mainController.newsContent;
+  newsVC.delegate = self.mainController;
   
   // Initialize SideMenu VC
   UIStoryboard *storyboard = self.mainController.storyboard;

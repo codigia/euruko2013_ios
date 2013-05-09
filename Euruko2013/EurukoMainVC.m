@@ -8,9 +8,11 @@
 
 #import "EurukoMainVC.h"
 #import "EurukoSidemenuVC.h"
-#import "EurukoNewsVC.h"
 #import "EurukoAgendaVC.h"
 #import "EurukoSpeakersVC.h"
+#import "AFNetworking.h"
+
+NSString *const kEurukoAppNotifContentFetchedNews = @"com.codigia.ios.Euruko2013.kEurukoAppNotifContentFetchedNews";
 
 @interface EurukoMainVC () <EurukoSidemenuViewControllerDelegate>
 
@@ -30,10 +32,22 @@
     return self;
 }
 
+- (id)initWithCoder:(NSCoder *)aDecoder {
+	self = [super initWithCoder:aDecoder];
+	if (self) {
+		// Initialize Data arrays
+    self.newsContent = [NSMutableArray arrayWithCapacity:5];
+    self.agendaContent = [NSMutableArray arrayWithCapacity:5];
+    self.speakersContent = [NSMutableArray arrayWithCapacity:5];
+	}
+	return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+  
   // Load data from filesystem
   [self loadDataFromFileSystem];
 }
@@ -42,6 +56,47 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Net Tasks related methods
+- (void)doEurukoNetTask:(EurukoNetTask)task {
+  NSMutableString *urlPath = [NSMutableString stringWithString:serverURL];
+  AFJSONRequestOperation *operation;
+  if (task == EurukoNetTaskFetchNews) {
+    [urlPath appendString:@"/news.json.php"];
+    NSURL *url = [NSURL URLWithString:urlPath];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+      NSLog(@"Net Task: News content success!");
+      [self newsContFetched:[JSON valueForKeyPath:@"news"]];
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON){
+      NSLog(@"Fetching News content ERROR: %@", error);
+      // Alert Error message only if news content is empty (first run)
+      if (self.newsContent.count == 0) {
+        [self alertMsg:@"Network Error: Server is not reachable! Check your network connection or try again later."];
+      }
+    }];
+  }
+
+  [operation start];
+}
+
+- (void)newsContFetched:(NSArray *)newsData {
+  [self.newsContent removeAllObjects];
+  [self.newsContent addObjectsFromArray:newsData];
+  
+  // TODO: Sort News items based on date
+  
+  // Post related Notification
+  [[NSNotificationCenter defaultCenter] postNotificationName:kEurukoAppNotifContentFetchedNews object:self];
+  
+  // Save News content to Filesystem
+  [self saveDataToFileSystemForContentType:EurukoContentTypeNews];
+}
+
+#pragma mark - Net Tasks Delegate methods
+- (void)fetchNewsContent {
+  [self doEurukoNetTask:EurukoNetTaskFetchNews];
 }
 
 #pragma mark - Menu related methods
@@ -132,6 +187,19 @@
   }
 }
 
+#pragma mark - Error Handling methods
+// Alert String messages
+- (void)alertMsg:(NSString *)msg
+{
+  UIAlertView *alertView = [[UIAlertView alloc]
+                            initWithTitle:@"Error"
+                            message:msg
+                            delegate:nil
+                            cancelButtonTitle:@"OK"
+                            otherButtonTitles:nil];
+  [alertView show];
+}
+
 #pragma mark - Load/Store content to Filesystem
 - (void)loadDataFromFileSystem {
   // Locate files in Application Support standard directory
@@ -162,7 +230,8 @@
     NSLog(@"Load Data From Filesystem: ERROR on Reading news.xml file, error: %@", error);
   } else {
     // De-serialize data from file to NSDictionary/NSArray
-    self.newsContent = [NSPropertyListSerialization propertyListWithData:contentData options:NSPropertyListImmutable format:NULL error:&error];
+    [self.newsContent removeAllObjects];
+    [self.newsContent addObjectsFromArray:[NSPropertyListSerialization propertyListWithData:contentData options:NSPropertyListImmutable format:NULL error:&error]];
     if (error) {
       NSLog(@"Load Data From Filesystem: ERROR on De-Serializing News data, error: %@", error);
     }
@@ -212,6 +281,10 @@
   // app's bundle ID to it to specify the final directory.
   NSString *appBundleID = [[NSBundle mainBundle] bundleIdentifier];
   NSURL *appDirectory = [appSupportDir URLByAppendingPathComponent:appBundleID];
+  // Create that app directory
+  if (![sharedFM createDirectoryAtURL:appDirectory withIntermediateDirectories:YES attributes:nil error:&error]) {
+    NSLog(@"Save Data to Filesystem: ERROR on Creating App Directory, error: %@", error);
+  }
   
   // Save the according content type
   NSURL *dataFileURL;
