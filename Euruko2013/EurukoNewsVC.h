@@ -10,7 +10,6 @@
 
 @protocol EurukoNewsDelegate;
 
-
 @interface EurukoNewsVC : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic) NSMutableArray *newsContent;

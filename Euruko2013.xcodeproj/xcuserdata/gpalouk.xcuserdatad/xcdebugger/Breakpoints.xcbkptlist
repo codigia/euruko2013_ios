@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Euruko2013/EurukoMainVC.m"
-         timestampString = "389782626.280705"
+         timestampString = "389808168.950741"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "84"
-         endingLineNumber = "84"
+         startingLineNumber = "98"
+         endingLineNumber = "98"
          landmarkName = "-newsContFetched:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Euruko2013/EurukoNewsVC.m"
-         timestampString = "389775111.096427"
+         timestampString = "389808168.950741"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "53"
-         endingLineNumber = "53"
+         startingLineNumber = "44"
+         endingLineNumber = "44"
          landmarkName = "-onContentFetched:"
          landmarkType = "5">
       </FileBreakpoint>

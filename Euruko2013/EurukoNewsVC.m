@@ -28,15 +28,6 @@
                                            selector:@selector(onContentFetched:)
                                                name:kEurukoAppNotifContentFetchedNews
                                              object:nil];
-  // Static creation of News Content
-//  self.newsContent = @[@{@"time": @"1366218000",
-//                         @"title": @"Persado is our first Helios sponsor!"},
-//                       @{@"time": @"1365872400",
-//                         @"title": @"Countdown for 2nd ticket batch started!",
-//                         @"link" : @"http://euruko2013.org/blog/2013-04-12-above-and-beyond/"},
-//                       @{@"time": @"1365786000",
-//                         @"title": @"20 supporter tickets will be available",
-//                         @"link" : @"http://euruko2013.org/blog/2013-04-12-more-tickets-more-timezones-more-fun/"}];
 }
 
 - (void)didReceiveMemoryWarning

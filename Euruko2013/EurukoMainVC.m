@@ -8,11 +8,11 @@
 
 #import "EurukoMainVC.h"
 #import "EurukoSidemenuVC.h"
-#import "EurukoAgendaVC.h"
 #import "EurukoSpeakersVC.h"
 #import "AFNetworking.h"
 
 NSString *const kEurukoAppNotifContentFetchedNews = @"com.codigia.ios.Euruko2013.kEurukoAppNotifContentFetchedNews";
+NSString *const kEurukoAppNotifContentFetchedAgenda = @"com.codigia.ios.Euruko2013.kEurukoAppNotifContentFetchedAgenda";
 
 @interface EurukoMainVC () <EurukoSidemenuViewControllerDelegate>
 
@@ -76,6 +76,20 @@ NSString *const kEurukoAppNotifContentFetchedNews = @"com.codigia.ios.Euruko2013
         [self alertMsg:@"Network Error: Server is not reachable! Check your network connection or try again later."];
       }
     }];
+  } else if (task == EurukoNetTaskFetchAgenda) {
+    [urlPath appendString:@"/agenda.json.php"];
+    NSURL *url = [NSURL URLWithString:urlPath];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+      NSLog(@"Net Task: Agenda content success!");
+      [self agendaContFetched:[JSON valueForKeyPath:@"agenda"] withSpeakers:[JSON valueForKeyPath:@"speakers"]];
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON){
+      NSLog(@"Fetching Agenda/Speakers content ERROR: %@", error);
+      // Alert Error message only if agenda/speakers content is empty (first run)
+      if (self.agendaContent.count == 0) {
+        [self alertMsg:@"Network Error: Server is not reachable! Check your network connection or try again later."];
+      }
+    }];
   }
 
   [operation start];
@@ -94,9 +108,27 @@ NSString *const kEurukoAppNotifContentFetchedNews = @"com.codigia.ios.Euruko2013
   [self saveDataToFileSystemForContentType:EurukoContentTypeNews];
 }
 
+- (void)agendaContFetched:(NSArray *)agendaData withSpeakers:(NSArray *)speakersData {
+  [self.agendaContent removeAllObjects];
+  [self.agendaContent addObjectsFromArray:agendaData];
+  [self.speakersContent removeAllObjects];
+  [self.speakersContent addObjectsFromArray:speakersData];
+  
+  // Post related Notification
+  [[NSNotificationCenter defaultCenter] postNotificationName:kEurukoAppNotifContentFetchedAgenda object:self];
+  
+  // Save Agenda/Speakers content to Filesystem
+  [self saveDataToFileSystemForContentType:EurukoContentTypeAgenda];
+  [self saveDataToFileSystemForContentType:EurukoContentTypeSpeakers];
+}
+
 #pragma mark - Net Tasks Delegate methods
 - (void)fetchNewsContent {
   [self doEurukoNetTask:EurukoNetTaskFetchNews];
+}
+
+- (void)fetchAgendaContent {
+  [self doEurukoNetTask:EurukoNetTaskFetchAgenda];
 }
 
 #pragma mark - Menu related methods
@@ -126,8 +158,11 @@ NSString *const kEurukoAppNotifContentFetchedNews = @"com.codigia.ios.Euruko2013
   }
   
   UIStoryboard *storyboard = self.storyboard;
-  EurukoAgendaVC *spkVC = (EurukoAgendaVC *)[storyboard instantiateViewControllerWithIdentifier:@"agendaViewController"];
-  [self pushViewController:spkVC animated:NO];
+  EurukoAgendaVC *agendaVC = (EurukoAgendaVC *)[storyboard instantiateViewControllerWithIdentifier:@"agendaViewController"];
+  agendaVC.agendaContent = self.agendaContent;
+  agendaVC.speaksContent = self.speakersContent;
+  agendaVC.delegate = self;
+  [self pushViewController:agendaVC animated:NO];
 }
 
 // Menu Item: Speakers
