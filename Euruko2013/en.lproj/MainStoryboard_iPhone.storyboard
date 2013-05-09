@@ -747,7 +747,7 @@
                                                         <constraint firstAttribute="height" constant="40" id="uhP-hS-fEl"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="center" text="Yukihiro 'Matz' Matsumoto and second line...." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="227" translatesAutoresizingMaskIntoConstraints="NO" id="VCF-vs-jiU">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="center" text="Yukihiro 'Matz' Matsumoto and second line...." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" minimumFontSize="12" preferredMaxLayoutWidth="227" translatesAutoresizingMaskIntoConstraints="NO" id="VCF-vs-jiU">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="227" id="zYF-Eb-Sc2"/>
                                                     </constraints>
@@ -755,7 +755,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="left" text="Ruby Chief ARCHITECT" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="227" translatesAutoresizingMaskIntoConstraints="NO" id="hJc-rj-k85">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="left" text="Ruby Chief ARCHITECT" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" minimumFontSize="10" preferredMaxLayoutWidth="227" translatesAutoresizingMaskIntoConstraints="NO" id="hJc-rj-k85">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="32" id="dT4-RR-K6F"/>
                                                     </constraints>
@@ -790,9 +790,51 @@
                                             <constraint firstItem="9ss-j7-1r7" firstAttribute="leading" secondItem="sk9-wP-eJC" secondAttribute="leading" type="default" id="lJS-S8-REs"/>
                                             <constraint firstItem="VCF-vs-jiU" firstAttribute="leading" secondItem="sk9-wP-eJC" secondAttribute="leading" constant="76" id="u3f-hu-W7g"/>
                                         </constraints>
+                                        <size key="customSize" width="320" height="125"/>
                                         <connections>
                                             <segue destination="LMs-3x-8nL" kind="push" identifier="ShowSpeechView" id="1YR-0Z-qu0"/>
                                         </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AgendaCellSimple" id="M93-1P-r2R">
+                                        <rect key="frame" x="0.0" y="125" width="320" height="84"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="agenda_item_simple.png" translatesAutoresizingMaskIntoConstraints="NO" id="qax-gb-AfX"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="center" text="Yukihiro 'Matz' Matsumoto and second line....and go for third" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" minimumFontSize="12" preferredMaxLayoutWidth="227" translatesAutoresizingMaskIntoConstraints="NO" id="lZY-J2-sKs">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="227" id="LXM-PS-JF7"/>
+                                                        <constraint firstAttribute="height" constant="57" id="jKh-ea-IoB"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="left" text="23:59" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llB-uZ-taF">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="7yH-RJ-oZK"/>
+                                                        <constraint firstAttribute="width" constant="42" id="jWF-dt-swT"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="llB-uZ-taF" firstAttribute="top" secondItem="M93-1P-r2R" secondAttribute="top" constant="30" id="8TT-ve-QmN"/>
+                                            <constraint firstAttribute="trailing" secondItem="lZY-J2-sKs" secondAttribute="trailing" constant="20" type="default" id="AxL-73-hwc"/>
+                                            <constraint firstItem="lZY-J2-sKs" firstAttribute="top" secondItem="M93-1P-r2R" secondAttribute="top" constant="13" id="Gi1-WY-LfN"/>
+                                            <constraint firstItem="qax-gb-AfX" firstAttribute="trailing" secondItem="M93-1P-r2R" secondAttribute="trailing" type="default" id="PGl-0V-E6G"/>
+                                            <constraint firstItem="qax-gb-AfX" firstAttribute="top" secondItem="M93-1P-r2R" secondAttribute="top" type="default" id="Tq0-ru-WZ4"/>
+                                            <constraint firstItem="qax-gb-AfX" firstAttribute="leading" secondItem="M93-1P-r2R" secondAttribute="leading" type="default" id="ZKC-qy-Q7h"/>
+                                            <constraint firstItem="qax-gb-AfX" firstAttribute="bottom" secondItem="M93-1P-r2R" secondAttribute="bottom" type="default" id="t79-uk-iIw"/>
+                                            <constraint firstItem="llB-uZ-taF" firstAttribute="leading" secondItem="M93-1P-r2R" secondAttribute="leading" constant="10" id="xiA-A2-o4U"/>
+                                        </constraints>
+                                        <size key="customSize" width="320" height="84"/>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -991,6 +1033,7 @@
     </scenes>
     <resources>
         <image name="agenda_item.png" width="640" height="250"/>
+        <image name="agenda_item_simple.png" width="640" height="168"/>
         <image name="disclosure_mark.png" width="30" height="30"/>
         <image name="icon_gaia.png" width="57" height="52"/>
         <image name="logo_title.png" width="640" height="200"/>

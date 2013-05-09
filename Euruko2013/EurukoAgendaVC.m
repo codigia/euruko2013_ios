@@ -100,37 +100,54 @@
   
 }
 
-#pragma mark - Collection view data source
+#pragma mark - Collection view Data source / Delegate
 - (NSInteger)collectionView:(UICollectionView *)cv numberOfItemsInSection:(NSInteger)section;
 {
   return self.agendaData.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath;
-{
-	static NSString *CellIdentifier = @"AgendaCell";
-	
+{	
   NSDictionary *agendaItem = [self.agendaData objectAtIndex:indexPath.row];
+  UICollectionViewCell *cell;
   
-	UICollectionViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-	
-	// Configure Cell
-	UILabel *sphLbl = (UILabel *)[cell viewWithTag:1];
-  sphLbl.text = [agendaItem objectForKey:@"title"];
-  
-  sphLbl = (UILabel *)[cell viewWithTag:3];
-  sphLbl.text = [agendaItem objectForKey:@"spkName"];
-  
-  UIImageView *spkAvatar = (UIImageView *)[cell viewWithTag:2];
-  if ([agendaItem objectForKey:@"spkAvatar"])
-    [spkAvatar setImageWithURL:[NSURL URLWithString:[agendaItem objectForKey:@"spkAvatar"]] placeholderImage:[UIImage imageNamed:@"no_speaker.png"]];
-  else
-    spkAvatar.image = [UIImage imageNamed:@"no_speaker.png"];
-  
-  sphLbl = (UILabel *)[cell viewWithTag:4];
-  sphLbl.text = [agendaItem objectForKey:@"time"];
+  if ([agendaItem objectForKey:@"speaker_id"]) {
+    cell = [cv dequeueReusableCellWithReuseIdentifier:@"AgendaCell" forIndexPath:indexPath];
+    // Configure Cell
+    UILabel *sphLbl = (UILabel *)[cell viewWithTag:1];
+    sphLbl.text = [agendaItem objectForKey:@"title"];
+    
+    sphLbl = (UILabel *)[cell viewWithTag:3];
+    sphLbl.text = [agendaItem objectForKey:@"spkName"];
+    
+    UIImageView *spkAvatar = (UIImageView *)[cell viewWithTag:2];
+    if ([agendaItem objectForKey:@"spkAvatar"])
+      [spkAvatar setImageWithURL:[NSURL URLWithString:[agendaItem objectForKey:@"spkAvatar"]] placeholderImage:[UIImage imageNamed:@"no_speaker.png"]];
+    else
+      spkAvatar.image = [UIImage imageNamed:@"no_speaker.png"];
+    
+    sphLbl = (UILabel *)[cell viewWithTag:4];
+    sphLbl.text = [agendaItem objectForKey:@"time"];
+  } else {
+    cell = [cv dequeueReusableCellWithReuseIdentifier:@"AgendaCellSimple" forIndexPath:indexPath];
+    // Configure Cell
+    UILabel *sphLbl = (UILabel *)[cell viewWithTag:1];
+    sphLbl.text = [agendaItem objectForKey:@"title"];
+    
+    sphLbl = (UILabel *)[cell viewWithTag:4];
+    sphLbl.text = [agendaItem objectForKey:@"time"];
+  }
   
 	return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+  NSDictionary *agendaItem = [self.agendaData objectAtIndex:indexPath.row];
+  
+  if ([agendaItem objectForKey:@"speaker_id"])
+    return CGSizeMake(320, 125);
+  else
+    return CGSizeMake(320, 84);
 }
 
 #pragma mark - Segues
