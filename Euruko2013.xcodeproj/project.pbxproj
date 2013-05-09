@@ -36,6 +36,8 @@
 		281527A8173ABD610036A7D4 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2815279E173ABD610036A7D4 /* AFXMLRequestOperation.m */; };
 		281527A9173ABD610036A7D4 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 281527A0173ABD610036A7D4 /* UIImageView+AFNetworking.m */; };
 		281527AB173C31830036A7D4 /* agenda_item_simple.png in Resources */ = {isa = PBXBuildFile; fileRef = 281527AA173C31830036A7D4 /* agenda_item_simple.png */; };
+		281527AE173C555F0036A7D4 /* agenda_footer.png in Resources */ = {isa = PBXBuildFile; fileRef = 281527AC173C555F0036A7D4 /* agenda_footer.png */; };
+		281527AF173C555F0036A7D4 /* agenda_header.png in Resources */ = {isa = PBXBuildFile; fileRef = 281527AD173C555F0036A7D4 /* agenda_header.png */; };
 		289013A8171808E20006FB9D /* EurukoSpeakersVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 289013A7171808E20006FB9D /* EurukoSpeakersVC.m */; };
 		289013AC17183C390006FB9D /* spk01.png in Resources */ = {isa = PBXBuildFile; fileRef = 289013A917183C390006FB9D /* spk01.png */; };
 		289013AD17183C390006FB9D /* spk02.png in Resources */ = {isa = PBXBuildFile; fileRef = 289013AA17183C390006FB9D /* spk02.png */; };
@@ -111,6 +113,8 @@
 		2815279F173ABD610036A7D4 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		281527A0173ABD610036A7D4 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		281527AA173C31830036A7D4 /* agenda_item_simple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = agenda_item_simple.png; path = Gfx/agenda_item_simple.png; sourceTree = SOURCE_ROOT; };
+		281527AC173C555F0036A7D4 /* agenda_footer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = agenda_footer.png; path = Gfx/agenda_footer.png; sourceTree = SOURCE_ROOT; };
+		281527AD173C555F0036A7D4 /* agenda_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = agenda_header.png; path = Gfx/agenda_header.png; sourceTree = SOURCE_ROOT; };
 		289013A6171808E20006FB9D /* EurukoSpeakersVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EurukoSpeakersVC.h; sourceTree = "<group>"; };
 		289013A7171808E20006FB9D /* EurukoSpeakersVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EurukoSpeakersVC.m; sourceTree = "<group>"; };
 		289013A917183C390006FB9D /* spk01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spk01.png; path = Gfx/spk01.png; sourceTree = SOURCE_ROOT; };
@@ -199,6 +203,8 @@
 		28BDAFDF1705B5AD0024A65B /* Gfx */ = {
 			isa = PBXGroup;
 			children = (
+				281527AC173C555F0036A7D4 /* agenda_footer.png */,
+				281527AD173C555F0036A7D4 /* agenda_header.png */,
 				281527AA173C31830036A7D4 /* agenda_item_simple.png */,
 				28152783172D59D00036A7D4 /* speech_header.png */,
 				28152781172D32D50036A7D4 /* nav_speech.png */,
@@ -409,6 +415,8 @@
 				28152782172D32D50036A7D4 /* nav_speech.png in Resources */,
 				28152784172D59D00036A7D4 /* speech_header.png in Resources */,
 				281527AB173C31830036A7D4 /* agenda_item_simple.png in Resources */,
+				281527AE173C555F0036A7D4 /* agenda_footer.png in Resources */,
+				281527AF173C555F0036A7D4 /* agenda_header.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

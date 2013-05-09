@@ -141,6 +141,22 @@
 	return cell;
 }
 
+- (UICollectionReusableView *)collectionView:(UICollectionView *)cv viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+  UICollectionReusableView *reuseView;
+  // Configure Agenda Header
+  if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
+    reuseView = [cv dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"AgendaHeader" forIndexPath:indexPath];
+    // Configure Header
+    UILabel *dayLbl = (UILabel *)[reuseView viewWithTag:1];
+    dayLbl.text = [NSString stringWithFormat:@"Day %d", indexPath.section+1];
+  } else if ([kind isEqualToString:UICollectionElementKindSectionFooter]) {
+  // Configure Agenda Footer
+    reuseView = [cv dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"AgendaFooter" forIndexPath:indexPath];
+  }
+  
+  return reuseView;
+}
+
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
   NSDictionary *agendaItem = [self.agendaData objectAtIndex:indexPath.row];
   
