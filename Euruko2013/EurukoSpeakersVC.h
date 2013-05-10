@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EurukoAgendaVC.h"
 
 @interface EurukoSpeakersVC : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+
+@property (nonatomic) NSMutableArray *speaksContent;
+@property (weak, nonatomic) id <EurukoAgendaDelegate> delegate;
 
 @property (weak, nonatomic) IBOutlet UIButton *menuBtn;
 

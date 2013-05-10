@@ -37,7 +37,7 @@
 	// Do any additional setup after loading the view.
   self.agendaData = [NSMutableArray arrayWithCapacity:2];
   
-  // Update News Collection when news fetched from net
+  // Update Agenda Collection when content fetched from net
 	[[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(onContentFetched:)
                                                name:kEurukoAppNotifContentFetchedAgenda

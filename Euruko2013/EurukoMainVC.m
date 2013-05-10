@@ -179,6 +179,8 @@ NSString *const kEurukoAppNotifContentFetchedAgenda = @"com.codigia.ios.Euruko20
 
   UIStoryboard *storyboard = self.storyboard;
   EurukoSpeakersVC *spkVC = (EurukoSpeakersVC *)[storyboard instantiateViewControllerWithIdentifier:@"speakersViewController"];
+  spkVC.speaksContent = self.speakersContent;
+  spkVC.delegate = self;
   [self pushViewController:spkVC animated:NO];
 }
 

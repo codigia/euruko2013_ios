@@ -9,6 +9,7 @@
 #import "EurukoSpeechVC.h"
 #import "EurukoSpeakerInfoVC.h"
 #import "EurukoBrowserVC.h"
+#import "AFNetworking.h"
 
 @interface EurukoSpeechVC ()
 @property (weak, nonatomic) IBOutlet UILabel *timeLbl;
@@ -40,7 +41,7 @@
   self.timeLbl.text = [self.speechData objectForKey:@"time"];
   self.speechTitleLbl.text = [self.speechData objectForKey:@"title"];
   if ([self.speakerData objectForKey:@"avatar"])
-    self.speakerAvatarImg.image = [UIImage imageNamed:[self.speakerData objectForKey:@"avatar"]];
+    [self.speakerAvatarImg setImageWithURL:[NSURL URLWithString:[self.speakerData objectForKey:@"avatar"]] placeholderImage:[UIImage imageNamed:@"no_speaker.png"]];
   
   // Speech description in WebView
   NSString* descrString = [NSString stringWithFormat:
