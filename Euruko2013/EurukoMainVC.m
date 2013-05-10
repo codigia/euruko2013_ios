@@ -9,6 +9,7 @@
 #import "EurukoMainVC.h"
 #import "EurukoSidemenuVC.h"
 #import "EurukoSpeakersVC.h"
+#import "EurukoAboutVC.h"
 #import "AFNetworking.h"
 
 NSString *const kEurukoAppNotifContentFetchedNews = @"com.codigia.ios.Euruko2013.kEurukoAppNotifContentFetchedNews";
@@ -184,23 +185,37 @@ NSString *const kEurukoAppNotifContentFetchedAgenda = @"com.codigia.ios.Euruko20
   [self pushViewController:spkVC animated:NO];
 }
 
+// Menu Item: About
+- (void)showAbout {
+  if ([self.topViewController isKindOfClass:[EurukoAboutVC class]])
+    return;
+  
+  for (UIViewController *theVC in self.viewControllers) {
+    if ([theVC isKindOfClass:[EurukoAboutVC class]]) {
+      [self popToViewController:theVC animated:NO];
+      return;
+    }
+  }
+  
+  UIStoryboard *storyboard = self.storyboard;
+  EurukoAboutVC *aboutVC = (EurukoAboutVC *)[storyboard instantiateViewControllerWithIdentifier:@"aboutViewController"];
+  [self pushViewController:aboutVC animated:NO];
+}
+
 /*!
  @method
  @abstract
  Performs each Action according SideMenu Item selection
  */
 - (void)performMenuActionWithId:(NSInteger)menuItemId {
-  // Hide Toolbar before change screen
-  [self setToolbarHidden:YES animated:NO];
-  
   // Perform Menu Item action
   switch (menuItemId) {
-      // Show News Menu item
+      // News Menu item
     case 0:
       [self showNews];
       break;
       
-      // Show News Menu item
+      // Agenda Menu item
     case 1:
       [self showAgenda];
       break;
@@ -210,6 +225,10 @@ NSString *const kEurukoAppNotifContentFetchedAgenda = @"com.codigia.ios.Euruko20
       [self showSpeakers];
       break;
       
+      // About Menu item
+    case 3:
+      [self showAbout];
+      break;
       
     case 4:
       

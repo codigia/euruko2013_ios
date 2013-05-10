@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Euruko2013/EurukoMainVC.m"
-         timestampString = "389808168.950741"
+         timestampString = "389889977.343562"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "98"
-         endingLineNumber = "98"
+         startingLineNumber = "99"
+         endingLineNumber = "99"
          landmarkName = "-newsContFetched:"
          landmarkType = "5">
       </FileBreakpoint>

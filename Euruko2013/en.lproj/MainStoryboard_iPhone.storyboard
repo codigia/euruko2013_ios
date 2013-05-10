@@ -106,7 +106,7 @@
                                             <constraint firstItem="8Rm-hy-jeY" firstAttribute="leading" secondItem="dKI-HU-6nl" secondAttribute="leading" constant="5" id="zzL-df-VoU"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="BOE-Nt-iMl" kind="push" identifier="ShowBrowserViewFromNews" id="LKe-on-wg2"/>
+                                            <segue destination="Jxq-3y-cRL" kind="push" identifier="ShowAboutView" id="pCP-G7-x2J"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -177,7 +177,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <view key="tableFooterView" contentMode="scaleToFill" id="c77-qc-gz9">
-                            <rect key="frame" x="0.0" y="364" width="320" height="96"/>
+                            <rect key="frame" x="0.0" y="276" width="320" height="96"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="pagefold.png" translatesAutoresizingMaskIntoConstraints="NO" id="QsN-Zr-eye">
@@ -311,72 +311,8 @@
                                             <constraint firstItem="JEL-lM-ize" firstAttribute="centerY" secondItem="MSb-O6-DXf" secondAttribute="centerY" type="default" id="fxh-s2-BGJ"/>
                                         </constraints>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="aHx-NI-6T9">
-                                        <rect key="frame" x="0.0" y="232" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Twitter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRk-T5-Q5Y">
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="220" id="XXK-Cq-r5v"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="22"/>
-                                                    <color key="textColor" red="0.57649075260000004" green="0.57649075260000004" blue="0.57649075260000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="menu_twitter.png" translatesAutoresizingMaskIntoConstraints="NO" id="Eme-Fg-Z5c">
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="hGm-Do-gsH"/>
-                                                        <constraint firstAttribute="width" constant="30" id="sly-br-oTU"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="LRk-T5-Q5Y" firstAttribute="leading" secondItem="aHx-NI-6T9" secondAttribute="leading" constant="60" id="AKH-5b-gh9"/>
-                                            <constraint firstItem="Eme-Fg-Z5c" firstAttribute="top" secondItem="LRk-T5-Q5Y" secondAttribute="top" type="default" id="Q2w-uz-LwS"/>
-                                            <constraint firstItem="Eme-Fg-Z5c" firstAttribute="bottom" secondItem="LRk-T5-Q5Y" secondAttribute="bottom" type="default" id="VRs-4X-Skh"/>
-                                            <constraint firstItem="Eme-Fg-Z5c" firstAttribute="leading" secondItem="aHx-NI-6T9" secondAttribute="leading" constant="15" id="hNv-9K-PsU"/>
-                                            <constraint firstItem="Eme-Fg-Z5c" firstAttribute="centerY" secondItem="aHx-NI-6T9" secondAttribute="centerY" type="default" id="oN8-9T-KGG"/>
-                                        </constraints>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="NPe-TS-xvT">
-                                        <rect key="frame" x="0.0" y="276" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Map" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LrF-sv-ntU">
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="220" id="YSj-CO-z7k"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="22"/>
-                                                    <color key="textColor" red="0.57649075260000004" green="0.57649075260000004" blue="0.57649075260000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="menu_map.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rbs-Zp-OyJ">
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="Lq7-tu-sr4"/>
-                                                        <constraint firstAttribute="width" constant="30" id="lV7-Mt-C8c"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="LrF-sv-ntU" firstAttribute="leading" secondItem="NPe-TS-xvT" secondAttribute="leading" constant="60" id="8d5-tP-rIN"/>
-                                            <constraint firstItem="Rbs-Zp-OyJ" firstAttribute="bottom" secondItem="LrF-sv-ntU" secondAttribute="bottom" type="default" id="FkJ-qS-4hS"/>
-                                            <constraint firstItem="Rbs-Zp-OyJ" firstAttribute="top" secondItem="LrF-sv-ntU" secondAttribute="top" type="default" id="IDh-G4-O2o"/>
-                                            <constraint firstItem="Rbs-Zp-OyJ" firstAttribute="leading" secondItem="NPe-TS-xvT" secondAttribute="leading" constant="15" id="Qku-yo-mow"/>
-                                            <constraint firstItem="Rbs-Zp-OyJ" firstAttribute="centerY" secondItem="NPe-TS-xvT" secondAttribute="centerY" type="default" id="ZUW-Uv-mtL"/>
-                                        </constraints>
-                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="CXw-zi-lnn">
-                                        <rect key="frame" x="0.0" y="320" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="232" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -438,7 +374,7 @@
                                     <outlet property="delegate" destination="BOE-Nt-iMl" id="1ku-KH-lT5"/>
                                 </connections>
                             </webView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="nav_speaker.png" translatesAutoresizingMaskIntoConstraints="NO" id="K15-1j-zKT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="nav_empty.png" translatesAutoresizingMaskIntoConstraints="NO" id="K15-1j-zKT">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="ZZJ-Ul-sh8"/>
                                 </constraints>
@@ -923,6 +859,130 @@
             </objects>
             <point key="canvasLocation" x="827" y="638"/>
         </scene>
+        <!--Euruko AboutVC - AboutViewController-->
+        <scene sceneID="E4J-mi-ZxS">
+            <objects>
+                <viewController storyboardIdentifier="aboutViewController" title="AboutViewController" id="Jxq-3y-cRL" customClass="EurukoAboutVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rbh-yZ-ckp">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" image="nav_about.png" translatesAutoresizingMaskIntoConstraints="NO" id="kKO-4i-ZHS">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="FLh-4K-7jG"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faM-Jf-WFO">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="LN4-BZ-k9q"/>
+                                    <constraint firstAttribute="width" constant="38" id="hzB-Po-Q1M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="menubutton.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showSidemenu:" destination="Jxq-3y-cRL" eventType="touchUpInside" id="YtN-R3-u2Z"/>
+                                </connections>
+                            </button>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bMB-5b-bsQ">
+                                <color key="backgroundColor" red="0.86477598850000004" green="0.86477598850000004" blue="0.86477598850000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="about_logo_gaia.png" translatesAutoresizingMaskIntoConstraints="NO" id="J5f-XN-Z2e">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="k3w-vX-YDk"/>
+                                    <constraint firstAttribute="width" constant="220" id="mED-Tf-CVy"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="about_logo_euruko.png" translatesAutoresizingMaskIntoConstraints="NO" id="OBO-OJ-SEg">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230" id="WLd-7Z-6FG"/>
+                                    <constraint firstAttribute="height" constant="30" id="ql8-ia-7Xl"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="B7d-wb-8B8">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="6VA-n3-5o3"/>
+                                </constraints>
+                                <string key="text">EuRuKo (the European Ruby Conference) is an annual conference which focuses on the Ruby programming language, with an informal atmosphere.</string>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="13"/>
+                                <color key="textColor" red="0.86477598850000004" green="0.86477598850000004" blue="0.86477598850000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="This is the official Euruko Athens 2013 iOS app. Enjoy!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="270" translatesAutoresizingMaskIntoConstraints="NO" id="eXJ-wv-SGx">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ktI-2Q-l7c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="13"/>
+                                <color key="textColor" red="0.86477598850000004" green="0.86477598850000004" blue="0.86477598850000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Proud Gaia sponsor!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="270" translatesAutoresizingMaskIntoConstraints="NO" id="g6N-fS-QZZ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="Qbc-sE-2Cw"/>
+                                    <constraint firstAttribute="height" constant="30" type="user" id="jub-w6-nPA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana-BoldItalic" family="Verdana" pointSize="13"/>
+                                <color key="textColor" red="0.86477598850000004" green="0.86477598850000004" blue="0.86477598850000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="app development" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="270" translatesAutoresizingMaskIntoConstraints="NO" id="gEl-IN-EPc">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IHt-oI-Ktt"/>
+                                    <constraint firstAttribute="width" constant="270" id="x1R-8j-1V6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="11"/>
+                                <color key="textColor" red="0.86477598850000004" green="0.86477598850000004" blue="0.86477598850000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="about_logo_codigia.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jza-FU-WfE">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="8KG-VK-6vI"/>
+                                    <constraint firstAttribute="width" constant="86" id="Py6-IB-B9B"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="faM-Jf-WFO" firstAttribute="leading" secondItem="rbh-yZ-ckp" secondAttribute="leading" constant="10" id="2EP-US-APn"/>
+                            <constraint firstItem="J5f-XN-Z2e" firstAttribute="centerY" secondItem="bMB-5b-bsQ" secondAttribute="centerY" type="default" id="45Z-N0-3Kn"/>
+                            <constraint firstItem="gEl-IN-EPc" firstAttribute="trailing" secondItem="eXJ-wv-SGx" secondAttribute="trailing" type="default" id="4hC-4I-YXF"/>
+                            <constraint firstItem="OBO-OJ-SEg" firstAttribute="top" secondItem="kKO-4i-ZHS" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="6IB-ve-xF7"/>
+                            <constraint firstItem="B7d-wb-8B8" firstAttribute="top" secondItem="OBO-OJ-SEg" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="6nY-Ch-Cj2"/>
+                            <constraint firstAttribute="bottom" secondItem="J5f-XN-Z2e" secondAttribute="bottom" priority="1" constant="170" type="user" id="9x4-CF-RpW"/>
+                            <constraint firstAttribute="bottom" secondItem="g6N-fS-QZZ" secondAttribute="bottom" priority="1" constant="145" type="user" id="DC4-Wa-B0Y"/>
+                            <constraint firstAttribute="bottom" secondItem="Jza-FU-WfE" secondAttribute="bottom" constant="64" id="KzS-qg-70c"/>
+                            <constraint firstItem="bMB-5b-bsQ" firstAttribute="leading" secondItem="rbh-yZ-ckp" secondAttribute="leading" constant="40" id="MEq-zF-DsZ"/>
+                            <constraint firstItem="gEl-IN-EPc" firstAttribute="centerX" secondItem="Jza-FU-WfE" secondAttribute="centerX" type="default" id="MSI-49-NDO"/>
+                            <constraint firstAttribute="bottom" secondItem="gEl-IN-EPc" secondAttribute="bottom" constant="43" id="RQc-3J-FF4"/>
+                            <constraint firstItem="B7d-wb-8B8" firstAttribute="leading" secondItem="rbh-yZ-ckp" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="S7k-1Q-agB"/>
+                            <constraint firstItem="OBO-OJ-SEg" firstAttribute="centerX" secondItem="kKO-4i-ZHS" secondAttribute="centerX" type="default" id="SeJ-ZH-m1P"/>
+                            <constraint firstItem="J5f-XN-Z2e" firstAttribute="centerX" secondItem="eXJ-wv-SGx" secondAttribute="centerX" type="default" id="UXa-lb-ujJ"/>
+                            <constraint firstAttribute="trailing" secondItem="g6N-fS-QZZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="UgX-Ok-xcd"/>
+                            <constraint firstItem="kKO-4i-ZHS" firstAttribute="leading" secondItem="rbh-yZ-ckp" secondAttribute="leading" type="default" id="WV1-YL-61H"/>
+                            <constraint firstAttribute="trailing" secondItem="B7d-wb-8B8" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="bBL-O7-PAQ"/>
+                            <constraint firstAttribute="bottom" secondItem="bMB-5b-bsQ" secondAttribute="bottom" constant="160" type="user" id="dDf-jm-dQt"/>
+                            <constraint firstItem="J5f-XN-Z2e" firstAttribute="centerX" secondItem="bMB-5b-bsQ" secondAttribute="centerX" type="default" id="eR4-Vk-rBk"/>
+                            <constraint firstItem="kKO-4i-ZHS" firstAttribute="trailing" secondItem="rbh-yZ-ckp" secondAttribute="trailing" type="default" id="f9I-gX-d4l"/>
+                            <constraint firstItem="gEl-IN-EPc" firstAttribute="leading" secondItem="eXJ-wv-SGx" secondAttribute="leading" type="default" id="gaF-ir-3gX"/>
+                            <constraint firstItem="kKO-4i-ZHS" firstAttribute="top" secondItem="rbh-yZ-ckp" secondAttribute="top" type="user" id="hHg-og-Bxu"/>
+                            <constraint firstItem="eXJ-wv-SGx" firstAttribute="top" secondItem="B7d-wb-8B8" secondAttribute="bottom" constant="-8" type="user" id="hQc-ik-3HR"/>
+                            <constraint firstItem="J5f-XN-Z2e" firstAttribute="top" secondItem="eXJ-wv-SGx" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="kqA-1O-xmX"/>
+                            <constraint firstItem="g6N-fS-QZZ" firstAttribute="top" secondItem="J5f-XN-Z2e" secondAttribute="bottom" constant="-5" type="user" id="tOF-yH-fX3"/>
+                            <constraint firstItem="eXJ-wv-SGx" firstAttribute="centerX" secondItem="B7d-wb-8B8" secondAttribute="centerX" type="default" id="xU3-Jz-c8Z"/>
+                            <constraint firstItem="faM-Jf-WFO" firstAttribute="top" secondItem="rbh-yZ-ckp" secondAttribute="top" constant="3" id="xxr-17-qUC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Y6Y-Or-Wb1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5iT-HV-Oy0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="827" y="1216"/>
+        </scene>
         <!--Euruko SpeechVC - SpeechViewController-->
         <scene sceneID="dLd-dl-u0a">
             <objects>
@@ -1068,6 +1128,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="about_logo_codigia.png" width="173" height="48"/>
+        <image name="about_logo_euruko.png" width="460" height="61"/>
+        <image name="about_logo_gaia.png" width="440" height="121"/>
         <image name="agenda_footer.png" width="640" height="140"/>
         <image name="agenda_header.png" width="640" height="140"/>
         <image name="agenda_item.png" width="640" height="250"/>
@@ -1077,13 +1140,13 @@
         <image name="logo_title.png" width="640" height="200"/>
         <image name="menu_about.png" width="80" height="80"/>
         <image name="menu_agenda.png" width="80" height="80"/>
-        <image name="menu_map.png" width="80" height="80"/>
         <image name="menu_news.png" width="80" height="80"/>
         <image name="menu_speakers.png" width="80" height="80"/>
-        <image name="menu_twitter.png" width="80" height="80"/>
         <image name="menuback.png" width="76" height="76"/>
         <image name="menubutton.png" width="76" height="76"/>
+        <image name="nav_about.png" width="640" height="98"/>
         <image name="nav_agenda.png" width="640" height="98"/>
+        <image name="nav_empty.png" width="640" height="98"/>
         <image name="nav_news.png" width="640" height="98"/>
         <image name="nav_speaker.png" width="640" height="98"/>
         <image name="nav_speakers.png" width="640" height="98"/>
@@ -1095,13 +1158,97 @@
         <image name="spk01.png" width="214" height="214"/>
         <image name="vertical_line.png" width="8" height="100"/>
     </resources>
+    <classes>
+        <class className="EurukoAboutVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoAboutVC.h"/>
+            <relationships>
+                <relationship kind="action" name="showSidemenu:"/>
+            </relationships>
+        </class>
+        <class className="EurukoAgendaVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoAgendaVC.h"/>
+            <relationships>
+                <relationship kind="action" name="showSidemenu:"/>
+                <relationship kind="outlet" name="agendaCollView" candidateClass="UICollectionView"/>
+                <relationship kind="outlet" name="menuBtn" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="EurukoBrowserVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoBrowserVC.h"/>
+            <relationships>
+                <relationship kind="action" name="backBtnTapped:"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="EurukoMainVC" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoMainVC.h"/>
+        </class>
+        <class className="EurukoNewsVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoNewsVC.h"/>
+            <relationships>
+                <relationship kind="action" name="showSidemenu:"/>
+                <relationship kind="outlet" name="menuBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="newsCollView" candidateClass="UICollectionView"/>
+            </relationships>
+        </class>
+        <class className="EurukoSidemenuVC" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoSidemenuVC.h"/>
+            <relationships>
+                <relationship kind="action" name="footerBtnTapped:"/>
+                <relationship kind="outlet" name="footerView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="EurukoSpeakerInfoVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoSpeakerInfoVC.h"/>
+            <relationships>
+                <relationship kind="action" name="backBtnTapped:"/>
+                <relationship kind="outlet" name="speakerAvatarImg" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="speakerNameLbl" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="speakerTitleLbl" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="spkBioWebView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="EurukoSpeakersVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoSpeakersVC.h"/>
+            <relationships>
+                <relationship kind="action" name="showSidemenu:"/>
+                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
+                <relationship kind="outlet" name="menuBtn" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="EurukoSpeechVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoSpeechVC.h"/>
+            <relationships>
+                <relationship kind="action" name="backBtnTapped:"/>
+                <relationship kind="outlet" name="speakerAvatarImg" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="speechDescrWebv" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="speechTitleLbl" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeLbl" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="LKe-on-wg2"/>
         <segue reference="Puy-ob-1bF"/>
+        <segue reference="1fk-P7-PLx"/>
     </inferredMetricsTieBreakers>
 </document>

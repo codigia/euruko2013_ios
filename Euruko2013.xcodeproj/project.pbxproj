@@ -38,6 +38,12 @@
 		281527AB173C31830036A7D4 /* agenda_item_simple.png in Resources */ = {isa = PBXBuildFile; fileRef = 281527AA173C31830036A7D4 /* agenda_item_simple.png */; };
 		281527AE173C555F0036A7D4 /* agenda_footer.png in Resources */ = {isa = PBXBuildFile; fileRef = 281527AC173C555F0036A7D4 /* agenda_footer.png */; };
 		281527AF173C555F0036A7D4 /* agenda_header.png in Resources */ = {isa = PBXBuildFile; fileRef = 281527AD173C555F0036A7D4 /* agenda_header.png */; };
+		286A04DB173D29E9008985AC /* about_logo_codigia.png in Resources */ = {isa = PBXBuildFile; fileRef = 286A04D8173D29E9008985AC /* about_logo_codigia.png */; };
+		286A04DC173D29E9008985AC /* about_logo_euruko.png in Resources */ = {isa = PBXBuildFile; fileRef = 286A04D9173D29E9008985AC /* about_logo_euruko.png */; };
+		286A04DD173D29E9008985AC /* about_logo_gaia.png in Resources */ = {isa = PBXBuildFile; fileRef = 286A04DA173D29E9008985AC /* about_logo_gaia.png */; };
+		286A04E0173D2AE2008985AC /* EurukoAboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 286A04DF173D2AE2008985AC /* EurukoAboutVC.m */; };
+		286A04E3173D2D12008985AC /* nav_about.png in Resources */ = {isa = PBXBuildFile; fileRef = 286A04E1173D2D12008985AC /* nav_about.png */; };
+		286A04E4173D2D12008985AC /* nav_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 286A04E2173D2D12008985AC /* nav_empty.png */; };
 		289013A8171808E20006FB9D /* EurukoSpeakersVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 289013A7171808E20006FB9D /* EurukoSpeakersVC.m */; };
 		289013AC17183C390006FB9D /* spk01.png in Resources */ = {isa = PBXBuildFile; fileRef = 289013A917183C390006FB9D /* spk01.png */; };
 		289013AD17183C390006FB9D /* spk02.png in Resources */ = {isa = PBXBuildFile; fileRef = 289013AA17183C390006FB9D /* spk02.png */; };
@@ -115,6 +121,13 @@
 		281527AA173C31830036A7D4 /* agenda_item_simple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = agenda_item_simple.png; path = Gfx/agenda_item_simple.png; sourceTree = SOURCE_ROOT; };
 		281527AC173C555F0036A7D4 /* agenda_footer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = agenda_footer.png; path = Gfx/agenda_footer.png; sourceTree = SOURCE_ROOT; };
 		281527AD173C555F0036A7D4 /* agenda_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = agenda_header.png; path = Gfx/agenda_header.png; sourceTree = SOURCE_ROOT; };
+		286A04D8173D29E9008985AC /* about_logo_codigia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about_logo_codigia.png; path = Gfx/about_logo_codigia.png; sourceTree = SOURCE_ROOT; };
+		286A04D9173D29E9008985AC /* about_logo_euruko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about_logo_euruko.png; path = Gfx/about_logo_euruko.png; sourceTree = SOURCE_ROOT; };
+		286A04DA173D29E9008985AC /* about_logo_gaia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about_logo_gaia.png; path = Gfx/about_logo_gaia.png; sourceTree = SOURCE_ROOT; };
+		286A04DE173D2AE2008985AC /* EurukoAboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EurukoAboutVC.h; sourceTree = "<group>"; };
+		286A04DF173D2AE2008985AC /* EurukoAboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EurukoAboutVC.m; sourceTree = "<group>"; };
+		286A04E1173D2D12008985AC /* nav_about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nav_about.png; path = Gfx/nav_about.png; sourceTree = SOURCE_ROOT; };
+		286A04E2173D2D12008985AC /* nav_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nav_empty.png; path = Gfx/nav_empty.png; sourceTree = SOURCE_ROOT; };
 		289013A6171808E20006FB9D /* EurukoSpeakersVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EurukoSpeakersVC.h; sourceTree = "<group>"; };
 		289013A7171808E20006FB9D /* EurukoSpeakersVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EurukoSpeakersVC.m; sourceTree = "<group>"; };
 		289013A917183C390006FB9D /* spk01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spk01.png; path = Gfx/spk01.png; sourceTree = SOURCE_ROOT; };
@@ -203,6 +216,11 @@
 		28BDAFDF1705B5AD0024A65B /* Gfx */ = {
 			isa = PBXGroup;
 			children = (
+				286A04E1173D2D12008985AC /* nav_about.png */,
+				286A04E2173D2D12008985AC /* nav_empty.png */,
+				286A04D8173D29E9008985AC /* about_logo_codigia.png */,
+				286A04D9173D29E9008985AC /* about_logo_euruko.png */,
+				286A04DA173D29E9008985AC /* about_logo_gaia.png */,
 				281527AC173C555F0036A7D4 /* agenda_footer.png */,
 				281527AD173C555F0036A7D4 /* agenda_header.png */,
 				281527AA173C31830036A7D4 /* agenda_item_simple.png */,
@@ -285,6 +303,8 @@
 				289013A7171808E20006FB9D /* EurukoSpeakersVC.m */,
 				2815277E172CF6590036A7D4 /* EurukoSpeakerInfoVC.h */,
 				2815277F172CF6590036A7D4 /* EurukoSpeakerInfoVC.m */,
+				286A04DE173D2AE2008985AC /* EurukoAboutVC.h */,
+				286A04DF173D2AE2008985AC /* EurukoAboutVC.m */,
 				28152788173069D40036A7D4 /* EurukoBrowserVC.h */,
 				28152789173069D40036A7D4 /* EurukoBrowserVC.m */,
 				28BDAFDF1705B5AD0024A65B /* Gfx */,
@@ -417,6 +437,11 @@
 				281527AB173C31830036A7D4 /* agenda_item_simple.png in Resources */,
 				281527AE173C555F0036A7D4 /* agenda_footer.png in Resources */,
 				281527AF173C555F0036A7D4 /* agenda_header.png in Resources */,
+				286A04DB173D29E9008985AC /* about_logo_codigia.png in Resources */,
+				286A04DC173D29E9008985AC /* about_logo_euruko.png in Resources */,
+				286A04DD173D29E9008985AC /* about_logo_gaia.png in Resources */,
+				286A04E3173D2D12008985AC /* nav_about.png in Resources */,
+				286A04E4173D2D12008985AC /* nav_empty.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +474,7 @@
 				281527A7173ABD610036A7D4 /* AFURLConnectionOperation.m in Sources */,
 				281527A8173ABD610036A7D4 /* AFXMLRequestOperation.m in Sources */,
 				281527A9173ABD610036A7D4 /* UIImageView+AFNetworking.m in Sources */,
+				286A04E0173D2AE2008985AC /* EurukoAboutVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
