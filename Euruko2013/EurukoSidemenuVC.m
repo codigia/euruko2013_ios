@@ -48,7 +48,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   [tableView deselectRowAtIndexPath:indexPath animated:YES];
-  NSLog(@"Menu item id: %d", indexPath.row);
   // Perform Menu Item action
   switch (indexPath.row) {
       // News Menu item

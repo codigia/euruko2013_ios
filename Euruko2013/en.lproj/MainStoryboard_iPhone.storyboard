@@ -900,8 +900,8 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="about_logo_euruko.png" translatesAutoresizingMaskIntoConstraints="NO" id="OBO-OJ-SEg">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="230" id="WLd-7Z-6FG"/>
                                     <constraint firstAttribute="height" constant="30" id="ql8-ia-7Xl"/>
+                                    <constraint firstAttribute="width" constant="230" id="tis-6t-tcU"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="B7d-wb-8B8">
@@ -916,6 +916,7 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="This is the official Euruko Athens 2013 iOS app. Enjoy!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="270" translatesAutoresizingMaskIntoConstraints="NO" id="eXJ-wv-SGx">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ktI-2Q-l7c"/>
+                                    <constraint firstAttribute="width" constant="270" id="vql-wW-JTP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="13"/>
                                 <color key="textColor" red="0.86477598850000004" green="0.86477598850000004" blue="0.86477598850000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -923,7 +924,6 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Proud Gaia sponsor!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="270" translatesAutoresizingMaskIntoConstraints="NO" id="g6N-fS-QZZ">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="270" id="Qbc-sE-2Cw"/>
                                     <constraint firstAttribute="height" constant="30" type="user" id="jub-w6-nPA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Verdana-BoldItalic" family="Verdana" pointSize="13"/>
@@ -933,7 +933,6 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="app development" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="270" translatesAutoresizingMaskIntoConstraints="NO" id="gEl-IN-EPc">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="IHt-oI-Ktt"/>
-                                    <constraint firstAttribute="width" constant="270" id="x1R-8j-1V6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="11"/>
                                 <color key="textColor" red="0.86477598850000004" green="0.86477598850000004" blue="0.86477598850000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -945,39 +944,103 @@
                                     <constraint firstAttribute="width" constant="86" id="Py6-IB-B9B"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Sq-jc-Ng3">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="ElS-6i-4uP"/>
+                                    <constraint firstAttribute="width" constant="240" id="cnp-9q-XeF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoTapped:" destination="Jxq-3y-cRL" eventType="touchUpInside" id="SVb-k3-v8s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dn-sw-ngc">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="dOk-uu-ytu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoTapped:" destination="Jxq-3y-cRL" eventType="touchUpInside" id="K03-FB-u7H"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahw-yn-PeG">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="3o8-AV-U83"/>
+                                    <constraint firstAttribute="height" constant="45" id="PKT-cK-hFQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoTapped:" destination="Jxq-3y-cRL" eventType="touchUpInside" id="uFt-s6-hhj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="faM-Jf-WFO" firstAttribute="leading" secondItem="rbh-yZ-ckp" secondAttribute="leading" constant="10" id="2EP-US-APn"/>
                             <constraint firstItem="J5f-XN-Z2e" firstAttribute="centerY" secondItem="bMB-5b-bsQ" secondAttribute="centerY" type="default" id="45Z-N0-3Kn"/>
-                            <constraint firstItem="gEl-IN-EPc" firstAttribute="trailing" secondItem="eXJ-wv-SGx" secondAttribute="trailing" type="default" id="4hC-4I-YXF"/>
                             <constraint firstItem="OBO-OJ-SEg" firstAttribute="top" secondItem="kKO-4i-ZHS" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="6IB-ve-xF7"/>
                             <constraint firstItem="B7d-wb-8B8" firstAttribute="top" secondItem="OBO-OJ-SEg" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="6nY-Ch-Cj2"/>
+                            <constraint firstItem="g6N-fS-QZZ" firstAttribute="centerX" secondItem="ahw-yn-PeG" secondAttribute="centerX" type="default" id="8sw-AP-9p1"/>
                             <constraint firstAttribute="bottom" secondItem="J5f-XN-Z2e" secondAttribute="bottom" priority="1" constant="170" type="user" id="9x4-CF-RpW"/>
+                            <constraint firstItem="7dn-sw-ngc" firstAttribute="centerX" secondItem="g6N-fS-QZZ" secondAttribute="centerX" type="default" id="Btr-Es-80S"/>
                             <constraint firstAttribute="bottom" secondItem="g6N-fS-QZZ" secondAttribute="bottom" priority="1" constant="145" type="user" id="DC4-Wa-B0Y"/>
-                            <constraint firstAttribute="bottom" secondItem="Jza-FU-WfE" secondAttribute="bottom" constant="64" id="KzS-qg-70c"/>
-                            <constraint firstItem="bMB-5b-bsQ" firstAttribute="leading" secondItem="rbh-yZ-ckp" secondAttribute="leading" constant="40" id="MEq-zF-DsZ"/>
+                            <constraint firstItem="9Sq-jc-Ng3" firstAttribute="top" secondItem="kKO-4i-ZHS" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="DMW-2g-xR7"/>
+                            <constraint firstItem="7dn-sw-ngc" firstAttribute="top" secondItem="eXJ-wv-SGx" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Leu-Us-WbZ"/>
                             <constraint firstItem="gEl-IN-EPc" firstAttribute="centerX" secondItem="Jza-FU-WfE" secondAttribute="centerX" type="default" id="MSI-49-NDO"/>
+                            <constraint firstItem="9Sq-jc-Ng3" firstAttribute="centerX" secondItem="OBO-OJ-SEg" secondAttribute="centerX" type="default" id="Npq-iT-rC1"/>
+                            <constraint firstItem="7dn-sw-ngc" firstAttribute="bottom" secondItem="g6N-fS-QZZ" secondAttribute="bottom" type="default" id="OeE-nN-vCK"/>
                             <constraint firstAttribute="bottom" secondItem="gEl-IN-EPc" secondAttribute="bottom" constant="43" id="RQc-3J-FF4"/>
                             <constraint firstItem="B7d-wb-8B8" firstAttribute="leading" secondItem="rbh-yZ-ckp" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="S7k-1Q-agB"/>
-                            <constraint firstItem="OBO-OJ-SEg" firstAttribute="centerX" secondItem="kKO-4i-ZHS" secondAttribute="centerX" type="default" id="SeJ-ZH-m1P"/>
+                            <constraint firstItem="9Sq-jc-Ng3" firstAttribute="leading" secondItem="bMB-5b-bsQ" secondAttribute="leading" type="default" id="ScE-m2-nrf"/>
                             <constraint firstItem="J5f-XN-Z2e" firstAttribute="centerX" secondItem="eXJ-wv-SGx" secondAttribute="centerX" type="default" id="UXa-lb-ujJ"/>
                             <constraint firstAttribute="trailing" secondItem="g6N-fS-QZZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="UgX-Ok-xcd"/>
                             <constraint firstItem="kKO-4i-ZHS" firstAttribute="leading" secondItem="rbh-yZ-ckp" secondAttribute="leading" type="default" id="WV1-YL-61H"/>
+                            <constraint firstItem="kKO-4i-ZHS" firstAttribute="centerX" secondItem="OBO-OJ-SEg" secondAttribute="centerX" type="default" id="Ztt-SW-vBf"/>
                             <constraint firstAttribute="trailing" secondItem="B7d-wb-8B8" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="bBL-O7-PAQ"/>
+                            <constraint firstAttribute="bottom" secondItem="ahw-yn-PeG" secondAttribute="bottom" constant="47" id="bKE-dG-Juv"/>
+                            <constraint firstAttribute="bottom" secondItem="Jza-FU-WfE" secondAttribute="bottom" constant="64" id="cOd-BH-Xeg"/>
                             <constraint firstAttribute="bottom" secondItem="bMB-5b-bsQ" secondAttribute="bottom" constant="160" type="user" id="dDf-jm-dQt"/>
                             <constraint firstItem="J5f-XN-Z2e" firstAttribute="centerX" secondItem="bMB-5b-bsQ" secondAttribute="centerX" type="default" id="eR4-Vk-rBk"/>
                             <constraint firstItem="kKO-4i-ZHS" firstAttribute="trailing" secondItem="rbh-yZ-ckp" secondAttribute="trailing" type="default" id="f9I-gX-d4l"/>
                             <constraint firstItem="gEl-IN-EPc" firstAttribute="leading" secondItem="eXJ-wv-SGx" secondAttribute="leading" type="default" id="gaF-ir-3gX"/>
+                            <constraint firstItem="bMB-5b-bsQ" firstAttribute="trailing" secondItem="9Sq-jc-Ng3" secondAttribute="trailing" type="default" id="glL-Gw-oil"/>
                             <constraint firstItem="kKO-4i-ZHS" firstAttribute="top" secondItem="rbh-yZ-ckp" secondAttribute="top" type="user" id="hHg-og-Bxu"/>
                             <constraint firstItem="eXJ-wv-SGx" firstAttribute="top" secondItem="B7d-wb-8B8" secondAttribute="bottom" constant="-8" type="user" id="hQc-ik-3HR"/>
+                            <constraint firstItem="eXJ-wv-SGx" firstAttribute="trailing" secondItem="gEl-IN-EPc" secondAttribute="trailing" type="default" id="imD-Wm-KIu"/>
                             <constraint firstItem="J5f-XN-Z2e" firstAttribute="top" secondItem="eXJ-wv-SGx" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="kqA-1O-xmX"/>
+                            <constraint firstItem="7dn-sw-ngc" firstAttribute="leading" secondItem="OBO-OJ-SEg" secondAttribute="leading" type="default" id="nyl-2z-Ery"/>
                             <constraint firstItem="g6N-fS-QZZ" firstAttribute="top" secondItem="J5f-XN-Z2e" secondAttribute="bottom" constant="-5" type="user" id="tOF-yH-fX3"/>
-                            <constraint firstItem="eXJ-wv-SGx" firstAttribute="centerX" secondItem="B7d-wb-8B8" secondAttribute="centerX" type="default" id="xU3-Jz-c8Z"/>
                             <constraint firstItem="faM-Jf-WFO" firstAttribute="top" secondItem="rbh-yZ-ckp" secondAttribute="top" constant="3" id="xxr-17-qUC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Y6Y-Or-Wb1"/>
+                    <connections>
+                        <outlet property="codigiaBtn" destination="ahw-yn-PeG" id="9uF-WB-OfM"/>
+                        <outlet property="eurukoBtn" destination="9Sq-jc-Ng3" id="DsX-UV-VkL"/>
+                        <outlet property="gaiaBtn" destination="7dn-sw-ngc" id="tkc-S3-ylS"/>
+                        <segue destination="BOE-Nt-iMl" kind="push" identifier="ShowBrowserViewFromAbout" id="nNG-O4-rHZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5iT-HV-Oy0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1158,90 +1221,6 @@
         <image name="spk01.png" width="214" height="214"/>
         <image name="vertical_line.png" width="8" height="100"/>
     </resources>
-    <classes>
-        <class className="EurukoAboutVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoAboutVC.h"/>
-            <relationships>
-                <relationship kind="action" name="showSidemenu:"/>
-            </relationships>
-        </class>
-        <class className="EurukoAgendaVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoAgendaVC.h"/>
-            <relationships>
-                <relationship kind="action" name="showSidemenu:"/>
-                <relationship kind="outlet" name="agendaCollView" candidateClass="UICollectionView"/>
-                <relationship kind="outlet" name="menuBtn" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="EurukoBrowserVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoBrowserVC.h"/>
-            <relationships>
-                <relationship kind="action" name="backBtnTapped:"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="EurukoMainVC" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoMainVC.h"/>
-        </class>
-        <class className="EurukoNewsVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoNewsVC.h"/>
-            <relationships>
-                <relationship kind="action" name="showSidemenu:"/>
-                <relationship kind="outlet" name="menuBtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="newsCollView" candidateClass="UICollectionView"/>
-            </relationships>
-        </class>
-        <class className="EurukoSidemenuVC" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoSidemenuVC.h"/>
-            <relationships>
-                <relationship kind="action" name="footerBtnTapped:"/>
-                <relationship kind="outlet" name="footerView" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="EurukoSpeakerInfoVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoSpeakerInfoVC.h"/>
-            <relationships>
-                <relationship kind="action" name="backBtnTapped:"/>
-                <relationship kind="outlet" name="speakerAvatarImg" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="speakerNameLbl" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="speakerTitleLbl" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="spkBioWebView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="EurukoSpeakersVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoSpeakersVC.h"/>
-            <relationships>
-                <relationship kind="action" name="showSidemenu:"/>
-                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
-                <relationship kind="outlet" name="menuBtn" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="EurukoSpeechVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoSpeechVC.h"/>
-            <relationships>
-                <relationship kind="action" name="backBtnTapped:"/>
-                <relationship kind="outlet" name="speakerAvatarImg" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="speechDescrWebv" candidateClass="UIWebView"/>
-                <relationship kind="outlet" name="speechTitleLbl" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="timeLbl" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="UICollectionReusableView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
-        </class>
-        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
-        </class>
-        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
@@ -1249,6 +1228,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Puy-ob-1bF"/>
-        <segue reference="1fk-P7-PLx"/>
+        <segue reference="nNG-O4-rHZ"/>
     </inferredMetricsTieBreakers>
 </document>

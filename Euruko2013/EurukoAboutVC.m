@@ -7,15 +7,22 @@
 //
 
 #import "EurukoAboutVC.h"
+#import "EurukoBrowserVC.h"
 #import "IIViewDeckController.h"
 
 @interface EurukoAboutVC ()
+@property (weak, nonatomic) IBOutlet UIButton *eurukoBtn;
+@property (weak, nonatomic) IBOutlet UIButton *gaiaBtn;
+@property (weak, nonatomic) IBOutlet UIButton *codigiaBtn;
 
 - (IBAction)showSidemenu:(id)sender;
+- (IBAction)logoTapped:(id)sender;
 
 @end
 
-@implementation EurukoAboutVC
+@implementation EurukoAboutVC {
+  NSURL *_urlToBrowse;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,10 +45,31 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Segues
+// Show URLs to app's browser screen
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+	if ([[segue identifier] isEqualToString:@"ShowBrowserViewFromAbout"]) {
+    EurukoBrowserVC *browserVC = [segue destinationViewController];
+		browserVC.startURL = _urlToBrowse;
+	}
+}
+
 #pragma mark - Actions
 - (IBAction)showSidemenu:(id)sender {
   // Show SideMenu
   [self.navigationController.viewDeckController toggleLeftViewAnimated:YES];
+}
+
+- (IBAction)logoTapped:(id)sender {
+  if (sender == self.eurukoBtn)
+    _urlToBrowse = [NSURL URLWithString:@"http://euruko2013.org/"];
+  else if (sender == self.gaiaBtn)
+    _urlToBrowse = [NSURL URLWithString:@"http://www.skroutz.gr/"];
+  else if (sender == self.codigiaBtn)
+    _urlToBrowse = [NSURL URLWithString:@"http://codigia.com/"];
+  
+  [self performSegueWithIdentifier:@"ShowBrowserViewFromAbout" sender:self];
 }
 
 @end
