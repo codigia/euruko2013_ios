@@ -67,6 +67,10 @@
   if (self.agendaData.count > 0)
     [self.agendaData removeAllObjects];
   
+  // Create Arrays for every Agenda Day
+  NSMutableArray *day1 = [NSMutableArray arrayWithCapacity:10];
+  NSMutableArray *day2 = [NSMutableArray arrayWithCapacity:10];
+  
   for (NSDictionary *aAgendaItem in self.agendaContent) {
     NSMutableDictionary *theAgendaObj = [NSMutableDictionary dictionaryWithCapacity:5];
     [theAgendaObj setObject:[aAgendaItem objectForKey:@"start"] forKey:@"start"];
@@ -94,21 +98,31 @@
     [gregorian components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:startDate];
     [theAgendaObj setObject:[NSString stringWithFormat:@"%d:%.2d", timeComponents.hour, timeComponents.minute] forKey:@"time"];
     
-    // Add to array
-    [self.agendaData addObject:theAgendaObj];
+    // Add it to proper Day array
+    // Epoch for June 29, 0:00 is 1372464000
+    if ([[aAgendaItem objectForKey:@"start"] longLongValue] < 1372464000)
+      [day1 addObject:theAgendaObj];
+    else
+      [day2 addObject:theAgendaObj];
   }
   
+  [self.agendaData addObject:day1];
+  [self.agendaData addObject:day2];
 }
 
 #pragma mark - Collection view Data source / Delegate
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+  return self.agendaData.count;
+}
+
 - (NSInteger)collectionView:(UICollectionView *)cv numberOfItemsInSection:(NSInteger)section;
 {
-  return self.agendaData.count;
+  return [[self.agendaData objectAtIndex:section] count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath;
 {	
-  NSDictionary *agendaItem = [self.agendaData objectAtIndex:indexPath.row];
+  NSDictionary *agendaItem = [[self.agendaData objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
   UICollectionViewCell *cell;
   
   if ([agendaItem objectForKey:@"speaker_id"]) {
@@ -158,7 +172,7 @@
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-  NSDictionary *agendaItem = [self.agendaData objectAtIndex:indexPath.row];
+  NSDictionary *agendaItem = [[self.agendaData objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
   
   if ([agendaItem objectForKey:@"speaker_id"])
     return CGSizeMake(320, 125);
@@ -173,7 +187,7 @@
 	if ([[segue identifier] isEqualToString:@"ShowSpeechView"]) {
 		NSIndexPath *selectedIndexPath = [[self.agendaCollView indexPathsForSelectedItems] objectAtIndex:0];
 		
-		NSDictionary *selectedSpeech = [self.agendaData objectAtIndex:selectedIndexPath.row];
+		NSDictionary *selectedSpeech = [[self.agendaData objectAtIndex:selectedIndexPath.section] objectAtIndex:selectedIndexPath.row];
 		NSDictionary *selectedSpeaker;
     
     // References to speaker item

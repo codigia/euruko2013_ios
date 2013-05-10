@@ -228,7 +228,7 @@
        sodipodi:open="true" />
   </g>
   <g
-     style="display:inline"
+     style="display:none"
      inkscape:label="header copy"
      inkscape:groupmode="layer"
      id="g3960"
@@ -285,17 +285,17 @@
      id="g3976"
      inkscape:groupmode="layer"
      inkscape:label="footer"
-     style="display:none"
+     style="display:inline"
      sodipodi:insensitive="true">
     <path
-       style="fill:none;stroke:#cccccc;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:5, 5;stroke-dashoffset:16.5"
-       d="m 60.510676,30.482201 c 0.28156,-6.540879 -1.005831,5.932997 1.185808,14.774625 1.519548,6.130239 4.789068,14.980257 4.789068,14.980257 5.481443,8.210323 9.42483,10.480664 13.453615,13.495722 C 86.489223,78.63473 94.300677,81.010546 97.053381,81 332.29903,80.098779 320.71352,81 320.71352,81"
+       style="fill:none;stroke:#cccccc;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:5, 5;stroke-dashoffset:13"
+       d="m 60.521352,15.40213 c 0.28156,-6.5408791 -1.016507,21.013068 1.175132,29.854696 1.519548,6.130239 4.789068,14.980257 4.789068,14.980257 5.481443,8.210323 9.42483,10.480664 13.453615,13.495722 C 86.489223,78.63473 94.300677,81.010546 97.053381,81 332.29903,80.098779 320.71352,81 320.71352,81"
        id="path3982"
        inkscape:connector-curvature="0"
        transform="translate(0,884.36218)"
        sodipodi:nodetypes="cssssc" />
     <path
-       style="fill:none;stroke:#cccccc;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:5, 5;stroke-dashoffset:0"
+       style="fill:none;stroke:#cccccc;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:5, 5;stroke-dashoffset:0.5"
        d="m 321.70818,81 c 2.73125,0.03767 122.03054,-0.03627 124.6604,0 137.73284,1.899763 137.73284,0 137.73284,0"
        id="path3984"
        inkscape:connector-curvature="0"
