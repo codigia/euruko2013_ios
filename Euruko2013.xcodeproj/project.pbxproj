@@ -48,6 +48,9 @@
 		286A04EA173E20F3008985AC /* webBtn_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 286A04E6173E20F3008985AC /* webBtn_back@2x.png */; };
 		286A04EB173E20F3008985AC /* webBtn_forth.png in Resources */ = {isa = PBXBuildFile; fileRef = 286A04E7173E20F3008985AC /* webBtn_forth.png */; };
 		286A04EC173E20F3008985AC /* webBtn_forth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 286A04E8173E20F3008985AC /* webBtn_forth@2x.png */; };
+		286A04FC173EEEA3008985AC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 286A04F9173EEEA3008985AC /* Default-568h@2x.png */; };
+		286A04FD173EEEA3008985AC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 286A04FA173EEEA3008985AC /* Default.png */; };
+		286A04FE173EEEA3008985AC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 286A04FB173EEEA3008985AC /* Default@2x.png */; };
 		289013A8171808E20006FB9D /* EurukoSpeakersVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 289013A7171808E20006FB9D /* EurukoSpeakersVC.m */; };
 		289013B01718926E0006FB9D /* nav_speakers.png in Resources */ = {isa = PBXBuildFile; fileRef = 289013AF1718926E0006FB9D /* nav_speakers.png */; };
 		289013B5172187650006FB9D /* vertical_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 289013B4172187640006FB9D /* vertical_line.png */; };
@@ -69,9 +72,6 @@
 		28EAA4BF16D775E000F523B3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28EAA4BD16D775E000F523B3 /* InfoPlist.strings */; };
 		28EAA4C116D775E000F523B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EAA4C016D775E000F523B3 /* main.m */; };
 		28EAA4C516D775E000F523B3 /* EurukoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EAA4C416D775E000F523B3 /* EurukoAppDelegate.m */; };
-		28EAA4C716D775E000F523B3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 28EAA4C616D775E000F523B3 /* Default.png */; };
-		28EAA4C916D775E000F523B3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28EAA4C816D775E000F523B3 /* Default@2x.png */; };
-		28EAA4CB16D775E000F523B3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28EAA4CA16D775E000F523B3 /* Default-568h@2x.png */; };
 		28EAA4CE16D775E000F523B3 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28EAA4CC16D775E000F523B3 /* MainStoryboard_iPhone.storyboard */; };
 		28EAA4D116D775E000F523B3 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28EAA4CF16D775E000F523B3 /* MainStoryboard_iPad.storyboard */; };
 		28EAA4D416D775E000F523B3 /* EurukoNewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EAA4D316D775E000F523B3 /* EurukoNewsVC.m */; };
@@ -133,6 +133,9 @@
 		286A04E6173E20F3008985AC /* webBtn_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "webBtn_back@2x.png"; path = "Gfx/webBtn_back@2x.png"; sourceTree = SOURCE_ROOT; };
 		286A04E7173E20F3008985AC /* webBtn_forth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = webBtn_forth.png; path = Gfx/webBtn_forth.png; sourceTree = SOURCE_ROOT; };
 		286A04E8173E20F3008985AC /* webBtn_forth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "webBtn_forth@2x.png"; path = "Gfx/webBtn_forth@2x.png"; sourceTree = SOURCE_ROOT; };
+		286A04F9173EEEA3008985AC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		286A04FA173EEEA3008985AC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		286A04FB173EEEA3008985AC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		289013A6171808E20006FB9D /* EurukoSpeakersVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EurukoSpeakersVC.h; sourceTree = "<group>"; };
 		289013A7171808E20006FB9D /* EurukoSpeakersVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EurukoSpeakersVC.m; sourceTree = "<group>"; };
 		289013AF1718926E0006FB9D /* nav_speakers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nav_speakers.png; path = Gfx/nav_speakers.png; sourceTree = SOURCE_ROOT; };
@@ -165,9 +168,6 @@
 		28EAA4C216D775E000F523B3 /* Euruko2013-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Euruko2013-Prefix.pch"; sourceTree = "<group>"; };
 		28EAA4C316D775E000F523B3 /* EurukoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EurukoAppDelegate.h; sourceTree = "<group>"; };
 		28EAA4C416D775E000F523B3 /* EurukoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EurukoAppDelegate.m; sourceTree = "<group>"; };
-		28EAA4C616D775E000F523B3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		28EAA4C816D775E000F523B3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		28EAA4CA16D775E000F523B3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		28EAA4CD16D775E000F523B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		28EAA4D016D775E000F523B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		28EAA4D216D775E000F523B3 /* EurukoNewsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EurukoNewsVC.h; sourceTree = "<group>"; };
@@ -320,13 +320,13 @@
 		28EAA4BB16D775E000F523B3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				286A04F9173EEEA3008985AC /* Default-568h@2x.png */,
+				286A04FA173EEEA3008985AC /* Default.png */,
+				286A04FB173EEEA3008985AC /* Default@2x.png */,
 				28EAA4BC16D775E000F523B3 /* Euruko2013-Info.plist */,
 				28EAA4BD16D775E000F523B3 /* InfoPlist.strings */,
 				28EAA4C016D775E000F523B3 /* main.m */,
 				28EAA4C216D775E000F523B3 /* Euruko2013-Prefix.pch */,
-				28EAA4C616D775E000F523B3 /* Default.png */,
-				28EAA4C816D775E000F523B3 /* Default@2x.png */,
-				28EAA4CA16D775E000F523B3 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -406,9 +406,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				28EAA4BF16D775E000F523B3 /* InfoPlist.strings in Resources */,
-				28EAA4C716D775E000F523B3 /* Default.png in Resources */,
-				28EAA4C916D775E000F523B3 /* Default@2x.png in Resources */,
-				28EAA4CB16D775E000F523B3 /* Default-568h@2x.png in Resources */,
 				28EAA4CE16D775E000F523B3 /* MainStoryboard_iPhone.storyboard in Resources */,
 				28EAA4D116D775E000F523B3 /* MainStoryboard_iPad.storyboard in Resources */,
 				28BDAFE11705C82F0024A65B /* logo_title.png in Resources */,
@@ -446,6 +443,9 @@
 				286A04EA173E20F3008985AC /* webBtn_back@2x.png in Resources */,
 				286A04EB173E20F3008985AC /* webBtn_forth.png in Resources */,
 				286A04EC173E20F3008985AC /* webBtn_forth@2x.png in Resources */,
+				286A04FC173EEEA3008985AC /* Default-568h@2x.png in Resources */,
+				286A04FD173EEEA3008985AC /* Default.png in Resources */,
+				286A04FE173EEEA3008985AC /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

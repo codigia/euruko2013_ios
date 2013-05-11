@@ -16,6 +16,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
+  
   // Enable Net Indicator manager of AFNetworking framework
   [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
   
