@@ -61,7 +61,7 @@
                                                         <constraint firstAttribute="height" constant="50" id="hjJ-07-Dfo"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="News Title" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="227" translatesAutoresizingMaskIntoConstraints="NO" id="o7J-Lb-lZg">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="News Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" preferredMaxLayoutWidth="227" translatesAutoresizingMaskIntoConstraints="NO" id="o7J-Lb-lZg">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="227" id="8yq-BH-MrP"/>
                                                     </constraints>
@@ -497,7 +497,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="Ruby Chief Architect" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="185" translatesAutoresizingMaskIntoConstraints="NO" id="gRc-LR-KCt">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="Ruby Chief Architect" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="8" preferredMaxLayoutWidth="185" translatesAutoresizingMaskIntoConstraints="NO" id="gRc-LR-KCt">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="41" id="hwt-ph-VzF"/>
                                                     </constraints>
@@ -613,7 +613,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="Ruby Chief Architect" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="174" translatesAutoresizingMaskIntoConstraints="NO" id="gkP-ny-VNZ">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="Ruby Chief Architect" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="8" preferredMaxLayoutWidth="174" translatesAutoresizingMaskIntoConstraints="NO" id="gkP-ny-VNZ">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="41" id="Bvu-B1-Jne"/>
                                         </constraints>
@@ -720,7 +720,7 @@
                                                         <constraint firstAttribute="height" constant="40" id="uhP-hS-fEl"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="center" text="Yukihiro 'Matz' Matsumoto and second line...." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" minimumFontSize="12" preferredMaxLayoutWidth="227" translatesAutoresizingMaskIntoConstraints="NO" id="VCF-vs-jiU">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="center" text="Yukihiro 'Matz' Matsumoto and second line...." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="9" preferredMaxLayoutWidth="227" translatesAutoresizingMaskIntoConstraints="NO" id="VCF-vs-jiU">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="227" id="zYF-Eb-Sc2"/>
                                                     </constraints>
@@ -776,7 +776,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="agenda_item_simple.png" translatesAutoresizingMaskIntoConstraints="NO" id="qax-gb-AfX"/>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="center" text="Yukihiro 'Matz' Matsumoto and second line....and go for third" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" minimumFontSize="12" preferredMaxLayoutWidth="227" translatesAutoresizingMaskIntoConstraints="NO" id="lZY-J2-sKs">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="center" text="Yukihiro 'Matz' Matsumoto and second line....and go for third" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="11" preferredMaxLayoutWidth="227" translatesAutoresizingMaskIntoConstraints="NO" id="lZY-J2-sKs">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="227" id="LXM-PS-JF7"/>
                                                         <constraint firstAttribute="height" constant="57" id="jKh-ea-IoB"/>
@@ -1128,7 +1128,7 @@
                             </label>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wne-CP-g9n">
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="center" text="Yukihiro 'Matz' Matsumoto" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="Xko-js-Rup">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="center" text="Yukihiro 'Matz' Matsumoto" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" minimumFontSize="11" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="Xko-js-Rup">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="57" id="Pve-Bc-oWb"/>
                                         </constraints>
@@ -1265,7 +1265,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="D5R-Dt-7Yh"/>
         <segue reference="Zxz-tN-qbh"/>
-        <segue reference="1fk-P7-PLx"/>
     </inferredMetricsTieBreakers>
 </document>
