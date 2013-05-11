@@ -40,8 +40,8 @@
   // Populate with speaker data
   self.speakerNameLbl.text = [self.speakerData objectForKey:@"name"];
   self.speakerTitleLbl.text = [self.speakerData objectForKey:@"title"];
-  if ([self.speakerData objectForKey:@"avatar"])
-    [self.speakerAvatarImg setImageWithURL:[NSURL URLWithString:[self.speakerData objectForKey:@"avatar"]] placeholderImage:[UIImage imageNamed:@"no_speaker.png"]];
+  if ([self.speakerData objectForKey:@"avatar_ring"])
+    [self.speakerAvatarImg setImageWithURL:[NSURL URLWithString:[self.speakerData objectForKey:@"avatar_ring"]] placeholderImage:[UIImage imageNamed:@"no_speaker.png"]];
   
   // Speaker bio in WebView
   NSString* bioString = [NSString stringWithFormat:

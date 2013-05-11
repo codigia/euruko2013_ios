@@ -74,8 +74,8 @@
   spkLbl.text = [speakerData objectForKey:@"title"];
   
   UIImageView *spkAvatar = (UIImageView *)[cell viewWithTag:3];
-  if ([speakerData objectForKey:@"avatar"]) {
-    [spkAvatar setImageWithURL:[NSURL URLWithString:[speakerData objectForKey:@"avatar"]] placeholderImage:[UIImage imageNamed:@"no_speaker.png"]];
+  if ([speakerData objectForKey:@"avatar_ring"]) {
+    [spkAvatar setImageWithURL:[NSURL URLWithString:[speakerData objectForKey:@"avatar_ring"]] placeholderImage:[UIImage imageNamed:@"no_speaker.png"]];
   } else {
     spkAvatar.image = [UIImage imageNamed:@"no_speaker.png"];
   }

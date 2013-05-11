@@ -84,8 +84,8 @@
     for (NSDictionary *aSpkData in self.speaksContent) {
       if ([[aSpkData objectForKey:@"id"] isEqualToString:[aAgendaItem objectForKey:@"speaker_id"]]) {
         [theAgendaObj setObject:[aSpkData objectForKey:@"name"] forKey:@"spkName"];
-        if ([aSpkData objectForKey:@"avatar"])
-          [theAgendaObj setObject:[aSpkData objectForKey:@"avatar"] forKey:@"spkAvatar"];
+        if ([aSpkData objectForKey:@"avatar_ring"])
+          [theAgendaObj setObject:[aSpkData objectForKey:@"avatar_ring"] forKey:@"spkAvatar"];
         break;
       }
     }

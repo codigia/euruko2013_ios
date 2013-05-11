@@ -40,8 +40,8 @@
   // Populate with speech data
   self.timeLbl.text = [self.speechData objectForKey:@"time"];
   self.speechTitleLbl.text = [self.speechData objectForKey:@"title"];
-  if ([self.speakerData objectForKey:@"avatar"])
-    [self.speakerAvatarImg setImageWithURL:[NSURL URLWithString:[self.speakerData objectForKey:@"avatar"]] placeholderImage:[UIImage imageNamed:@"no_speaker.png"]];
+  if ([self.speakerData objectForKey:@"avatar_ring"])
+    [self.speakerAvatarImg setImageWithURL:[NSURL URLWithString:[self.speakerData objectForKey:@"avatar_ring"]] placeholderImage:[UIImage imageNamed:@"no_speaker.png"]];
   
   // Speech description in WebView
   NSString* descrString = [NSString stringWithFormat:
