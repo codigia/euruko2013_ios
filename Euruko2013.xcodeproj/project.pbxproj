@@ -44,6 +44,10 @@
 		286A04E0173D2AE2008985AC /* EurukoAboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 286A04DF173D2AE2008985AC /* EurukoAboutVC.m */; };
 		286A04E3173D2D12008985AC /* nav_about.png in Resources */ = {isa = PBXBuildFile; fileRef = 286A04E1173D2D12008985AC /* nav_about.png */; };
 		286A04E4173D2D12008985AC /* nav_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 286A04E2173D2D12008985AC /* nav_empty.png */; };
+		286A04E9173E20F3008985AC /* webBtn_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 286A04E5173E20F3008985AC /* webBtn_back.png */; };
+		286A04EA173E20F3008985AC /* webBtn_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 286A04E6173E20F3008985AC /* webBtn_back@2x.png */; };
+		286A04EB173E20F3008985AC /* webBtn_forth.png in Resources */ = {isa = PBXBuildFile; fileRef = 286A04E7173E20F3008985AC /* webBtn_forth.png */; };
+		286A04EC173E20F3008985AC /* webBtn_forth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 286A04E8173E20F3008985AC /* webBtn_forth@2x.png */; };
 		289013A8171808E20006FB9D /* EurukoSpeakersVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 289013A7171808E20006FB9D /* EurukoSpeakersVC.m */; };
 		289013AC17183C390006FB9D /* spk01.png in Resources */ = {isa = PBXBuildFile; fileRef = 289013A917183C390006FB9D /* spk01.png */; };
 		289013AD17183C390006FB9D /* spk02.png in Resources */ = {isa = PBXBuildFile; fileRef = 289013AA17183C390006FB9D /* spk02.png */; };
@@ -128,6 +132,10 @@
 		286A04DF173D2AE2008985AC /* EurukoAboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EurukoAboutVC.m; sourceTree = "<group>"; };
 		286A04E1173D2D12008985AC /* nav_about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nav_about.png; path = Gfx/nav_about.png; sourceTree = SOURCE_ROOT; };
 		286A04E2173D2D12008985AC /* nav_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nav_empty.png; path = Gfx/nav_empty.png; sourceTree = SOURCE_ROOT; };
+		286A04E5173E20F3008985AC /* webBtn_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = webBtn_back.png; path = Gfx/webBtn_back.png; sourceTree = SOURCE_ROOT; };
+		286A04E6173E20F3008985AC /* webBtn_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "webBtn_back@2x.png"; path = "Gfx/webBtn_back@2x.png"; sourceTree = SOURCE_ROOT; };
+		286A04E7173E20F3008985AC /* webBtn_forth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = webBtn_forth.png; path = Gfx/webBtn_forth.png; sourceTree = SOURCE_ROOT; };
+		286A04E8173E20F3008985AC /* webBtn_forth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "webBtn_forth@2x.png"; path = "Gfx/webBtn_forth@2x.png"; sourceTree = SOURCE_ROOT; };
 		289013A6171808E20006FB9D /* EurukoSpeakersVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EurukoSpeakersVC.h; sourceTree = "<group>"; };
 		289013A7171808E20006FB9D /* EurukoSpeakersVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EurukoSpeakersVC.m; sourceTree = "<group>"; };
 		289013A917183C390006FB9D /* spk01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spk01.png; path = Gfx/spk01.png; sourceTree = SOURCE_ROOT; };
@@ -216,6 +224,10 @@
 		28BDAFDF1705B5AD0024A65B /* Gfx */ = {
 			isa = PBXGroup;
 			children = (
+				286A04E5173E20F3008985AC /* webBtn_back.png */,
+				286A04E6173E20F3008985AC /* webBtn_back@2x.png */,
+				286A04E7173E20F3008985AC /* webBtn_forth.png */,
+				286A04E8173E20F3008985AC /* webBtn_forth@2x.png */,
 				286A04E1173D2D12008985AC /* nav_about.png */,
 				286A04E2173D2D12008985AC /* nav_empty.png */,
 				286A04D8173D29E9008985AC /* about_logo_codigia.png */,
@@ -442,6 +454,10 @@
 				286A04DD173D29E9008985AC /* about_logo_gaia.png in Resources */,
 				286A04E3173D2D12008985AC /* nav_about.png in Resources */,
 				286A04E4173D2D12008985AC /* nav_empty.png in Resources */,
+				286A04E9173E20F3008985AC /* webBtn_back.png in Resources */,
+				286A04EA173E20F3008985AC /* webBtn_back@2x.png in Resources */,
+				286A04EB173E20F3008985AC /* webBtn_forth.png in Resources */,
+				286A04EC173E20F3008985AC /* webBtn_forth@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
