@@ -67,7 +67,7 @@
   else if (sender == self.gaiaBtn)
     _urlToBrowse = [NSURL URLWithString:@"http://www.skroutz.gr/"];
   else if (sender == self.codigiaBtn)
-    _urlToBrowse = [NSURL URLWithString:@"http://codigia.com/"];
+    _urlToBrowse = [NSURL URLWithString:@"http://euruko2013.codigia.com/?utm_source=codigia&utm_medium=iphone_app&utm_campaign=euruko2013"];
   
   [self performSegueWithIdentifier:@"ShowBrowserViewFromAbout" sender:self];
 }
