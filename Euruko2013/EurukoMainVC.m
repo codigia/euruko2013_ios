@@ -73,9 +73,10 @@ NSString *const kEurukoAppNotifContentFetchedAgenda = @"com.codigia.ios.Euruko20
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON){
       NSLog(@"Fetching News content ERROR: %@", error);
       // Alert Error message only if news content is empty (first run)
-      if (self.newsContent.count == 0) {
+      // TODO: Display No Network connection banner
+      //if (self.newsContent.count == 0) {
         [self alertMsg:@"Network Error: Server is not reachable! Check your network connection or try again later."];
-      }
+      //}
     }];
   } else if (task == EurukoNetTaskFetchAgenda) {
     [urlPath appendString:@"/agenda.json.php"];

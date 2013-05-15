@@ -99,6 +99,19 @@
     self.pageTitle.text = self.webView.request.URL.absoluteString;
 }
 
+-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+  // Reset user initiated request flag
+  _userInitiatedRequest = NO;
+  
+  self.pageTitle.text = @"Network Error!";
+  
+  NSLog(@"In-app Browser Fail Load Error: %@", error);
+  
+  NSString* errorString = [NSString stringWithFormat:
+                           @"<html><head><title>Network Error!</title><style>body {background-color:#D3D3D3;font-family:\"Verdana\", sans-serif;font-style:normal;font-size:50px;font-weight:500;color:#090909;text-align:justify;} center {margin:30%% auto 30%%;height:40%%;width:70%%;}</style></head><body><center>Network Error! Please check your network connection or try again later.</center></body></html>"];
+  [self.webView loadHTMLString:errorString baseURL:nil];
+}
+
 #pragma mark - Actions
 - (IBAction)backBtnTapped:(id)sender {
   [self.navigationController popViewControllerAnimated:YES];

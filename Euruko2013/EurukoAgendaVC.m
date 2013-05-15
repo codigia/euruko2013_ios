@@ -74,7 +74,8 @@
   for (NSDictionary *aAgendaItem in self.agendaContent) {
     NSMutableDictionary *theAgendaObj = [NSMutableDictionary dictionaryWithCapacity:5];
     [theAgendaObj setObject:[aAgendaItem objectForKey:@"start"] forKey:@"start"];
-    [theAgendaObj setObject:[aAgendaItem objectForKey:@"end"] forKey:@"end"];
+    if ([aAgendaItem objectForKey:@"end"])
+      [theAgendaObj setObject:[aAgendaItem objectForKey:@"end"] forKey:@"end"];
     if ([aAgendaItem objectForKey:@"speaker_id"])
       [theAgendaObj setObject:[aAgendaItem objectForKey:@"speaker_id"] forKey:@"speaker_id"];
     [theAgendaObj setObject:[aAgendaItem objectForKey:@"title"] forKey:@"title"];

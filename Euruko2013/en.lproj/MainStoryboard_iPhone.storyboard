@@ -927,7 +927,7 @@
                                 </connections>
                             </button>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bMB-5b-bsQ">
-                                <color key="backgroundColor" red="0.86477598850000004" green="0.86477598850000004" blue="0.86477598850000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="about_logo_gaia.png" translatesAutoresizingMaskIntoConstraints="NO" id="J5f-XN-Z2e">
                                 <constraints>
@@ -947,7 +947,7 @@
                                 </constraints>
                                 <string key="text">EuRuKo (the European Ruby Conference) is an annual conference which focuses on the Ruby programming language, with an informal atmosphere.</string>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="13"/>
-                                <color key="textColor" red="0.86477598850000004" green="0.86477598850000004" blue="0.86477598850000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="This is the official Euruko Athens 2013 iOS app. Enjoy!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="270" translatesAutoresizingMaskIntoConstraints="NO" id="eXJ-wv-SGx">
@@ -956,7 +956,7 @@
                                     <constraint firstAttribute="width" constant="270" id="vql-wW-JTP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="13"/>
-                                <color key="textColor" red="0.86477598850000004" green="0.86477598850000004" blue="0.86477598850000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Proud Gaia sponsor!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="270" translatesAutoresizingMaskIntoConstraints="NO" id="g6N-fS-QZZ">
@@ -964,7 +964,7 @@
                                     <constraint firstAttribute="height" constant="30" type="user" id="jub-w6-nPA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Verdana-BoldItalic" family="Verdana" pointSize="13"/>
-                                <color key="textColor" red="0.86477598850000004" green="0.86477598850000004" blue="0.86477598850000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="app development" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="270" translatesAutoresizingMaskIntoConstraints="NO" id="gEl-IN-EPc">
@@ -972,7 +972,7 @@
                                     <constraint firstAttribute="height" constant="30" id="IHt-oI-Ktt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="11"/>
-                                <color key="textColor" red="0.86477598850000004" green="0.86477598850000004" blue="0.86477598850000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="about_logo_codigia.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jza-FU-WfE">
@@ -1032,7 +1032,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="faM-Jf-WFO" firstAttribute="leading" secondItem="rbh-yZ-ckp" secondAttribute="leading" constant="10" id="2EP-US-APn"/>
                             <constraint firstItem="J5f-XN-Z2e" firstAttribute="centerY" secondItem="bMB-5b-bsQ" secondAttribute="centerY" type="default" id="45Z-N0-3Kn"/>
