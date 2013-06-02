@@ -114,6 +114,7 @@
 		
 		EurukoBrowserVC *browserVC = [segue destinationViewController];
 		browserVC.startURL = [NSURL URLWithString:[selectedNews objectForKey:@"link"]];
+    browserVC.mainScreenMode = NO;
 	}
 }
 

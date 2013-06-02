@@ -7,9 +7,11 @@
 //
 
 #import "EurukoBrowserVC.h"
+#import "IIViewDeckController.h"
 
 @interface EurukoBrowserVC ()
 
+@property (weak, nonatomic) IBOutlet UIButton *menuBackBtn;
 @property (weak, nonatomic) IBOutlet UILabel *pageTitle;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *browserBackBtn;
@@ -36,17 +38,36 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+  [super viewDidLoad];
 	// Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  
   self.browserBackBtn.enabled = NO;
   self.browserForthBtn.enabled = NO;
   [self.navigationController setToolbarHidden:YES animated:NO];
+  self.pageTitle.text = @"Loading...";
+  
+  // Setup UI according screen mode
+  UIImage *btnImg;
+  if (self.mainScreenMode) {
+    btnImg = [UIImage imageNamed:@"menubutton"];
+  } else {
+    btnImg = [UIImage imageNamed:@"menuback"];
+  }
+  [self.menuBackBtn setImage:btnImg forState:UIControlStateNormal];
+  [self.menuBackBtn setImage:btnImg forState:UIControlStateHighlighted];
+  [self.menuBackBtn setImage:btnImg forState:UIControlStateSelected];
+  [self.menuBackBtn setImage:btnImg forState:UIControlStateDisabled];
+  
   // Start loading web page
   [self.webView loadRequest:[NSURLRequest requestWithURL:self.startURL]];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-  [self.navigationController setToolbarHidden:YES animated:YES];
+  [self.navigationController setToolbarHidden:YES animated:NO];
 }
 
 - (void)didReceiveMemoryWarning
@@ -114,7 +135,11 @@
 
 #pragma mark - Actions
 - (IBAction)backBtnTapped:(id)sender {
-  [self.navigationController popViewControllerAnimated:YES];
+  if (self.mainScreenMode)
+    // Show SideMenu
+    [self.navigationController.viewDeckController toggleLeftViewAnimated:YES];
+  else
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)browserBtnTapped:(id)sender {

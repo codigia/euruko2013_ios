@@ -184,7 +184,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <view key="tableFooterView" contentMode="scaleToFill" id="c77-qc-gz9">
-                            <rect key="frame" x="0.0" y="276" width="320" height="96"/>
+                            <rect key="frame" x="0.0" y="320" width="320" height="96"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="pagefold.png" translatesAutoresizingMaskIntoConstraints="NO" id="QsN-Zr-eye">
@@ -325,7 +325,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="About" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRN-TA-AL6">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Twitter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRN-TA-AL6">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="220" id="Dcu-1A-ezr"/>
                                                     </constraints>
@@ -333,7 +333,7 @@
                                                     <color key="textColor" red="0.57649075260000004" green="0.57649075260000004" blue="0.57649075260000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="menu_about.png" translatesAutoresizingMaskIntoConstraints="NO" id="OrZ-Dm-oGE">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="menu_twitter.png" translatesAutoresizingMaskIntoConstraints="NO" id="OrZ-Dm-oGE">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="Bzk-xp-PhS"/>
                                                         <constraint firstAttribute="height" constant="30" id="SQM-1L-bO0"/>
@@ -348,6 +348,38 @@
                                             <constraint firstItem="LRN-TA-AL6" firstAttribute="centerY" secondItem="CXw-zi-lnn" secondAttribute="centerY" type="default" id="Sxz-rK-Jli"/>
                                             <constraint firstItem="OrZ-Dm-oGE" firstAttribute="bottom" secondItem="LRN-TA-AL6" secondAttribute="bottom" type="default" id="V6G-7F-xfG"/>
                                             <constraint firstItem="OrZ-Dm-oGE" firstAttribute="leading" secondItem="CXw-zi-lnn" secondAttribute="leading" constant="15" id="spP-zz-Pcm"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="LqT-m3-vvs">
+                                        <rect key="frame" x="0.0" y="276" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="About" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXO-rG-lNh">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="220" id="Dz0-kN-oSL"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="22"/>
+                                                    <color key="textColor" red="0.57649075260000004" green="0.57649075260000004" blue="0.57649075260000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="menu_about.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZD2-4o-LgI">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="F3i-dd-nQk"/>
+                                                        <constraint firstAttribute="width" constant="30" id="lv8-Ck-gYS"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="ZD2-4o-LgI" firstAttribute="bottom" secondItem="tXO-rG-lNh" secondAttribute="bottom" type="default" id="HEK-Z6-ELK"/>
+                                            <constraint firstItem="ZD2-4o-LgI" firstAttribute="top" secondItem="tXO-rG-lNh" secondAttribute="top" type="default" id="LzO-eV-7m2"/>
+                                            <constraint firstItem="tXO-rG-lNh" firstAttribute="centerY" secondItem="LqT-m3-vvs" secondAttribute="centerY" type="default" id="gEw-gU-9c0"/>
+                                            <constraint firstItem="ZD2-4o-LgI" firstAttribute="leading" secondItem="LqT-m3-vvs" secondAttribute="leading" constant="15" id="h0m-af-XE9"/>
+                                            <constraint firstItem="tXO-rG-lNh" firstAttribute="leading" secondItem="LqT-m3-vvs" secondAttribute="leading" constant="60" id="nS7-6B-I1h"/>
                                         </constraints>
                                     </tableViewCell>
                                 </cells>
@@ -448,6 +480,7 @@
                     <connections>
                         <outlet property="browserBackBtn" destination="fHe-My-asq" id="4QS-yf-H9u"/>
                         <outlet property="browserForthBtn" destination="MBS-7c-NPf" id="ZlQ-FD-oZh"/>
+                        <outlet property="menuBackBtn" destination="WkB-yc-Ns1" id="9Pd-cO-2DD"/>
                         <outlet property="pageTitle" destination="tCS-0z-Chf" id="Z4c-hm-CaJ"/>
                         <outlet property="webView" destination="GVO-aC-Vg1" id="3Fg-kl-bkC"/>
                     </connections>
@@ -896,6 +929,115 @@
             </objects>
             <point key="canvasLocation" x="827" y="638"/>
         </scene>
+        <!--Euruko TwitterVC - TwitterViewController-->
+        <scene sceneID="3el-9c-R5r">
+            <objects>
+                <viewController storyboardIdentifier="twitterViewController" title="TwitterViewController" id="0Yr-pT-i3K" customClass="EurukoTwitterVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AEv-qi-cre">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" image="nav_agenda.png" translatesAutoresizingMaskIntoConstraints="NO" id="x0b-9B-pML">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="zV5-49-IMg"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZD-jO-A5z">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="Qxo-bj-RmW"/>
+                                    <constraint firstAttribute="height" constant="38" id="sfu-iz-KvA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="menubutton.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showSidemenu:" destination="0Yr-pT-i3K" eventType="touchUpInside" id="hwD-kV-UCx"/>
+                                </connections>
+                            </button>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0i8-DX-WPT">
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="1" constant="416" type="user" id="mfF-GD-b3k"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rmt-sf-HBY">
+                                    <size key="itemSize" width="310" height="113"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SpeakerCell" id="LCY-Qw-CWa">
+                                        <rect key="frame" x="5" y="5" width="310" height="113"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="310" height="113"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" image="no_speaker.png" translatesAutoresizingMaskIntoConstraints="NO" id="aEM-Hv-d8K">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="107" id="Fue-uf-sNm"/>
+                                                        <constraint firstAttribute="height" constant="107" id="oqI-Ie-w3q"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="center" text="Yukihiro 'Matz' Matsumoto" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="185" translatesAutoresizingMaskIntoConstraints="NO" id="CWf-pB-6kM">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="185" id="8BZ-fm-uHi"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="Ruby Chief Architect" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="8" preferredMaxLayoutWidth="185" translatesAutoresizingMaskIntoConstraints="NO" id="hbn-Td-Nr3">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="41" id="qWg-tQ-9Es"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="13"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.86477598850000004" green="0.86477598850000004" blue="0.86477598850000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="CWf-pB-6kM" firstAttribute="top" secondItem="LCY-Qw-CWa" secondAttribute="top" constant="20" type="default" id="66m-3n-oK9"/>
+                                            <constraint firstItem="hbn-Td-Nr3" firstAttribute="bottom" secondItem="aEM-Hv-d8K" secondAttribute="bottom" type="default" id="cEe-TA-jtZ"/>
+                                            <constraint firstItem="CWf-pB-6kM" firstAttribute="leading" secondItem="aEM-Hv-d8K" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="fFb-u4-tuz"/>
+                                            <constraint firstItem="hbn-Td-Nr3" firstAttribute="leading" secondItem="aEM-Hv-d8K" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="prK-kf-AFd"/>
+                                            <constraint firstItem="hbn-Td-Nr3" firstAttribute="trailing" secondItem="CWf-pB-6kM" secondAttribute="trailing" type="default" id="sZt-Yw-cuM"/>
+                                            <constraint firstItem="aEM-Hv-d8K" firstAttribute="centerY" secondItem="LCY-Qw-CWa" secondAttribute="centerY" type="default" id="xGv-TS-kv8"/>
+                                            <constraint firstItem="aEM-Hv-d8K" firstAttribute="leading" secondItem="LCY-Qw-CWa" secondAttribute="leading" constant="3" id="xok-0M-Uay"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0i8-DX-WPT" firstAttribute="leading" secondItem="AEv-qi-cre" secondAttribute="leading" type="default" id="1dN-Mb-8fX"/>
+                            <constraint firstItem="x0b-9B-pML" firstAttribute="leading" secondItem="AEv-qi-cre" secondAttribute="leading" type="default" id="3RC-uF-qBb"/>
+                            <constraint firstItem="x0b-9B-pML" firstAttribute="trailing" secondItem="AEv-qi-cre" secondAttribute="trailing" type="default" id="7C0-hH-mbl"/>
+                            <constraint firstItem="0i8-DX-WPT" firstAttribute="trailing" secondItem="AEv-qi-cre" secondAttribute="trailing" type="default" id="P3e-lN-mq5"/>
+                            <constraint firstItem="yZD-jO-A5z" firstAttribute="top" secondItem="AEv-qi-cre" secondAttribute="top" constant="3" id="Scc-UR-3qI"/>
+                            <constraint firstItem="x0b-9B-pML" firstAttribute="top" secondItem="AEv-qi-cre" secondAttribute="top" type="default" id="cwp-8W-xGl"/>
+                            <constraint firstItem="0i8-DX-WPT" firstAttribute="bottom" secondItem="AEv-qi-cre" secondAttribute="bottom" type="user" id="rfP-xd-CSz"/>
+                            <constraint firstItem="yZD-jO-A5z" firstAttribute="leading" secondItem="AEv-qi-cre" secondAttribute="leading" constant="10" id="t82-7r-dsS"/>
+                            <constraint firstItem="0i8-DX-WPT" firstAttribute="top" secondItem="AEv-qi-cre" secondAttribute="top" constant="44" type="user" id="vUV-4L-Y8a"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tweetsCollView" destination="0i8-DX-WPT" id="HcD-xl-PMt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UbH-7x-JZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="827" y="1218"/>
+        </scene>
         <!--Euruko AboutVC - AboutViewController-->
         <scene sceneID="E4J-mi-ZxS">
             <objects>
@@ -1081,7 +1223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5iT-HV-Oy0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="827" y="1216"/>
+            <point key="canvasLocation" x="827" y="1796"/>
         </scene>
         <!--Euruko SpeechVC - SpeechViewController-->
         <scene sceneID="dLd-dl-u0a">
@@ -1242,6 +1384,7 @@
         <image name="menu_agenda.png" width="80" height="80"/>
         <image name="menu_news.png" width="80" height="80"/>
         <image name="menu_speakers.png" width="80" height="80"/>
+        <image name="menu_twitter.png" width="80" height="80"/>
         <image name="menuback.png" width="76" height="76"/>
         <image name="menubutton.png" width="76" height="76"/>
         <image name="nav_about.png" width="640" height="98"/>
@@ -1259,102 +1402,13 @@
         <image name="webBtn_back.png" width="20" height="20"/>
         <image name="webBtn_forth.png" width="20" height="20"/>
     </resources>
-    <classes>
-        <class className="EurukoAboutVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoAboutVC.h"/>
-            <relationships>
-                <relationship kind="action" name="logoTapped:"/>
-                <relationship kind="action" name="showSidemenu:"/>
-                <relationship kind="outlet" name="codigiaBtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="eurukoBtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="gaiaBtn" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="EurukoAgendaVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoAgendaVC.h"/>
-            <relationships>
-                <relationship kind="action" name="showSidemenu:"/>
-                <relationship kind="outlet" name="agendaCollView" candidateClass="UICollectionView"/>
-                <relationship kind="outlet" name="menuBtn" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="EurukoBrowserVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoBrowserVC.h"/>
-            <relationships>
-                <relationship kind="action" name="backBtnTapped:"/>
-                <relationship kind="action" name="browserBtnTapped:"/>
-                <relationship kind="outlet" name="browserBackBtn" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="browserForthBtn" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="pageTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="EurukoMainVC" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoMainVC.h"/>
-        </class>
-        <class className="EurukoNewsVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoNewsVC.h"/>
-            <relationships>
-                <relationship kind="action" name="showSidemenu:"/>
-                <relationship kind="outlet" name="menuBtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="newsCollView" candidateClass="UICollectionView"/>
-            </relationships>
-        </class>
-        <class className="EurukoSidemenuVC" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoSidemenuVC.h"/>
-            <relationships>
-                <relationship kind="action" name="footerBtnTapped:"/>
-                <relationship kind="outlet" name="footerView" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="EurukoSpeakerInfoVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoSpeakerInfoVC.h"/>
-            <relationships>
-                <relationship kind="action" name="backBtnTapped:"/>
-                <relationship kind="outlet" name="speakerAvatarImg" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="speakerNameLbl" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="speakerTitleLbl" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="spkBioWebView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="EurukoSpeakersVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoSpeakersVC.h"/>
-            <relationships>
-                <relationship kind="action" name="showSidemenu:"/>
-                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
-                <relationship kind="outlet" name="menuBtn" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="EurukoSpeechVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EurukoSpeechVC.h"/>
-            <relationships>
-                <relationship kind="action" name="backBtnTapped:"/>
-                <relationship kind="outlet" name="speakerAvatarImg" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="speechDescrWebv" candidateClass="UIWebView"/>
-                <relationship kind="outlet" name="speechTitleLbl" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="timeLbl" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="UICollectionReusableView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
-        </class>
-        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
-        </class>
-        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Zxz-tN-qbh"/>
         <segue reference="nNG-O4-rHZ"/>
+        <segue reference="Puy-ob-1bF"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -9,6 +9,7 @@
 #import "EurukoMainVC.h"
 #import "EurukoSidemenuVC.h"
 #import "EurukoSpeakersVC.h"
+#import "EurukoBrowserVC.h"
 #import "EurukoAboutVC.h"
 #import "AFNetworking.h"
 
@@ -186,6 +187,25 @@ NSString *const kEurukoAppNotifContentFetchedAgenda = @"com.codigia.ios.Euruko20
   [self pushViewController:spkVC animated:NO];
 }
 
+// Menu Item: Twitter
+- (void)showTwitter {
+  //if ([self.topViewController isKindOfClass:[EurukoBrowserVC class]])
+  //  return;
+  
+//  for (UIViewController *theVC in self.viewControllers) {
+//    if ([theVC isKindOfClass:[EurukoBrowserVC class]]) {
+//      [self popToViewController:theVC animated:NO];
+//      return;
+//    }
+//  }
+  
+  UIStoryboard *storyboard = self.storyboard;
+  EurukoBrowserVC *browserVC = (EurukoBrowserVC *)[storyboard instantiateViewControllerWithIdentifier:@"browserViewController"];
+  browserVC.startURL = [NSURL URLWithString:@"https://twitter.com/search?q=%23euruko"];
+  browserVC.mainScreenMode = YES;
+  [self pushViewController:browserVC animated:NO];
+}
+
 // Menu Item: About
 - (void)showAbout {
   if ([self.topViewController isKindOfClass:[EurukoAboutVC class]])
@@ -226,13 +246,14 @@ NSString *const kEurukoAppNotifContentFetchedAgenda = @"com.codigia.ios.Euruko20
       [self showSpeakers];
       break;
       
-      // About Menu item
+      // Twitter Menu item
     case 3:
-      [self showAbout];
+      [self showTwitter];
       break;
       
+      // About Menu item
     case 4:
-      
+      [self showAbout];
       break;
       
     case 5:

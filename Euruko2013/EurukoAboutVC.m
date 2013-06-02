@@ -52,6 +52,7 @@
 	if ([[segue identifier] isEqualToString:@"ShowBrowserViewFromAbout"]) {
     EurukoBrowserVC *browserVC = [segue destinationViewController];
 		browserVC.startURL = _urlToBrowse;
+    browserVC.mainScreenMode = NO;
 	}
 }
 

@@ -80,6 +80,7 @@
 	if ([[segue identifier] isEqualToString:@"ShowBrowserViewFromSpeaker"]) {
     EurukoBrowserVC *browserVC = [segue destinationViewController];
 		browserVC.startURL = _urlToBrowse;
+    browserVC.mainScreenMode = NO;
 	}
 }
 

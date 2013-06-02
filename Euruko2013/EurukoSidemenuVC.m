@@ -33,8 +33,8 @@
   
   // Calculate Footer View's height
   // TableView's height is: statusbar:20, EurukoTitle:100, 6 menu items * 44
-  // TODO: Currently 4 menu items
-  self.footerView.bounds = CGRectMake(self.footerView.bounds.origin.x, self.footerView.bounds.origin.y, self.footerView.bounds.size.width, [UIScreen mainScreen].bounds.size.height - (20+100+4*44));
+  // TODO: Currently 5 menu items
+  self.footerView.bounds = CGRectMake(self.footerView.bounds.origin.x, self.footerView.bounds.origin.y, self.footerView.bounds.size.width, [UIScreen mainScreen].bounds.size.height - (20+100+5*44));
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,7 +72,7 @@
 
 - (IBAction)footerBtnTapped:(id)sender {
   // About Menu item (watch out its id)
-  [self closeMenuAndPerformAction:3];
+  [self closeMenuAndPerformAction:4];
 }
 
 - (void)closeMenuAndPerformAction:(NSInteger)menuId {
