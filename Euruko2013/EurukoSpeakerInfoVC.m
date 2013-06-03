@@ -16,12 +16,16 @@
 @property (weak, nonatomic) IBOutlet UILabel *speakerTitleLbl;
 @property (weak, nonatomic) IBOutlet UIImageView *speakerAvatarImg;
 @property (weak, nonatomic) IBOutlet UIWebView *spkBioWebView;
+@property (weak, nonatomic) IBOutlet UIButton *actionBtn;
 
 - (IBAction)backBtnTapped:(id)sender;
+- (IBAction)actionBtnTapped:(id)sender;
+
 @end
 
 @implementation EurukoSpeakerInfoVC {
   NSURL *_urlToBrowse;
+  NSMutableDictionary *_sheetIndexes;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -37,6 +41,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+  // Check if Speaker has Twitter/Github page and display/hide Action button
+  if (![self.speakerData objectForKey:@"twitter"] && ![self.speakerData objectForKey:@"github"])
+    self.actionBtn.alpha = 0.0;
+  
+  // ActionSheet indexes
+  _sheetIndexes = [NSMutableDictionary dictionaryWithCapacity:2];
+  
   // Populate with speaker data
   self.speakerNameLbl.text = [self.speakerData objectForKey:@"name"];
   self.speakerTitleLbl.text = [self.speakerData objectForKey:@"title"];
@@ -87,6 +98,45 @@
 #pragma mark - Actions
 - (IBAction)backBtnTapped:(id)sender {
   [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)actionBtnTapped:(id)sender {
+  UIActionSheet *sheet =
+  [[UIActionSheet alloc] initWithTitle:@"Speaker's personal page(s)"
+                              delegate:self
+                     cancelButtonTitle:nil
+                destructiveButtonTitle:nil
+                     otherButtonTitles:nil];
+    
+  if ([self.speakerData objectForKey:@"twitter"]) {
+    NSInteger idx = [sheet addButtonWithTitle:@"Twitter page"];
+    [_sheetIndexes setObject:@"twitter" forKey:[NSNumber numberWithInteger:idx]];
+  }
+  if ([self.speakerData objectForKey:@"github"]) {
+    NSInteger idx = [sheet addButtonWithTitle:@"Github page"];
+    [_sheetIndexes setObject:@"github" forKey:[NSNumber numberWithInteger:idx]];
+  }
+  // Cancel button
+  sheet.cancelButtonIndex = [sheet addButtonWithTitle:@"Cancel"];
+  [_sheetIndexes setObject:@"cancel" forKey:[NSNumber numberWithInteger:sheet.cancelButtonIndex]];
+  [sheet showInView:[[UIApplication sharedApplication] keyWindow]];
+}
+
+#pragma mark ActionSheet delegate methods
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+  // Perform related task according ActionSheet button
+  NSString *pageCode = [_sheetIndexes objectForKey:[NSNumber numberWithInteger:buttonIndex]];
+  NSString *urlStr;
+  if ([pageCode isEqualToString:@"cancel"])
+    return;
+  
+  if ([pageCode isEqualToString:@"twitter"]) {
+    urlStr = [NSString stringWithFormat:@"https://twitter.com/%@", [self.speakerData objectForKey:pageCode]];
+  } else if ([pageCode isEqualToString:@"github"]) {
+    urlStr = [NSString stringWithFormat:@"https://github.com/%@", [self.speakerData objectForKey:pageCode]];
+  }
+  _urlToBrowse = [NSURL URLWithString:urlStr];
+  [self performSegueWithIdentifier:@"ShowBrowserViewFromSpeaker" sender:self];
 }
 
 @end

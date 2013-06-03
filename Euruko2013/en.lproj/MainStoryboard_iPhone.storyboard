@@ -636,6 +636,22 @@
                                     <action selector="backBtnTapped:" destination="wUq-Wi-RUm" eventType="touchUpInside" id="o4o-GB-xKX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUI-7N-UwT">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="uVT-yB-rkh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="menuaction.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionBtnTapped:" destination="wUq-Wi-RUm" eventType="touchUpInside" id="P1d-sJ-wyv"/>
+                                </connections>
+                            </button>
                             <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="tET-aI-OkV">
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="center" text="Yukihiro 'Matz' Matsumoto" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="174" translatesAutoresizingMaskIntoConstraints="NO" id="Vr7-M5-ylp">
@@ -688,10 +704,13 @@
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="tET-aI-OkV" firstAttribute="leading" secondItem="jvW-fS-UF6" secondAttribute="leading" type="default" id="5E5-7R-FJ2"/>
+                            <constraint firstItem="rUI-7N-UwT" firstAttribute="bottom" secondItem="jvW-fS-UF6" secondAttribute="bottom" type="default" id="5X0-9O-gec"/>
                             <constraint firstItem="PNf-cM-aIZ" firstAttribute="centerX" secondItem="7GS-k6-9R3" secondAttribute="centerX" type="default" id="BUH-IA-k0x"/>
                             <constraint firstItem="PNf-cM-aIZ" firstAttribute="trailing" secondItem="V1Q-0u-AvB" secondAttribute="trailing" type="default" id="D7o-hV-GAV"/>
                             <constraint firstItem="7GS-k6-9R3" firstAttribute="leading" secondItem="tRo-Nh-KPm" secondAttribute="leading" type="default" id="Ese-RN-cKF"/>
+                            <constraint firstItem="rUI-7N-UwT" firstAttribute="top" secondItem="jvW-fS-UF6" secondAttribute="top" type="user" id="FId-pS-ErJ"/>
                             <constraint firstItem="7GS-k6-9R3" firstAttribute="top" secondItem="tRo-Nh-KPm" secondAttribute="top" type="default" id="J2X-mW-Ifs"/>
+                            <constraint firstItem="rUI-7N-UwT" firstAttribute="trailing" secondItem="tRo-Nh-KPm" secondAttribute="trailing" constant="-10" type="user" id="Jmo-78-cd2"/>
                             <constraint firstAttribute="trailing" secondItem="V1Q-0u-AvB" secondAttribute="trailing" constant="10" type="user" id="LZ9-8o-apx"/>
                             <constraint firstItem="7GS-k6-9R3" firstAttribute="trailing" secondItem="tRo-Nh-KPm" secondAttribute="trailing" type="default" id="NGA-Uc-0W4"/>
                             <constraint firstAttribute="trailing" secondItem="ftn-Hk-nNg" secondAttribute="trailing" constant="13" id="Pil-Zy-gXh"/>
@@ -699,15 +718,17 @@
                             <constraint firstItem="tET-aI-OkV" firstAttribute="top" secondItem="tRo-Nh-KPm" secondAttribute="top" constant="70" type="user" id="cNc-7C-3EO"/>
                             <constraint firstAttribute="bottom" secondItem="PNf-cM-aIZ" secondAttribute="bottom" constant="15" type="user" id="ca5-lJ-9mm"/>
                             <constraint firstItem="PNf-cM-aIZ" firstAttribute="top" secondItem="V1Q-0u-AvB" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="dbE-z8-zm1"/>
+                            <constraint firstItem="rUI-7N-UwT" firstAttribute="top" secondItem="tRo-Nh-KPm" secondAttribute="top" constant="3" type="user" id="eCv-L9-xMt"/>
                             <constraint firstItem="ftn-Hk-nNg" firstAttribute="centerY" secondItem="V1Q-0u-AvB" secondAttribute="centerY" type="default" id="eeK-ZA-jnl"/>
                             <constraint firstItem="PNf-cM-aIZ" firstAttribute="leading" secondItem="tET-aI-OkV" secondAttribute="leading" type="default" id="hFn-hX-Fvp"/>
-                            <constraint firstItem="jvW-fS-UF6" firstAttribute="top" secondItem="tRo-Nh-KPm" secondAttribute="top" constant="3" id="pPy-Q6-xkd"/>
+                            <constraint firstItem="jvW-fS-UF6" firstAttribute="top" secondItem="tRo-Nh-KPm" secondAttribute="top" constant="3" type="user" id="pPy-Q6-xkd"/>
                             <constraint firstAttribute="trailing" secondItem="tET-aI-OkV" secondAttribute="trailing" constant="75" id="sKh-hH-0tt"/>
                             <constraint firstAttribute="bottom" secondItem="tET-aI-OkV" secondAttribute="bottom" priority="1" constant="294" type="user" id="v6r-hS-Hlc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BQd-uT-x6r"/>
                     <connections>
+                        <outlet property="actionBtn" destination="rUI-7N-UwT" id="zxh-EC-FpL"/>
                         <outlet property="speakerAvatarImg" destination="ftn-Hk-nNg" id="dKR-DC-mS6"/>
                         <outlet property="speakerNameLbl" destination="Vr7-M5-ylp" id="XXn-8T-vs5"/>
                         <outlet property="speakerTitleLbl" destination="gkP-ny-VNZ" id="Rt7-oM-Fv9"/>
@@ -1385,6 +1406,7 @@
         <image name="menu_news.png" width="80" height="80"/>
         <image name="menu_speakers.png" width="80" height="80"/>
         <image name="menu_twitter.png" width="80" height="80"/>
+        <image name="menuaction.png" width="76" height="76"/>
         <image name="menuback.png" width="76" height="76"/>
         <image name="menubutton.png" width="76" height="76"/>
         <image name="nav_about.png" width="640" height="98"/>
@@ -1408,7 +1430,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="nNG-O4-rHZ"/>
+        <segue reference="1fk-P7-PLx"/>
         <segue reference="Puy-ob-1bF"/>
     </inferredMetricsTieBreakers>
 </document>
