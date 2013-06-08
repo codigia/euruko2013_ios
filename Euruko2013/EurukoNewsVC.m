@@ -14,7 +14,9 @@
 @interface EurukoNewsVC ()
 
 @property (weak, nonatomic) IBOutlet UICollectionView *newsCollView;
+@property (weak, nonatomic) IBOutlet UIView *noNetBannerView;
 
+- (IBAction)tapToRetry:(id)sender;
 @end
 
 @implementation EurukoNewsVC
@@ -27,6 +29,11 @@
 	[[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(onContentFetched:)
                                                name:kEurukoAppNotifContentFetchedNews
+                                             object:nil];
+  // Network error, show related banner
+	[[NSNotificationCenter defaultCenter] addObserver:self
+                                           selector:@selector(onNetworkError:)
+                                               name:kEurukoAppNotifContentNetworkError
                                              object:nil];
 }
 
@@ -43,6 +50,10 @@
 
 - (void)onContentFetched:(NSNotification *)notif {
   [self.newsCollView reloadData];
+}
+
+- (void)onNetworkError:(NSNotification *)notif {
+  [self showNetErrorBanner:YES];
 }
 
 #pragma mark - Collection view data source
@@ -103,6 +114,12 @@
   [self.navigationController.viewDeckController toggleLeftViewAnimated:YES];
 }
 
+- (IBAction)tapToRetry:(id)sender {
+  [self showNetErrorBanner:NO];
+  // Fetch News content from net
+  [self.delegate fetchNewsContent];
+}
+
 #pragma mark - Segues
 // Perform Selection action using Selection triggered Segue on CollectionView cell
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -117,6 +134,20 @@
     browserVC.mainScreenMode = NO;
 	}
 }
+
+#pragma mark - UI related methods
+- (void)showNetErrorBanner:(BOOL)show {
+  if (show) {
+    [UIView animateWithDuration:1.0 animations:^{
+      self.noNetBannerView.center = CGPointMake(self.noNetBannerView.center.x, self.noNetBannerView.center.y+34);
+    }];
+  } else {
+    [UIView animateWithDuration:1.0 animations:^{
+      self.noNetBannerView.center = CGPointMake(self.noNetBannerView.center.x, self.noNetBannerView.center.y-34);
+    }];
+  }
+}
+
 
 - (void)viewDidUnload {
   [self setMenuBtn:nil];

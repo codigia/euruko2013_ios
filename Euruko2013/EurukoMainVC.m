@@ -15,6 +15,7 @@
 
 NSString *const kEurukoAppNotifContentFetchedNews = @"com.codigia.ios.Euruko2013.kEurukoAppNotifContentFetchedNews";
 NSString *const kEurukoAppNotifContentFetchedAgenda = @"com.codigia.ios.Euruko2013.kEurukoAppNotifContentFetchedAgenda";
+NSString *const kEurukoAppNotifContentNetworkError = @"com.codigia.ios.Euruko2013.kEurukoAppNotifContentNetworkError";
 
 @interface EurukoMainVC () <EurukoSidemenuViewControllerDelegate>
 
@@ -76,7 +77,9 @@ NSString *const kEurukoAppNotifContentFetchedAgenda = @"com.codigia.ios.Euruko20
       // Alert Error message only if news content is empty (first run)
       // TODO: Display No Network connection banner
       //if (self.newsContent.count == 0) {
-        [self alertMsg:@"Network Error: Server is not reachable! Check your network connection or try again later."];
+        //[self alertMsg:@"Network Error: Server is not reachable! Check your network connection or try again later."];
+      // Post related Notification
+      [[NSNotificationCenter defaultCenter] postNotificationName:kEurukoAppNotifContentNetworkError object:self];
       //}
     }];
   } else if (task == EurukoNetTaskFetchAgenda) {
