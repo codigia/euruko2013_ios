@@ -38,7 +38,6 @@
 		281527AB173C31830036A7D4 /* agenda_item_simple.png in Resources */ = {isa = PBXBuildFile; fileRef = 281527AA173C31830036A7D4 /* agenda_item_simple.png */; };
 		281527AE173C555F0036A7D4 /* agenda_footer.png in Resources */ = {isa = PBXBuildFile; fileRef = 281527AC173C555F0036A7D4 /* agenda_footer.png */; };
 		281527AF173C555F0036A7D4 /* agenda_header.png in Resources */ = {isa = PBXBuildFile; fileRef = 281527AD173C555F0036A7D4 /* agenda_header.png */; };
-		2855DDBC175B3AE1004B6196 /* EurukoTwitterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2855DDBB175B3AE1004B6196 /* EurukoTwitterVC.m */; };
 		2855DDBE175B54CD004B6196 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2855DDBD175B54CD004B6196 /* Accounts.framework */; };
 		2855DDC0175B5503004B6196 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2855DDBF175B5503004B6196 /* Social.framework */; };
 		2855DDC2175BD9D3004B6196 /* menuaction.png in Resources */ = {isa = PBXBuildFile; fileRef = 2855DDC1175BD9D3004B6196 /* menuaction.png */; };
@@ -128,8 +127,6 @@
 		281527AA173C31830036A7D4 /* agenda_item_simple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = agenda_item_simple.png; path = Gfx/agenda_item_simple.png; sourceTree = SOURCE_ROOT; };
 		281527AC173C555F0036A7D4 /* agenda_footer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = agenda_footer.png; path = Gfx/agenda_footer.png; sourceTree = SOURCE_ROOT; };
 		281527AD173C555F0036A7D4 /* agenda_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = agenda_header.png; path = Gfx/agenda_header.png; sourceTree = SOURCE_ROOT; };
-		2855DDBA175B3AE1004B6196 /* EurukoTwitterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EurukoTwitterVC.h; sourceTree = "<group>"; };
-		2855DDBB175B3AE1004B6196 /* EurukoTwitterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EurukoTwitterVC.m; sourceTree = "<group>"; };
 		2855DDBD175B54CD004B6196 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		2855DDBF175B5503004B6196 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		2855DDC1175BD9D3004B6196 /* menuaction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menuaction.png; path = Gfx/menuaction.png; sourceTree = SOURCE_ROOT; };
@@ -324,8 +321,6 @@
 				289013A7171808E20006FB9D /* EurukoSpeakersVC.m */,
 				2815277E172CF6590036A7D4 /* EurukoSpeakerInfoVC.h */,
 				2815277F172CF6590036A7D4 /* EurukoSpeakerInfoVC.m */,
-				2855DDBA175B3AE1004B6196 /* EurukoTwitterVC.h */,
-				2855DDBB175B3AE1004B6196 /* EurukoTwitterVC.m */,
 				286A04DE173D2AE2008985AC /* EurukoAboutVC.h */,
 				286A04DF173D2AE2008985AC /* EurukoAboutVC.m */,
 				28152788173069D40036A7D4 /* EurukoBrowserVC.h */,
@@ -504,7 +499,6 @@
 				281527A8173ABD610036A7D4 /* AFXMLRequestOperation.m in Sources */,
 				281527A9173ABD610036A7D4 /* UIImageView+AFNetworking.m in Sources */,
 				286A04E0173D2AE2008985AC /* EurukoAboutVC.m in Sources */,
-				2855DDBC175B3AE1004B6196 /* EurukoTwitterVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

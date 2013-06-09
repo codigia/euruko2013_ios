@@ -93,7 +93,9 @@ NSString *const kEurukoAppNotifContentNetworkError = @"com.codigia.ios.Euruko201
       NSLog(@"Fetching Agenda/Speakers content ERROR: %@", error);
       // Alert Error message only if agenda/speakers content is empty (first run)
       if (self.agendaContent.count == 0) {
-        [self alertMsg:@"Network Error: Server is not reachable! Check your network connection or try again later."];
+        //[self alertMsg:@"Network Error: Server is not reachable! Check your network connection or try again later."];
+        // Post related Notification
+        [[NSNotificationCenter defaultCenter] postNotificationName:kEurukoAppNotifContentNetworkError object:self];
       }
     }];
   }
