@@ -38,6 +38,9 @@
 		281527AB173C31830036A7D4 /* agenda_item_simple.png in Resources */ = {isa = PBXBuildFile; fileRef = 281527AA173C31830036A7D4 /* agenda_item_simple.png */; };
 		281527AE173C555F0036A7D4 /* agenda_footer.png in Resources */ = {isa = PBXBuildFile; fileRef = 281527AC173C555F0036A7D4 /* agenda_footer.png */; };
 		281527AF173C555F0036A7D4 /* agenda_header.png in Resources */ = {isa = PBXBuildFile; fileRef = 281527AD173C555F0036A7D4 /* agenda_header.png */; };
+		2855DDBE175B54CD004B6196 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2855DDBD175B54CD004B6196 /* Accounts.framework */; };
+		2855DDC0175B5503004B6196 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2855DDBF175B5503004B6196 /* Social.framework */; };
+		2855DDC2175BD9D3004B6196 /* menuaction.png in Resources */ = {isa = PBXBuildFile; fileRef = 2855DDC1175BD9D3004B6196 /* menuaction.png */; };
 		286A04DB173D29E9008985AC /* about_logo_codigia.png in Resources */ = {isa = PBXBuildFile; fileRef = 286A04D8173D29E9008985AC /* about_logo_codigia.png */; };
 		286A04DC173D29E9008985AC /* about_logo_euruko.png in Resources */ = {isa = PBXBuildFile; fileRef = 286A04D9173D29E9008985AC /* about_logo_euruko.png */; };
 		286A04DD173D29E9008985AC /* about_logo_gaia.png in Resources */ = {isa = PBXBuildFile; fileRef = 286A04DA173D29E9008985AC /* about_logo_gaia.png */; };
@@ -124,6 +127,9 @@
 		281527AA173C31830036A7D4 /* agenda_item_simple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = agenda_item_simple.png; path = Gfx/agenda_item_simple.png; sourceTree = SOURCE_ROOT; };
 		281527AC173C555F0036A7D4 /* agenda_footer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = agenda_footer.png; path = Gfx/agenda_footer.png; sourceTree = SOURCE_ROOT; };
 		281527AD173C555F0036A7D4 /* agenda_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = agenda_header.png; path = Gfx/agenda_header.png; sourceTree = SOURCE_ROOT; };
+		2855DDBD175B54CD004B6196 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		2855DDBF175B5503004B6196 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		2855DDC1175BD9D3004B6196 /* menuaction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menuaction.png; path = Gfx/menuaction.png; sourceTree = SOURCE_ROOT; };
 		286A04D8173D29E9008985AC /* about_logo_codigia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about_logo_codigia.png; path = Gfx/about_logo_codigia.png; sourceTree = SOURCE_ROOT; };
 		286A04D9173D29E9008985AC /* about_logo_euruko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about_logo_euruko.png; path = Gfx/about_logo_euruko.png; sourceTree = SOURCE_ROOT; };
 		286A04DA173D29E9008985AC /* about_logo_gaia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about_logo_gaia.png; path = Gfx/about_logo_gaia.png; sourceTree = SOURCE_ROOT; };
@@ -183,6 +189,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2855DDC0175B5503004B6196 /* Social.framework in Frameworks */,
+				2855DDBE175B54CD004B6196 /* Accounts.framework in Frameworks */,
 				28CDA2B816DB5D3200B87D75 /* QuartzCore.framework in Frameworks */,
 				28EAA4B516D775DF00F523B3 /* UIKit.framework in Frameworks */,
 				28EAA4B716D775DF00F523B3 /* Foundation.framework in Frameworks */,
@@ -222,6 +230,7 @@
 		28BDAFDF1705B5AD0024A65B /* Gfx */ = {
 			isa = PBXGroup;
 			children = (
+				2855DDC1175BD9D3004B6196 /* menuaction.png */,
 				286A04E5173E20F3008985AC /* webBtn_back.png */,
 				286A04E6173E20F3008985AC /* webBtn_back@2x.png */,
 				286A04E7173E20F3008985AC /* webBtn_forth.png */,
@@ -281,6 +290,8 @@
 		28EAA4B316D775DF00F523B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2855DDBD175B54CD004B6196 /* Accounts.framework */,
+				2855DDBF175B5503004B6196 /* Social.framework */,
 				28CDA2B716DB5D3200B87D75 /* QuartzCore.framework */,
 				28EAA4B416D775DF00F523B3 /* UIKit.framework */,
 				28EAA4B616D775DF00F523B3 /* Foundation.framework */,
@@ -454,6 +465,7 @@
 				286A04FE173EEEA3008985AC /* Default@2x.png in Resources */,
 				286A0500173F0BA7008985AC /* appicon@2x.png in Resources */,
 				286A0502173F0E56008985AC /* appicon.png in Resources */,
+				2855DDC2175BD9D3004B6196 /* menuaction.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,8 +617,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ECA816B9-4249-445D-A4A0-239B08F22A41";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "ECA816B9-4249-445D-A4A0-239B08F22A41";
+				PROVISIONING_PROFILE = "F2DFB986-19F3-4496-BC71-D6E38123DDED";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F2DFB986-19F3-4496-BC71-D6E38123DDED";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

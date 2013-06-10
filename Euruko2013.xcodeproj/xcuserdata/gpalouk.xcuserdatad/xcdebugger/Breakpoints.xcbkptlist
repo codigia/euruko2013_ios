@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Euruko2013/EurukoMainVC.m"
-         timestampString = "390293674.31859"
+         timestampString = "392461329.05988"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "100"
-         endingLineNumber = "100"
+         startingLineNumber = "106"
+         endingLineNumber = "106"
          landmarkName = "-newsContFetched:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Euruko2013/EurukoNewsVC.m"
-         timestampString = "389808168.950741"
+         timestampString = "392464133.894011"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "44"
-         endingLineNumber = "44"
+         startingLineNumber = "65"
+         endingLineNumber = "65"
          landmarkName = "-onContentFetched:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -47,12 +47,51 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Euruko2013/EurukoBrowserVC.m"
-         timestampString = "389953800.634317"
+         timestampString = "392382151.020666"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "84"
-         endingLineNumber = "84"
+         startingLineNumber = "115"
+         endingLineNumber = "115"
          landmarkName = "-webViewDidFinishLoad:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Euruko2013/EurukoBrowserVC.m"
+         timestampString = "392382151.020666"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "167"
+         endingLineNumber = "167"
+         landmarkName = "-tapToRetry:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Euruko2013/EurukoNewsVC.m"
+         timestampString = "392464133.894011"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "71"
+         endingLineNumber = "71"
+         landmarkName = "-onNetworkError:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Euruko2013/EurukoNewsVC.m"
+         timestampString = "392464133.894011"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "155"
+         endingLineNumber = "155"
+         landmarkName = "-showNetErrorBanner:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

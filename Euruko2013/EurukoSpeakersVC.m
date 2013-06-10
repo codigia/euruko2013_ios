@@ -15,10 +15,15 @@
 @interface EurukoSpeakersVC ()
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIView *noNetBannerView;
 
+- (IBAction)tapToRetry:(id)sender;
 @end
 
-@implementation EurukoSpeakersVC
+@implementation EurukoSpeakersVC {
+  // Is Network Error banner presented?
+  BOOL _isNetworkBannerPresented;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,14 +37,19 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  _isNetworkBannerPresented = NO;
+  
 	// Do any additional setup after loading the view.
   // Update Speakers Collection when content fetched from net
 	[[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(onContentFetched:)
                                                name:kEurukoAppNotifContentFetchedAgenda
                                              object:nil];
-  // Fetch content from net
-  [self.delegate fetchAgendaContent];
+  // Network error, show related banner
+	[[NSNotificationCenter defaultCenter] addObserver:self
+                                           selector:@selector(onNetworkError:)
+                                               name:kEurukoAppNotifContentNetworkError
+                                             object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,8 +58,23 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+  _isNetworkBannerPresented = NO;
+  // Fetch content from net
+  [self.delegate fetchAgendaContent];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+  [self showNetErrorBanner:NO];
+}
+
 - (void)onContentFetched:(NSNotification *)notif {
   [self.collectionView reloadData];
+  [self showNetErrorBanner:NO];
+}
+
+- (void)onNetworkError:(NSNotification *)notif {
+  [self showNetErrorBanner:YES];
 }
 
 #pragma mark - Collection view data source
@@ -103,8 +128,35 @@
   [self.navigationController.viewDeckController toggleLeftViewAnimated:YES];
 }
 
+- (IBAction)tapToRetry:(id)sender {
+  [self showNetErrorBanner:NO];
+  // Fetch News content from net
+  [self.delegate fetchAgendaContent];
+}
+
+#pragma mark - UI related methods
+- (void)showNetErrorBanner:(BOOL)show {
+  if (show && !_isNetworkBannerPresented) {
+    [UIView animateWithDuration:1.0 animations:^{
+      self.noNetBannerView.center = CGPointMake(self.noNetBannerView.center.x, self.noNetBannerView.center.y+34);
+    }];
+    UIButton *retryBtn = (UIButton *)[self.noNetBannerView viewWithTag:1];
+    retryBtn.enabled = YES;
+    _isNetworkBannerPresented = YES;
+  } else if (!show && _isNetworkBannerPresented) {
+    [UIView animateWithDuration:1.0 animations:^{
+      self.noNetBannerView.center = CGPointMake(self.noNetBannerView.center.x, self.noNetBannerView.center.y-34);
+    }];
+    UIButton *retryBtn = (UIButton *)[self.noNetBannerView viewWithTag:1];
+    retryBtn.enabled = NO;
+    _isNetworkBannerPresented = NO;
+  }
+}
+
+
 - (void)viewDidUnload {
   [self setCollectionView:nil];
   [super viewDidUnload];
 }
+
 @end

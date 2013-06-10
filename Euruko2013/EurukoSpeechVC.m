@@ -84,6 +84,7 @@
 	} else if ([[segue identifier] isEqualToString:@"ShowBrowserViewFromSpeech"]) {
     EurukoBrowserVC *browserVC = [segue destinationViewController];
 		browserVC.startURL = _urlToBrowse;
+    browserVC.mainScreenMode = NO;
 	}
 }
 

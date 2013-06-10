@@ -31,6 +31,8 @@ typedef enum EurukoNetTask {
 extern NSString *const kEurukoAppNotifContentFetchedNews;
 // Agenda/Speakers content fetched from net
 extern NSString *const kEurukoAppNotifContentFetchedAgenda;
+// Network error on fetching content
+extern NSString *const kEurukoAppNotifContentNetworkError;
 
 @interface EurukoMainVC : UINavigationController <EurukoNewsDelegate, EurukoAgendaDelegate>
 

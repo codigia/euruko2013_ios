@@ -11,5 +11,6 @@
 @interface EurukoBrowserVC : UIViewController <UIWebViewDelegate>
 
 @property (nonatomic) NSURL *startURL;
+@property (nonatomic) BOOL mainScreenMode;
 
 @end

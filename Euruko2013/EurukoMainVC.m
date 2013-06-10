@@ -9,11 +9,13 @@
 #import "EurukoMainVC.h"
 #import "EurukoSidemenuVC.h"
 #import "EurukoSpeakersVC.h"
+#import "EurukoBrowserVC.h"
 #import "EurukoAboutVC.h"
 #import "AFNetworking.h"
 
 NSString *const kEurukoAppNotifContentFetchedNews = @"com.codigia.ios.Euruko2013.kEurukoAppNotifContentFetchedNews";
 NSString *const kEurukoAppNotifContentFetchedAgenda = @"com.codigia.ios.Euruko2013.kEurukoAppNotifContentFetchedAgenda";
+NSString *const kEurukoAppNotifContentNetworkError = @"com.codigia.ios.Euruko2013.kEurukoAppNotifContentNetworkError";
 
 @interface EurukoMainVC () <EurukoSidemenuViewControllerDelegate>
 
@@ -75,7 +77,9 @@ NSString *const kEurukoAppNotifContentFetchedAgenda = @"com.codigia.ios.Euruko20
       // Alert Error message only if news content is empty (first run)
       // TODO: Display No Network connection banner
       //if (self.newsContent.count == 0) {
-        [self alertMsg:@"Network Error: Server is not reachable! Check your network connection or try again later."];
+        //[self alertMsg:@"Network Error: Server is not reachable! Check your network connection or try again later."];
+      // Post related Notification
+      [[NSNotificationCenter defaultCenter] postNotificationName:kEurukoAppNotifContentNetworkError object:self];
       //}
     }];
   } else if (task == EurukoNetTaskFetchAgenda) {
@@ -89,7 +93,9 @@ NSString *const kEurukoAppNotifContentFetchedAgenda = @"com.codigia.ios.Euruko20
       NSLog(@"Fetching Agenda/Speakers content ERROR: %@", error);
       // Alert Error message only if agenda/speakers content is empty (first run)
       if (self.agendaContent.count == 0) {
-        [self alertMsg:@"Network Error: Server is not reachable! Check your network connection or try again later."];
+        //[self alertMsg:@"Network Error: Server is not reachable! Check your network connection or try again later."];
+        // Post related Notification
+        [[NSNotificationCenter defaultCenter] postNotificationName:kEurukoAppNotifContentNetworkError object:self];
       }
     }];
   }
@@ -186,6 +192,25 @@ NSString *const kEurukoAppNotifContentFetchedAgenda = @"com.codigia.ios.Euruko20
   [self pushViewController:spkVC animated:NO];
 }
 
+// Menu Item: Twitter
+- (void)showTwitter {
+  //if ([self.topViewController isKindOfClass:[EurukoBrowserVC class]])
+  //  return;
+  
+//  for (UIViewController *theVC in self.viewControllers) {
+//    if ([theVC isKindOfClass:[EurukoBrowserVC class]]) {
+//      [self popToViewController:theVC animated:NO];
+//      return;
+//    }
+//  }
+  
+  UIStoryboard *storyboard = self.storyboard;
+  EurukoBrowserVC *browserVC = (EurukoBrowserVC *)[storyboard instantiateViewControllerWithIdentifier:@"browserViewController"];
+  browserVC.startURL = [NSURL URLWithString:@"https://twitter.com/search?q=%23euruko"];
+  browserVC.mainScreenMode = YES;
+  [self pushViewController:browserVC animated:NO];
+}
+
 // Menu Item: About
 - (void)showAbout {
   if ([self.topViewController isKindOfClass:[EurukoAboutVC class]])
@@ -226,13 +251,14 @@ NSString *const kEurukoAppNotifContentFetchedAgenda = @"com.codigia.ios.Euruko20
       [self showSpeakers];
       break;
       
-      // About Menu item
+      // Twitter Menu item
     case 3:
-      [self showAbout];
+      [self showTwitter];
       break;
       
+      // About Menu item
     case 4:
-      
+      [self showAbout];
       break;
       
     case 5:
