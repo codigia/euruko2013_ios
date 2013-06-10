@@ -608,8 +608,8 @@
 		28EAA4DC16D775E000F523B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: GEORGIOS PALOUKIS (5FRE4PB356)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: GEORGIOS PALOUKIS (5FRE4PB356)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Euruko2013/Euruko2013-Prefix.pch";
 				INFOPLIST_FILE = "Euruko2013/Euruko2013-Info.plist";
@@ -617,8 +617,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "F2DFB986-19F3-4496-BC71-D6E38123DDED";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F2DFB986-19F3-4496-BC71-D6E38123DDED";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
